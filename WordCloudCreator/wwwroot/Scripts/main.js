@@ -105,3 +105,13 @@ function closeTile() {
         x.style.display = "block";
     }
 }
+function scrollRowPrev() {
+    console.log('Row Scrolled Previous');
+    var element = document.getElementById('movieTile1');
+    element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+}
+function scrollRowNext() {
+    console.log('Row Scrolled Next');
+    var element = document.getElementById('movieTile10');
+    element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+}

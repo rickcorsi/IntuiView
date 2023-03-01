@@ -9,11 +9,7 @@
             <input type="button" class="headerButtons" id="btnGames" value="Home" onclick="toggleGames();">
             <input type="button" class="headerButtons" id="btnViewList" value="Favorites" onclick="toggleList();">
             <input type="button" class="headerButtons" id="btnTV" value="TV Shows" onclick="toggleTV();">
-            <input type="button" class="headerButtons" id="btnMovies" value="Movies" onclick="toggleMovies();">
-@*            <input type="button" class="inputButtons" id="btnMovies" value="Movies" onclick="toggleMovies();">
-            <input type="button" class="inputButtons" id="btnTV" value="TV" onclick="toggleTV();">
-            <input type="button" class="inputButtons" id="btnGames" value="Games" onclick="toggleGames();">
-            <input type="button" class="inputButtons" id="btnViewList" value="Hide List" onclick="toggleList();">*@
+            <input type="button" class="headerButtons" id="scroll" value="Scroll" onclick="scroll();">
         </div>
     </div>
     <div class="mediaArea">
@@ -31,8 +27,9 @@
             <h2 class="rowHeadings">Recommended</h2>
             <div id="" class="rowOneMediaMask">
             </div>
-            <div id="row" class="mediaRow">
-                <input type="button" class="rowOneDirectionButtons" id="rowOneDirectionalButton" value=">" onclick="rowOneCycle();">
+            <button class="pre-button" onclick="scrollRowPrev();"><ion-icon name="arrow-back-outline"></ion-icon></button>
+            <button class="nxt-button" onclick="scrollRowNext();"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+            <div id="mediaRow" class="mediaRow">
                 <div id="movieTile1" class="movieTileMain">
                     <div class="movieTileOne" onclick="">
                         <label class="tileTextHead" id="mediaTileLabel1" >2020 | Documentary</label>
@@ -78,6 +75,171 @@
                     <label id="mediaTileGenre4" hidden >Genre: Action, Adventure, Superhero, Sci-Fi</label> 
                 </div>
                 <div id="movieTile5" class="movieTileMain">
+                    <div class="movieTileOne" onclick="">
+                        <label class="tileTextHead" id="mediaTileLabel5" >1990 | Crime</label>
+                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
+                        <img class="tileImageMain" id="mediaTileImage5" src="images/mediaTile5.jpg" onclick="expandTile('5');" alt="media2">    
+                    </div>
+                    <label id="mediaTileHeading5" hidden >Goodfellas | 1990 | 2h 26m</label>
+                    <label id="mediaTileSummary5" hidden >A young man grows up in the mob and works very hard to advance himself through the ranks. He enjoys his life of money and luxury, but is oblivious to the horror that he causes. </label>
+                    <label id="mediaTileCast5" hidden >Cast: Robert De Niro, Ray Liotta, Joe Pesci, Lorraine Bracco, Paul Sorvino</label>  
+                    <label id="mediaTileGenre5" hidden >Genre: Crime, Biography, Thriller, Drama</label> 
+                </div>
+                <div id="movieTile6" class="movieTileMain">
+                    <div class="movieTileOne" onclick="">
+                        <label class="tileTextHead" id="mediaTileLabel1" >2020 | Documentary</label>
+                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
+                        <img class="tileImageMain" id="mediaTileImage1" src="images/mediaTile1.jpg" onclick="expandTile('1');" alt="media1">    
+                    </div>
+                    <label id="mediaTileHeading1" hidden >The Last Dance | 2020 | 10 Episodes</label>
+                    <label id="mediaTileSummary1" hidden >This series revolves around the career of Michael Jordan, with particular focus on the 1997–98 season, his final season with the Chicago Bulls of the National Basketball Association (NBA).</label>
+                    <label id="mediaTileCast1" hidden >Cast: Michael Jordan, Scottie Pippen, Dennis Rodman</label>  
+                    <label id="mediaTileGenre1" hidden >Genre: Social and Cultural Docs, Docuseries, Sports</label>          
+                </div>
+                <div id="movieTile7" class="movieTileMain">
+                    <div class="movieTileOne" onclick="">
+                        <label class="tileTextHead" id="mediaTileLabel2" >2019 | Horror/Thriller</label>
+                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
+                        <img class="tileImageMain" id="mediaTileImage2" src="images/mediaTile2.jpg" onclick="expandTile('2');" alt="media2">    
+                    </div>
+                    <label id="mediaTileHeading2" hidden >Midsommar | 2019 | 2h 28m</label>
+                    <label id="mediaTileSummary2" hidden >A couple travel to Sweden to visit their friend's rural hometown for its fabled midsummer festival, but what begins as an idyllic retreat quickly devolves into an increasingly violent and bizarre competition at the hands of a pagan cult.</label>
+                    <label id="mediaTileCast2" hidden >Cast: Florence Pugh, Jack Reynor, William Jackson Harper, Vilhelm Blomgren, Ellora Torchia, Archie Madekwe, Will Poulter</label>  
+                    <label id="mediaTileGenre2" hidden >Genre: Folk Horror, Thriller, Drama, Mystery</label> 
+                </div>
+                <div id="movieTile8" class="movieTileMain">
+                    <div class="movieTileOne" onclick="">
+                        <label class="tileTextHead" id="mediaTileLabel3" >2014 | Documentary</label>
+                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
+                        <img class="tileImageMain" id="mediaTileImage3" src="images/mediaTile3.jpg" onclick="expandTile('3');" alt="media2">    
+                    </div>
+                    <label id="mediaTileHeading3" hidden >Louis Theroux: LA Stories - City of Dogs | 2014 | 59m</label>
+                    <label id="mediaTileSummary3" hidden >Louis visits the people who are providing a home for troubled and formerly feral dogs. He speaks to them about the city's enormous canine population.</label>
+                    <label id="mediaTileCast3" hidden >Cast: Louis Theroux</label>  
+                    <label id="mediaTileGenre3" hidden >Genre: Documentary, Special Interest</label> 
+                </div>
+                <div id="movieTile9" class="movieTileMain">
+                    <div class="movieTileOne" onclick="">
+                        <label class="tileTextHead" id="mediaTileLabel4" >2016 | Action/Adventure</label>
+                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
+                        <img class="tileImageMain" id="mediaTileImage4" src="images/mediaTile4.jpg" onclick="expandTile('4');" alt="media2">    
+                    </div>
+                    <label id="mediaTileHeading4" hidden >Captain America: Civil War | 2016 | 2h 28m</label>
+                    <label id="mediaTileSummary4" hidden >Political pressure mounts to install a system of accountability when the actions of the Avengers lead to collateral damage. The new status quo deeply divides members of the team.</label>
+                    <label id="mediaTileCast4" hidden >Cast: Chris Evans, Robert Downey Jr., Scarlett Johansson, Sebastian Stan, Anthony Mackie, Don Cheadle, Jeremy Renner</label>  
+                    <label id="mediaTileGenre4" hidden >Genre: Action, Adventure, Superhero, Sci-Fi</label> 
+                </div>
+                <div id="movieTile10" class="movieTileMain">
+                    <div class="movieTileOne" onclick="">
+                        <label class="tileTextHead" id="mediaTileLabel5" >1990 | Crime</label>
+                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
+                        <img class="tileImageMain" id="mediaTileImage5" src="images/mediaTile5.jpg" onclick="expandTile('5');" alt="media2">    
+                    </div>
+                    <label id="mediaTileHeading5" hidden >Goodfellas | 1990 | 2h 26m</label>
+                    <label id="mediaTileSummary5" hidden >A young man grows up in the mob and works very hard to advance himself through the ranks. He enjoys his life of money and luxury, but is oblivious to the horror that he causes. </label>
+                    <label id="mediaTileCast5" hidden >Cast: Robert De Niro, Ray Liotta, Joe Pesci, Lorraine Bracco, Paul Sorvino</label>  
+                    <label id="mediaTileGenre5" hidden >Genre: Crime, Biography, Thriller, Drama</label> 
+                </div>
+                <div id="movieTile11" class="movieTileMain">
+                    <div class="movieTileOne" onclick="">
+                        <label class="tileTextHead" id="mediaTileLabel1" >2020 | Documentary</label>
+                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
+                        <img class="tileImageMain" id="mediaTileImage1" src="images/mediaTile1.jpg" onclick="expandTile('1');" alt="media1">    
+                    </div>
+                    <label id="mediaTileHeading1" hidden >The Last Dance | 2020 | 10 Episodes</label>
+                    <label id="mediaTileSummary1" hidden >This series revolves around the career of Michael Jordan, with particular focus on the 1997–98 season, his final season with the Chicago Bulls of the National Basketball Association (NBA).</label>
+                    <label id="mediaTileCast1" hidden >Cast: Michael Jordan, Scottie Pippen, Dennis Rodman</label>  
+                    <label id="mediaTileGenre1" hidden >Genre: Social and Cultural Docs, Docuseries, Sports</label>          
+                </div>
+                <div id="movieTile12" class="movieTileMain">
+                    <div class="movieTileOne" onclick="">
+                        <label class="tileTextHead" id="mediaTileLabel2" >2019 | Horror/Thriller</label>
+                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
+                        <img class="tileImageMain" id="mediaTileImage2" src="images/mediaTile2.jpg" onclick="expandTile('2');" alt="media2">    
+                    </div>
+                    <label id="mediaTileHeading2" hidden >Midsommar | 2019 | 2h 28m</label>
+                    <label id="mediaTileSummary2" hidden >A couple travel to Sweden to visit their friend's rural hometown for its fabled midsummer festival, but what begins as an idyllic retreat quickly devolves into an increasingly violent and bizarre competition at the hands of a pagan cult.</label>
+                    <label id="mediaTileCast2" hidden >Cast: Florence Pugh, Jack Reynor, William Jackson Harper, Vilhelm Blomgren, Ellora Torchia, Archie Madekwe, Will Poulter</label>  
+                    <label id="mediaTileGenre2" hidden >Genre: Folk Horror, Thriller, Drama, Mystery</label> 
+                </div>
+                <div id="movieTile13" class="movieTileMain">
+                    <div class="movieTileOne" onclick="">
+                        <label class="tileTextHead" id="mediaTileLabel3" >2014 | Documentary</label>
+                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
+                        <img class="tileImageMain" id="mediaTileImage3" src="images/mediaTile3.jpg" onclick="expandTile('3');" alt="media2">    
+                    </div>
+                    <label id="mediaTileHeading3" hidden >Louis Theroux: LA Stories - City of Dogs | 2014 | 59m</label>
+                    <label id="mediaTileSummary3" hidden >Louis visits the people who are providing a home for troubled and formerly feral dogs. He speaks to them about the city's enormous canine population.</label>
+                    <label id="mediaTileCast3" hidden >Cast: Louis Theroux</label>  
+                    <label id="mediaTileGenre3" hidden >Genre: Documentary, Special Interest</label> 
+                </div>
+                <div id="movieTile14" class="movieTileMain">
+                    <div class="movieTileOne" onclick="">
+                        <label class="tileTextHead" id="mediaTileLabel4" >2016 | Action/Adventure</label>
+                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
+                        <img class="tileImageMain" id="mediaTileImage4" src="images/mediaTile4.jpg" onclick="expandTile('4');" alt="media2">    
+                    </div>
+                    <label id="mediaTileHeading4" hidden >Captain America: Civil War | 2016 | 2h 28m</label>
+                    <label id="mediaTileSummary4" hidden >Political pressure mounts to install a system of accountability when the actions of the Avengers lead to collateral damage. The new status quo deeply divides members of the team.</label>
+                    <label id="mediaTileCast4" hidden >Cast: Chris Evans, Robert Downey Jr., Scarlett Johansson, Sebastian Stan, Anthony Mackie, Don Cheadle, Jeremy Renner</label>  
+                    <label id="mediaTileGenre4" hidden >Genre: Action, Adventure, Superhero, Sci-Fi</label> 
+                </div>
+                <div id="movieTile15" class="movieTileMain">
+                    <div class="movieTileOne" onclick="">
+                        <label class="tileTextHead" id="mediaTileLabel5" >1990 | Crime</label>
+                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
+                        <img class="tileImageMain" id="mediaTileImage5" src="images/mediaTile5.jpg" onclick="expandTile('5');" alt="media2">    
+                    </div>
+                    <label id="mediaTileHeading5" hidden >Goodfellas | 1990 | 2h 26m</label>
+                    <label id="mediaTileSummary5" hidden >A young man grows up in the mob and works very hard to advance himself through the ranks. He enjoys his life of money and luxury, but is oblivious to the horror that he causes. </label>
+                    <label id="mediaTileCast5" hidden >Cast: Robert De Niro, Ray Liotta, Joe Pesci, Lorraine Bracco, Paul Sorvino</label>  
+                    <label id="mediaTileGenre5" hidden >Genre: Crime, Biography, Thriller, Drama</label> 
+                </div>
+                <div id="movieTile16" class="movieTileMain">
+                    <div class="movieTileOne" onclick="">
+                        <label class="tileTextHead" id="mediaTileLabel1" >2020 | Documentary</label>
+                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
+                        <img class="tileImageMain" id="mediaTileImage1" src="images/mediaTile1.jpg" onclick="expandTile('1');" alt="media1">    
+                    </div>
+                    <label id="mediaTileHeading1" hidden >The Last Dance | 2020 | 10 Episodes</label>
+                    <label id="mediaTileSummary1" hidden >This series revolves around the career of Michael Jordan, with particular focus on the 1997–98 season, his final season with the Chicago Bulls of the National Basketball Association (NBA).</label>
+                    <label id="mediaTileCast1" hidden >Cast: Michael Jordan, Scottie Pippen, Dennis Rodman</label>  
+                    <label id="mediaTileGenre1" hidden >Genre: Social and Cultural Docs, Docuseries, Sports</label>          
+                </div>
+                <div id="movieTile17" class="movieTileMain">
+                    <div class="movieTileOne" onclick="">
+                        <label class="tileTextHead" id="mediaTileLabel2" >2019 | Horror/Thriller</label>
+                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
+                        <img class="tileImageMain" id="mediaTileImage2" src="images/mediaTile2.jpg" onclick="expandTile('2');" alt="media2">    
+                    </div>
+                    <label id="mediaTileHeading2" hidden >Midsommar | 2019 | 2h 28m</label>
+                    <label id="mediaTileSummary2" hidden >A couple travel to Sweden to visit their friend's rural hometown for its fabled midsummer festival, but what begins as an idyllic retreat quickly devolves into an increasingly violent and bizarre competition at the hands of a pagan cult.</label>
+                    <label id="mediaTileCast2" hidden >Cast: Florence Pugh, Jack Reynor, William Jackson Harper, Vilhelm Blomgren, Ellora Torchia, Archie Madekwe, Will Poulter</label>  
+                    <label id="mediaTileGenre2" hidden >Genre: Folk Horror, Thriller, Drama, Mystery</label> 
+                </div>
+                <div id="movieTile18" class="movieTileMain">
+                    <div class="movieTileOne" onclick="">
+                        <label class="tileTextHead" id="mediaTileLabel3" >2014 | Documentary</label>
+                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
+                        <img class="tileImageMain" id="mediaTileImage3" src="images/mediaTile3.jpg" onclick="expandTile('3');" alt="media2">    
+                    </div>
+                    <label id="mediaTileHeading3" hidden >Louis Theroux: LA Stories - City of Dogs | 2014 | 59m</label>
+                    <label id="mediaTileSummary3" hidden >Louis visits the people who are providing a home for troubled and formerly feral dogs. He speaks to them about the city's enormous canine population.</label>
+                    <label id="mediaTileCast3" hidden >Cast: Louis Theroux</label>  
+                    <label id="mediaTileGenre3" hidden >Genre: Documentary, Special Interest</label> 
+                </div>
+                <div id="movieTile19" class="movieTileMain">
+                    <div class="movieTileOne" onclick="">
+                        <label class="tileTextHead" id="mediaTileLabel4" >2016 | Action/Adventure</label>
+                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
+                        <img class="tileImageMain" id="mediaTileImage4" src="images/mediaTile4.jpg" onclick="expandTile('4');" alt="media2">    
+                    </div>
+                    <label id="mediaTileHeading4" hidden >Captain America: Civil War | 2016 | 2h 28m</label>
+                    <label id="mediaTileSummary4" hidden >Political pressure mounts to install a system of accountability when the actions of the Avengers lead to collateral damage. The new status quo deeply divides members of the team.</label>
+                    <label id="mediaTileCast4" hidden >Cast: Chris Evans, Robert Downey Jr., Scarlett Johansson, Sebastian Stan, Anthony Mackie, Don Cheadle, Jeremy Renner</label>  
+                    <label id="mediaTileGenre4" hidden >Genre: Action, Adventure, Superhero, Sci-Fi</label> 
+                </div>
+                <div id="movieTile20" class="movieTileMain">
                     <div class="movieTileOne" onclick="">
                         <label class="tileTextHead" id="mediaTileLabel5" >1990 | Crime</label>
                         <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
