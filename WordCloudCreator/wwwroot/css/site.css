@@ -1,0 +1,499 @@
+﻿.mainBody {
+    background-color: ;
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+/*    background-color: yellow;
+*/    padding-top: 60px;
+}
+.textmain {
+    color: snow;
+}
+.header {
+    height: 60px;
+    min-width: 100%;
+    font-size: 40px;
+    border-radius: 5px;
+    outline-style: solid;
+    outline: 2px solid;
+    border-color: skyblue;
+}
+.inputButtons {
+    height: 30px;
+    min-width: 120px;
+    max-width: 120px;
+    margin: 15px;
+    border: 2px solid;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: snow;
+    color: snow;
+    background-color: rgba(10,10,10,0.00);
+}
+    .inputButtons:hover {
+        outline: 1px solid;
+        outline-style: solid;
+        outline-color: white;
+    }
+    .inputButtons:focus {
+        border-color: snow;
+    }
+.inputButtonsInactive {
+    height: 30px;
+    min-width: 120px;
+    max-width: 120px;
+    margin: 15px;
+    border: 2px solid;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: #666668;
+    color: #666668;
+    background-color: rgba(10,10,10,0.00);
+}
+    .inputButtonsInactive:hover {
+        border: 2px solid;
+        border-radius: 5px;
+        border-style: solid;
+        border-color: snow;
+        color: snow;
+    }
+    .inputButtonsInactive:focus {
+
+    }
+.inputText {
+    height: 40px;
+    min-width: 120px;
+    max-width: 120px;
+    padding: 3px;
+    margin: 15px;
+    color: black;
+    border: 2px solid;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: cyan;
+    background-color: white;
+}
+.mediaArea {
+    min-width: 95%;
+    max-width: 95%;
+    min-height: 450px;
+    max-height: 450px;
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+/*    background-color: red;
+*/    z-index: 2;
+}
+.mediaAreaMain {
+    min-width: 60%;
+    max-width: 60%;
+    min-height: 550px;
+    max-height: 550px;
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 7px 7px 7px 7px;
+    background-color: #151521;
+}
+
+.mediaAreaChild {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 498px;
+    max-height: 498px;
+    display: inline;
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    outline-color: black;
+    outline: solid 3px;
+/*    background-color: deeppink;
+*/}
+
+.mediaTable {
+    min-width: 100%;
+    outline-color: black;
+    outline: solid 3px;
+    background-color: indianred;
+}
+
+.mediaAreaChildItem {
+    min-width: 100%;
+    min-height: 52px;
+    max-height: 52px;
+    padding-top: 15px;
+    margin-top: 3px;
+    display: flex;
+    justify-content: space-evenly;
+    outline-color: black;
+    outline: solid 3px;
+    background-color: blueviolet;
+}
+.mediaTableData {
+    padding: 13px;
+    color: snow;
+    outline-color: snow;
+    outline: solid 3px;
+    background-color: mediumpurple;
+}
+.mediaAreaChildItemHeading {
+    min-width: 70%;
+    max-width: 70%;
+    min-height: 52px;
+    max-height: 52px;
+    padding-top: 15px;
+    color: snow;
+    display: flex;
+    justify-content: start;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    width: 7px;
+    background-color: rgba(10,10,10,0.00);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: snow;
+}
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: snow;
+    }
+.movieTileMain {
+    min-width: 280px;
+    max-width: 280px;
+    min-height: 140px;
+    max-height: 140px;
+    position: relative;
+    display: block;
+    flex: 1 1 0px;
+    transition: transform 500ms;
+    border-radius: 7px 7px 7px 7px;
+    margin: 5px;
+    z-index: 4;
+}
+.tileImageMain {
+    min-width: 280px;
+    max-width: 280px;
+    min-height: 140px;
+    max-height: 140px;
+    object-fit: inherit;
+    object-position: 0% 0%;
+    border-radius: 7px 7px 7px 7px;
+    z-index: 3;
+}
+.tileTextHead {
+    display: none;
+    z-index: 4;
+    -webkit-transition: 1s 3s;
+}
+.movieTileOne:hover .tileTextHead {
+    display: block;
+    z-index: 4;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 280px;
+    max-width: 280px;
+    min-height: 40px;
+    max-height: 40px;
+    padding: 10px;
+    background-color: rgba(10,10,10,0.50);
+    color: snow;
+    border-radius: 0px 7px 7px 7px;
+}
+.listButton {
+    display: none;
+}
+ion-icon {
+    pointer-events: none;
+}
+.movieTileOne:hover .listButton {
+    display: block;
+    min-height: 30px;
+    max-height: 30px;
+    min-width: 30px;
+    max-width: 30px;
+    z-index: 5;
+    background-color: rgba(10,10,10,0.0);
+    color: snow;
+    border-radius: 0px;
+    border: none;
+    position: absolute;
+    top: 76%;
+    left: 88%;
+    padding-top: 3px;
+    font-size: 20px;
+}
+.hide {
+    display: block;
+    background-color: red;
+    min-height: 50px;
+    min-width: 50px;
+    z-index: 9;
+}
+.mediaRow {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 175px;
+    max-height: 175px;
+    display: flex;
+    padding-top: 12px;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    z-index: 3;
+    border-radius: 7px 7px 7px 7px;
+/*    background-color: purple;
+*/    overflow: hidden;
+}
+    .mediaRow:focus-within .movieTileMain,
+    .mediaRow:hover .movieTileMain {
+        transform: translateX(-15%);
+    }
+.movieTileMain:focus ~ .movieTileMain,
+.movieTileMain:hover ~ .movieTileMain {
+    transform: translateX(15%);
+}
+.movieTileMain:hover {
+    outline: 3px solid;
+    outline-style: solid;
+    outline-color: snow;
+    z-index: 8;
+}
+.mediaRow .movieTileMain:focus,
+.mediaRow .movieTileMain:hover {
+    transform: scale(1.2);
+    z-index: 7;
+}
+.movieTileMain:hover + .hide {
+    display: none;
+    background-color: green;
+    min-height: 50px;
+    min-width: 50px;
+}
+.rowContainter {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 250px;
+    max-height: 250px;
+/*    background-color: teal;
+*/    z-index: 2;
+}
+.ToolBar {
+    min-width: 810px;
+    width: 100%;
+    min-height: 60px;
+    margin-top: 0px;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 5;
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(10,10,10,0.75);
+}
+.ToolBarChild1 {
+    width: 100%;
+    height: 50px;
+    padding-top: 1%;
+    padding: 1%;
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    z-index: 6;
+    overflow: hidden;
+    padding-left: 16px;
+}
+.headerButtons {
+    height: 45px;
+    min-width: 100px;
+    max-width: 100px;
+    margin-top: 5px;
+    color: snow;
+    border-color: rgba(10,10,10,0.00);
+    background-color: rgba(10,10,10,0.00);
+}
+.rowHeadings {
+    font-size: 32px;
+    color: snow;
+    margin: 5px;
+    margin-left: 50px;
+}
+.rowOneDirectionButtons {
+    min-height: 50px;
+    max-height: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    z-index: 5;
+    background-color: rgba(10,10,10,0.20);
+    color: snow;
+    border-radius: 90px;
+    border: none;
+    position: absolute;
+    top: 35.5%;
+    left: 92%;
+    font-size: 20px;
+}
+    .rowOneDirectionButtons:hover {
+        background-color: rgba(10,10,10,0.30);
+        color: orange;
+    }
+.rowTwoDirectionButtons {
+    min-height: 50px;
+    max-height: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    z-index: 5;
+    background-color: rgba(10,10,10,0.20);
+    color: snow;
+    border-radius: 90px;
+    border: none;
+    position: absolute;
+    top: 83%;
+    left: 92%;
+    font-size: 20px;
+}
+    .rowTwoDirectionButtons:hover {
+        background-color: rgba(10,10,10,0.30);
+        color: orange;
+    }
+.rowOneMediaMask {
+    min-width: 93%;
+    max-width: 93%;
+    min-height: 175px;
+    max-height: 175px;
+    z-index: 0;
+    /*    background-color: greenyellow;
+*/ color: snow;
+    border: none;
+    position: absolute;
+    top: 35%;
+    font-size: 20px;
+}
+.rowTwoMediaMask {
+    min-width: 93%;
+    max-width: 93%;
+    min-height: 175px;
+    max-height: 175px;
+    z-index: 0;
+/*    background-color: greenyellow;
+*/    color: snow;
+    border: none;
+    position: absolute;
+    top: 75.5%;
+    font-size: 20px;
+}
+.tileExpanded {
+    min-width: 800px;
+    max-width: 800px;
+    min-height: 600px;
+    max-height: 600px;
+    background-color: #1d1f20;
+    position: absolute;
+    left: 50%;
+    margin-left: -400px;
+    top: 15%;
+    margin-top: 10px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 7px 7px 0px 0px;
+    display: none;
+}
+
+.expandedTileImage {
+    min-width: 800px;
+    max-width: 800px;
+    min-height: 400px;
+    max-height: 400px;
+    object-fit: inherit;
+    object-position: 0% 0%;
+    border-radius: 7px 7px 0px 0px;
+    z-index: 3;
+}
+.expandedTileChild {
+    min-width: 800px;
+    max-width: 800px;
+    min-height: 200px;
+    max-height: 200px;
+    object-fit: inherit;
+    object-position: 0% 0%;
+    border-radius: 0px 0px 0px 0px;
+    z-index: 4;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.expandedTileHeadingLabel {
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 50px;
+    max-height: 50px;
+    padding: 10px;
+    padding-left: 20px;
+    color: snow;
+    font-size: 20px;
+}
+.expandedTileSummaryLabel {
+    min-width: 500px;
+    max-width: 500px;
+    min-height: 150px;
+    max-height: 150px;
+    padding: 20px;
+    color: snow;
+}
+.expandedTileCastLabel {
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 100px;
+    max-height: 100px;
+    padding: 20px;
+    color: snow;
+}
+.expandedTileGenreLabel {
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 100px;
+    max-height: 100px;
+    padding: 20px;
+    color: snow;
+}
+.closeTileButton {
+    display: block;
+    min-height: 40px;
+    max-height: 40px;
+    min-width: 80px;
+    max-width: 80px;
+    z-index: 5;
+    background-color: rgba(10,10,10,0.01);
+    color: snow;
+    border-radius: 0px;
+    border: none;
+    position: absolute;
+    top: 92%;
+    left: 88%;
+    padding-top: 1px;
+    font-size: 20px;
+    border: 3px solid;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: snow;
+}
