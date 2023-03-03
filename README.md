@@ -1,1 +1,1 @@
-# WordCloudCreator
+# StreamingPlatformProject
