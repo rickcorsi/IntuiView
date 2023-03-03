@@ -12,240 +12,6 @@
 .textmain {
     color: snow;
 }
-.header {
-    height: 60px;
-    min-width: 100%;
-    font-size: 40px;
-    border-radius: 5px;
-    outline-style: solid;
-    outline: 2px solid;
-    border-color: skyblue;
-}
-.inputText {
-    height: 40px;
-    min-width: 120px;
-    max-width: 120px;
-    padding: 3px;
-    margin: 15px;
-    color: black;
-    border: 2px solid;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: cyan;
-    background-color: white;
-}
-.mediaArea {
-    min-width: 95%;
-    max-width: 95%;
-    min-height: 450px;
-    max-height: 450px;
-    display: flex;
-    justify-content: start;
-    flex-direction: row;
-    flex-wrap: wrap;
-/*    background-color: red;
-*/    z-index: 2;
-}
-.mediaAreaMain {
-    min-width: 60%;
-    max-width: 60%;
-    min-height: 550px;
-    max-height: 550px;
-    display: flex;
-    justify-content: start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-radius: 7px 7px 7px 7px;
-    background-color: #151521;
-}
-
-.mediaAreaChild {
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 498px;
-    max-height: 498px;
-    display: inline;
-    justify-content: start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    overflow-y: auto;
-    outline-color: black;
-    outline: solid 3px;
-/*    background-color: deeppink;
-*/}
-
-.mediaTable {
-    min-width: 100%;
-    outline-color: black;
-    outline: solid 3px;
-    background-color: indianred;
-}
-
-.mediaAreaChildItem {
-    min-width: 100%;
-    min-height: 52px;
-    max-height: 52px;
-    padding-top: 15px;
-    margin-top: 3px;
-    display: flex;
-    justify-content: space-evenly;
-    outline-color: black;
-    outline: solid 3px;
-    background-color: blueviolet;
-}
-.mediaTableData {
-    padding: 13px;
-    color: snow;
-    outline-color: snow;
-    outline: solid 3px;
-    background-color: mediumpurple;
-}
-.mediaAreaChildItemHeading {
-    min-width: 70%;
-    max-width: 70%;
-    min-height: 52px;
-    max-height: 52px;
-    padding-top: 15px;
-    color: snow;
-    display: flex;
-    justify-content: start;
-}
-/* width */
-::-webkit-scrollbar {
-    width: 7px;
-}
-/* Track */
-::-webkit-scrollbar-track {
-    width: 7px;
-    background-color: rgba(10,10,10,0.00);
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background-color: rgba(10,10,10,0.00);
-}
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-        background-color: rgba(10,10,10,0.00);
-    }
-.movieTileMain {
-    min-width: 280px;
-    max-width: 280px;
-    min-height: 140px;
-    max-height: 140px;
-    position: relative;
-    display: block;
-    flex: 1 1 0px;
-    transition: transform 500ms;
-    border-radius: 7px 7px 7px 7px;
-    margin: 5px;
-    z-index: 4;
-    overflow: hidden;
-    transition: .5s;
-}
-.tileImageMain {
-    min-width: 280px;
-    max-width: 280px;
-    min-height: 140px;
-    max-height: 140px;
-    object-fit: inherit;
-    object-position: 0% 0%;
-    border-radius: 7px 7px 7px 7px;
-    z-index: 4;
-}
-.tileTextHead {
-    display: none;
-    z-index: 4;
-    -webkit-transition: 1s 3s;
-}
-.movieTileOne:hover .tileTextHead {
-    display: block;
-    z-index: 4;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    min-width: 280px;
-    max-width: 280px;
-    min-height: 40px;
-    max-height: 40px;
-    padding: 10px;
-    background-color: rgba(10,10,10,0.50);
-    color: snow;
-    border-radius: 0px 7px 7px 7px;
-}
-.listButton {
-    display: none;
-}
-ion-icon {
-    pointer-events: none;
-}
-.movieTileOne:hover .listButton {
-    display: block;
-    min-height: 30px;
-    max-height: 30px;
-    min-width: 30px;
-    max-width: 30px;
-    z-index: 5;
-    background-color: rgba(10,10,10,0.0);
-    color: snow;
-    border-radius: 0px;
-    border: none;
-    position: absolute;
-    top: 76%;
-    left: 88%;
-    padding-top: 3px;
-    font-size: 20px;
-}
-.mediaRow {
-    min-width: 95%;
-    max-width: 95%;
-    min-height: 220px;
-    max-height: 220px;
-    display: flex;
-    padding-top: 12px;
-    padding-left: 50px;
-    z-index: 3;
-    border-radius: 7px 7px 7px 7px;
-    background-color: rgba(10,10,10,0.0);
-    align-items: center;
-    overflow-x: auto;
-    overflow-y: visible;
-    position: absolute;
-    top: 16%;
-    left: 2%;
-}
-    .mediaRow:focus-within .movieTileMain,
-    .mediaRow:hover .movieTileMain {
-        transform: translateX(-15%);
-    }
-.movieTileMain:focus ~ .movieTileMain,
-.movieTileMain:hover ~ .movieTileMain {
-    transform: translateX(15%);
-}
-.movieTileMain:hover {
-    outline: 3px solid;
-    outline-style: solid;
-    outline-color: snow;
-    z-index: 8;
-}
-.mediaRow .movieTileMain:focus,
-.mediaRow .movieTileMain:hover {
-    transform: scale(1.2);
-    z-index: 7;
-}
-.movieTileMain:hover + .hide {
-    display: none;
-    background-color: green;
-    min-height: 50px;
-    min-width: 50px;
-}
-.rowContainter {
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 250px;
-    max-height: 250px;
-/*    background-color: teal;
-*/    z-index: 2;
-}
 .ToolBar {
     min-width: 810px;
     width: 100%;
@@ -274,6 +40,127 @@ ion-icon {
     overflow: hidden;
     padding-left: 16px;
 }
+.header {
+    height: 60px;
+    min-width: 100%;
+    font-size: 40px;
+    border-radius: 5px;
+    outline-style: solid;
+    outline: 2px solid;
+    border-color: skyblue;
+}
+.inputText {
+    height: 40px;
+    min-width: 120px;
+    max-width: 120px;
+    padding: 3px;
+    margin: 15px;
+    color: black;
+    border: 2px solid;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: cyan;
+    background-color: white;
+}
+.mediaArea {
+    min-width: 95%;
+    max-width: 95%;
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+/*    background-color: red;
+*/    z-index: 2;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    width: 7px;
+    background-color: rgba(10,10,10,0.00);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: rgba(10,10,10,0.00);
+}
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(10,10,10,0.00);
+    }
+.movieTileMain {
+    min-width: 280px;
+    max-width: 280px;
+    min-height: 140px;
+    max-height: 140px;
+    position: relative;
+    display: block;
+    flex: 1 1 0px;
+    transition: transform 500ms;
+    margin: 5px;
+    z-index: 4;
+    overflow: hidden;
+    transition: .5s;
+}
+.tileImageMain {
+    min-width: 280px;
+    max-width: 280px;
+    min-height: 140px;
+    max-height: 140px;
+    object-fit: inherit;
+    object-position: 0% 0%;
+    z-index: 4;
+}
+.tileTextHead {
+    display: none;
+    z-index: 4;
+    -webkit-transition: 1s 3s;
+}
+.mediaTile:hover .tileTextHead {
+    display: block;
+    z-index: 4;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 280px;
+    max-width: 280px;
+    min-height: 40px;
+    max-height: 40px;
+    padding: 10px;
+    background-color: rgba(10,10,10,0.50);
+    color: snow;
+    border-radius: 0px 7px 0px 0px;
+}
+.listButton {
+    display: none;
+}
+ion-icon {
+    pointer-events: none;
+}
+.mediaTile:hover .listButton {
+    display: block;
+    min-height: 30px;
+    max-height: 30px;
+    min-width: 30px;
+    max-width: 30px;
+    z-index: 5;
+    background-color: rgba(10,10,10,0.0);
+    color: snow;
+    border-radius: 0px;
+    border: none;
+    position: absolute;
+    top: 76%;
+    left: 88%;
+    padding-top: 3px;
+    font-size: 20px;
+}
+.movieTileMain:hover + .hide {
+    display: none;
+    background-color: green;
+    min-height: 50px;
+    min-width: 50px;
+}
 .headerButtons {
     height: 45px;
     min-width: 100px;
@@ -283,74 +170,108 @@ ion-icon {
     border-color: rgba(10,10,10,0.00);
     background-color: rgba(10,10,10,0.00);
 }
+.mediaRow {
+    min-width: 96%;
+    max-width: 96%;
+    min-height: 200px;
+    max-height: 200px;
+    display: flex;
+    padding-top: 5px;
+    padding-left: 35px;
+    z-index: 3;
+    border-radius: 7px 7px 7px 7px;
+    padding-top: 22px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+    .mediaRow:focus-within .movieTileMain,
+    .mediaRow:hover .movieTileMain {
+        transform: translateX(-15%);
+    }
+
+.movieTileMain:focus ~ .movieTileMain,
+.movieTileMain:hover ~ .movieTileMain {
+    transform: translateX(15%);
+}
+
+.movieTileMain:hover {
+    outline: 3px solid;
+    outline-style: solid;
+    outline-color: snow;
+    z-index: 8;
+}
+
+.mediaRow .movieTileMain:focus,
+.mediaRow .movieTileMain:hover {
+    transform: scale(1.2);
+    z-index: 7;
+}
 .rowHeadings {
-    font-size: 32px;
+    font-size: 22px;
     color: snow;
-    margin: 5px;
     margin-left: 50px;
 }
+.rowContainter {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 250px;
+    max-height: 250px;
+/*    background-color: teal;
+*/    z-index: 2;
+}
+.rowMediaMask {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    max-height: 200px;
+    z-index: 0;
+    border-radius: 7px 7px 7px 7px;
+    background-color: rgba(10,10,10,0.50);
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: start;
+    display: flex;
+}
 .pre-button {
-    min-height: 220px;
-    max-height: 220px;
-    min-width: 50px;
-    max-width: 50px;
+    min-height: 200px;
+    max-height: 200px;
+    min-width: 2%;
+    max-width: 2%;
     z-index: 5;
-    background-color: rgba(10,10,10,0.25);
+    background-color: rgba(10,10,10,0.0);
     color: snow;
     border: none;
-    position: absolute;
-    top: 16%;
-    left: 2%;
     font-size: 20px;
 }
     .pre-button:focus {
         outline: none;
     }
 .nxt-button {
-    min-height: 220px;
-    max-height: 220px;
-    min-width: 50px;
-    max-width: 50px;
+    min-height: 200px;
+    max-height: 200px;
+    min-width: 2%;
+    max-width: 2%;
     z-index: 5;
-    background-color: rgba(10,10,10,0.25);
+    background-color: rgba(10,10,10,0.0);
     color: snow;
     border: none;
-    position: absolute;
-    top: 16%;
-    left: 94%;
     font-size: 20px;
 }
     .nxt-button:focus {
         outline: none;
     }
-.rowOneMediaMask {
-    min-width: 95%;
-    max-width: 95%;
-    min-height: 220px;
-    max-height: 220px;
-    padding-top: 12px;
-    padding-left: 50px;
-    z-index: 0;
-    border-radius: 7px 7px 7px 7px;
-    background-color: rgba(10,10,10,0.50);
-    align-items: center;
-    overflow-x: auto;
-    overflow-y: visible;
-    position: absolute;
-    top: 16%;
-    left: 2%;
-}
 .tileExpanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -400px;
     min-width: 800px;
     max-width: 800px;
     min-height: 600px;
     max-height: 600px;
-    background-color: #1d1f20;
-    position: absolute;
-    left: 50%;
-    margin-left: -400px;
-    top: 15%;
-    margin-top: 10px;
+    background-color: rgba(29,31,32,0.95);
     z-index: 10;
     display: flex;
     justify-content: center;
@@ -359,7 +280,6 @@ ion-icon {
     border-radius: 7px 7px 0px 0px;
     display: none;
 }
-
 .expandedTileImage {
     min-width: 800px;
     max-width: 800px;
@@ -429,9 +349,6 @@ ion-icon {
     color: snow;
     border-radius: 0px;
     border: none;
-    position: absolute;
-    top: 92%;
-    left: 88%;
     padding-top: 1px;
     font-size: 20px;
     border: 3px solid;

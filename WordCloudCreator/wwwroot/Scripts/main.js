@@ -69,11 +69,11 @@ function toggleList() {
     console.log('List Toggled');
 }
 function expandTile(n) {
-    var imgsrc = document.getElementById("mediaTileImage" + n).src;
-    var headingsrc = document.getElementById("mediaTileHeading" + n).textContent;
-    var summarysrc = document.getElementById("mediaTileSummary" + n).textContent;
-    var castsrc = document.getElementById("mediaTileCast" + n).textContent;
-    var genresrc = document.getElementById("mediaTileGenre" + n).textContent;
+    var imgsrc = document.getElementById("mediaTitleImage" + n).src;
+    var headingsrc = document.getElementById("mediaTitleHeading" + n).textContent;
+    var summarysrc = document.getElementById("mediaTitleSummary" + n).textContent;
+    var castsrc = document.getElementById("mediaTitleCast" + n).textContent;
+    var genresrc = document.getElementById("mediaTitleGenre" + n).textContent;
 
     console.log('imgsrc: ' + imgsrc);
     console.log('headingsrc: ' + headingsrc);
@@ -114,4 +114,13 @@ function scrollRowNext() {
     console.log('Row Scrolled Next');
     var element = document.getElementById('movieTile10');
     element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+}
+function goHome() {
+    location.href = "/";
+}
+function goSearch() {
+    location.href = "/Search";
+}
+function goFavorites() {
+    location.href = "/Favorites";
 }
