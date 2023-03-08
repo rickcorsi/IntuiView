@@ -115,6 +115,14 @@ function scrollRowNext() {
     var element = document.getElementById('movieTile10');
     element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
 }
+function resize_to_fit() {
+    let fontSize = window.getComputedStyle(output).fontSize;
+    output.style.fontSize = (parseFloat(fontSize) - 1) + 'px';
+
+    if (output.clientHeight >= outputContainer.clientHeight) {
+        resize_to_fit();
+    }
+}
 function goHome() {
     location.href = "/";
 }

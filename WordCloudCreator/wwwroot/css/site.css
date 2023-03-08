@@ -170,6 +170,15 @@ ion-icon {
     border-color: rgba(10,10,10,0.00);
     background-color: rgba(10,10,10,0.00);
 }
+.mediaHighlights {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 500px;
+    max-height: 500px;
+    margin-bottom: 15px;
+    background-color: yellow;
+    border-radius: 7px 7px 7px 7px;
+}
 .mediaRow {
     min-width: 96%;
     max-width: 96%;
@@ -184,27 +193,23 @@ ion-icon {
     overflow-x: auto;
     overflow-y: hidden;
 }
-
     .mediaRow:focus-within .movieTileMain,
     .mediaRow:hover .movieTileMain {
-        transform: translateX(-15%);
+/*        transform: translateX(-15%);*/
     }
-
 .movieTileMain:focus ~ .movieTileMain,
 .movieTileMain:hover ~ .movieTileMain {
-    transform: translateX(15%);
+/*    transform: translateX(15%);*/
 }
-
 .movieTileMain:hover {
     outline: 3px solid;
     outline-style: solid;
     outline-color: snow;
     z-index: 8;
 }
-
 .mediaRow .movieTileMain:focus,
 .mediaRow .movieTileMain:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
     z-index: 7;
 }
 .rowHeadings {
@@ -313,6 +318,8 @@ ion-icon {
     padding-left: 20px;
     color: snow;
     font-size: 20px;
+    background-color: rgba(10,10,10,0.50);
+    border-radius: 0px 0px 17px 0px;
 }
 .expandedTileSummaryLabel {
     min-width: 500px;
@@ -338,21 +345,68 @@ ion-icon {
     padding: 20px;
     color: snow;
 }
-.closeTileButton {
-    display: block;
-    min-height: 40px;
-    max-height: 40px;
-    min-width: 80px;
-    max-width: 80px;
-    z-index: 5;
-    background-color: rgba(10,10,10,0.01);
+.searchBarContainer {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 70px;
+    max-height: 70px;
+    margin-top: 30px;
+    background-color: rgba(0,0,0,0.0);
+    outline: 3px solid;
+    outline-style: solid;
+    outline-color: snow;
     color: snow;
-    border-radius: 0px;
-    border: none;
-    padding-top: 1px;
-    font-size: 20px;
-    border: 3px solid;
-    border-radius: 15px;
-    border-style: solid;
-    border-color: snow;
+    border-radius: 7px;
+}
+.searchBarInput {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    background-color: rgba(0,0,0,0.0);
+    font-size: 35px;
+    padding-left: 15px;
+    color: snow;
+    border-radius: 7px;
+}
+::placeholder {
+    color: snow;
+    opacity: 1;
+}
+input {
+    caret-color: snow;
+}
+.searchRow {
+    min-width: 100%;
+    max-width: 100%;
+    z-index: 2;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.mediaRowSearch {
+    min-width: 100%;
+    max-width: 100%;
+    display: flex;
+    padding-top: 5px;
+    z-index: 3;
+    border-radius: 7px 7px 7px 7px;
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.rowMediaMaskSearch {
+    min-width: 100%;
+    max-width: 100%;
+    z-index: 0;
+    border-radius: 7px 7px 7px 7px;
+    background-color: rgba(10,10,10,0.50);
+    padding-bottom: 22px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: start;
+    display: flex;
 }

@@ -2,7 +2,7 @@
 
 html, body {
     font-family: 'Lato', sans-serif;
-    background: linear-gradient(-45deg, #05111e, #03060a, #10161c, #04213d);
+    background: linear-gradient(-45deg, #05111e, #03060a, #10161c, #032442);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 100vh;
