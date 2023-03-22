@@ -173,20 +173,51 @@ ion-icon {
 .mediaHighlights {
     min-width: 100%;
     max-width: 100%;
-    min-height: 500px;
-    max-height: 500px;
-    margin-bottom: 15px;
-    background-color: yellow;
+    min-height: 440px;
+    max-height: 440px;
+    background-color: rgba(10,10,10,0.50);
     border-radius: 7px 7px 7px 7px;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 18px;
+}
+.mediaHighlightsMainTile {
+    min-width: 800px;
+    max-width: 800px;
+    min-height: 400px;
+    max-height: 400px;
+    position: relative;
+    display: block;
+    flex: 1 1 0px;
+    transition: transform 500ms;
+    z-index: 5;
+    overflow: hidden;
+    transition: .5s;
+    margin-right: 10px;
+}
+.HighlightsTileImage {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 50%;
+    max-height: 50%;
+    object-fit: inherit;
+    object-position: 0% 0%;
+    z-index: 4;
+}
+.mediaHighlightsMainTile:hover {
+    outline: 5px solid;
+    outline-style: solid;
+    outline-color: snow;
+    z-index: 8;
 }
 .mediaRow {
-    min-width: 96%;
-    max-width: 96%;
+    min-width: 88%;
+    max-width: 88%;
     min-height: 200px;
     max-height: 200px;
     display: flex;
-    padding-top: 5px;
-    padding-left: 35px;
+    padding-left: 15px;
     z-index: 3;
     border-radius: 7px 7px 7px 7px;
     padding-top: 22px;
@@ -241,31 +272,31 @@ ion-icon {
 .pre-button {
     min-height: 200px;
     max-height: 200px;
-    min-width: 2%;
-    max-width: 2%;
+    min-width: 6%;
+    max-width: 6%;
     z-index: 5;
-    background-color: rgba(10,10,10,0.0);
+    background-color: rgba(10,10,10,.5);
     color: snow;
     border: none;
-    font-size: 20px;
+    font-size: 30px;
+    border: solid;
+    border-width: 0 2px 0px 0px;
+    border-color: snow;
 }
-    .pre-button:focus {
-        outline: none;
-    }
 .nxt-button {
     min-height: 200px;
     max-height: 200px;
-    min-width: 2%;
-    max-width: 2%;
+    min-width: 6%;
+    max-width: 6%;
     z-index: 5;
-    background-color: rgba(10,10,10,0.0);
+    background-color: rgba(10,10,10,0.5);
     color: snow;
     border: none;
-    font-size: 20px;
+    font-size: 30px;
+    border: solid;
+    border-width: 0 0px 0px 2px;
+    border-color: snow;
 }
-    .nxt-button:focus {
-        outline: none;
-    }
 .tileExpanded {
     position: fixed;
     top: 50%;
