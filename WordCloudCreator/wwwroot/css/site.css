@@ -161,6 +161,9 @@ ion-icon {
     min-height: 50px;
     min-width: 50px;
 }
+.is-hidden {
+    display: none;
+}
 .headerButtons {
     height: 45px;
     min-width: 100px;
@@ -181,6 +184,7 @@ ion-icon {
     overflow-x: auto;
     overflow-y: hidden;
     padding: 18px;
+    margin-bottom: 22px;
 }
 .mediaHighlightsMainTile {
     min-width: 800px;
@@ -279,9 +283,6 @@ ion-icon {
     color: snow;
     border: none;
     font-size: 30px;
-    border: solid;
-    border-width: 0 2px 0px 0px;
-    border-color: snow;
 }
 .nxt-button {
     min-height: 200px;
@@ -293,9 +294,6 @@ ion-icon {
     color: snow;
     border: none;
     font-size: 30px;
-    border: solid;
-    border-width: 0 0px 0px 2px;
-    border-color: snow;
 }
 .tileExpanded {
     position: fixed;
@@ -418,26 +416,40 @@ input {
     min-width: 100%;
     max-width: 100%;
     display: flex;
-    padding-top: 5px;
     z-index: 3;
     border-radius: 7px 7px 7px 7px;
-    padding-top: 22px;
+    padding-top: 7px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
-    overflow-x: hidden;
-    overflow-y: auto;
 }
 .rowMediaMaskSearch {
+    min-height: 460px;
+    max-height: 460px;
     min-width: 100%;
     max-width: 100%;
     z-index: 0;
     border-radius: 7px 7px 7px 7px;
     background-color: rgba(10,10,10,0.50);
-    padding-bottom: 22px;
-    overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: hidden;
     justify-content: start;
     display: flex;
+}
+.spacer {
+    min-width: 280px;
+    max-width: 280px;
+    min-height: 140px;
+    max-height: 140px;
+    position: relative;
+    display: block;
+    flex: 1 1 0px;
+    transition: transform 500ms;
+    margin: 5px;
+    z-index: 4;
+    overflow: hidden;
+    transition: .5s;
+    background-color: transparent;
 }
