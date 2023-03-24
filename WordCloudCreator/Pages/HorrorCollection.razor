@@ -1,0 +1,183 @@
+﻿@page "/HorrorCollection"
+
+<PageTitle>Stream Project</PageTitle>
+
+<div class="mainBody">
+    <div class="ToolBar">
+        <div class="ToolBarChild">
+            <label class="headerLogo">LOGO HERE</label>
+            <input type="button" class="headerButtons" id="btnHome" value="Home" onclick="goHome();">
+            <input type="button" class="headerButtons" id="btnSearch" value="Search" onclick="goSearch();">
+            <input type="button" class="headerButtons" id="btnFavorites" value="Favorites" onclick="goFavorites();">
+        </div>
+    </div>
+    <div class="mediaArea">
+        <div id="overlay" class="screenOverlay" onclick="">
+            <div class="screenOverlayClickArea1" onclick="closeTile();"></div>
+            <div id="tileMain" class="tileExpanded" onclick="">
+                <img class="expandedTileImage" id="expandedTileImage" onclick="" alt="">
+                <div class="expandedTileChild" id="expandedTileChild">
+                    <label id="mediaTileHeadingExpanded" class="expandedTileHeadingLabel"></label>
+                    <label id="mediaTileSummaryExpanded" class="expandedTileSummaryLabel"></label>
+                    <label id="mediaTileCastExpanded" class="expandedTileCastLabel"></label>  
+                    <label id="mediaTileGenreExpanded" class="expandedTileGenreLabel"></label>            
+                </div>
+                <h2 class="similarTitlesHeadings">Similar Titles</h2>
+                <div class="similarTitlesExpanded">
+                        <div id="SimilarMediaTitle_0001" class="movieTileMain">
+                        </div>
+                        <div id="SimilarMediaTitle_0002" class="movieTileMain">      
+                        </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="rowHeadingWhatsNew">The Horror Collection</h2>
+        <div class="mediaHighlights">
+            <div id="WhatsNew1" class="newtile-primary">
+                <div class="HighlightsMediaTile">
+                    <img class="HighlightsTileImage" id="mediaTitleImage_0006" src="images/mediaTitle_0006.jpg" onclick="expandTile('_0006');">    
+                </div>
+                <label id="mediaTitleHeading_0006" hidden >Midsommar | 2019 | 2h 28m</label>
+                <label id="mediaTitleSummary_0006" hidden >A couple travel to Sweden to visit their friend's rural hometown for its fabled midsummer festival, but what begins as an idyllic retreat quickly devolves into an increasingly violent and bizarre competition at the hands of a pagan cult.</label>
+                <label id="mediaTitleCast_0006" hidden >Cast: Florence Pugh, Jack Reynor, William Jackson Harper, Vilhelm Blomgren, Ellora Torchia, Archie Madekwe, Will Poulter</label>  
+                <label id="mediaTitleGenre_0006" hidden >Genre: Folk Horror, Thriller, Drama, Mystery</label>          
+            </div>
+            <div id="WhatsNew2" class="newtile-secondary">
+                <div class="HighlightsMediaTile">
+                    <img class="HighlightsTileImage" id="mediaTitleImage_0002" src="images/mediaTitle_0002.jpg" onclick="expandTile('_0002');">    
+                </div>
+                <label id="mediaTitleHeading_0002" hidden >The Witch | 2015 | 1h 32m</label>
+                <label hidden >The VVitch</label>
+                <label id="mediaTitleSummary_0002" hidden >A farmer relocates his family to a plot on the edge of an ominous forest.</label>
+                <label id="mediaTitleCast_0002" hidden >Cast: Anya Taylor-Joy, Ralph Ineson, Kate Dickie, Harvey Scrimshaw, Ellie Grainger, Lucas Dawson</label>  
+                <label id="mediaTitleGenre_0002" hidden >Genre: Folk Horror, Drama, Supernatural Horror</label>          
+                <label id="similarTitle1_0002" hidden >_0003</label>          
+                <label id="similarTitle2_0002" hidden >_0004</label>           
+            </div>
+        </div>
+        <div class="searchRow">
+            <div id="" class="rowMediaMaskSearch">
+                <div id="mediaRow" class="mediaRowSearch">
+                    <div id="MediaTitle_0001" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0001" >2014 | Horror</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0001" src="images/mediaTitle_0001.jpg" onclick="expandTile('_0001');">    
+                        </div>
+                        <label id="mediaTitleHeading_0001" hidden >It Follows | 2014 | 1h 40m</label>
+                        <label id="mediaTitleSummary_0001" hidden >After a seemingly innocent sexual encounter, 19-year-old Jay becomes trapped by a vicious curse - "it" is following her, and the only way to save herself is to put others in harm's way.</label>
+                        <label id="mediaTitleCast_0001" hidden >Cast: Maika Monroe, Keir Gilchrist, Olivia Luccardi, Lili Sepe, Daniel Zovatto, Jake Weary</label>  
+                        <label id="mediaTitleGenre_0001" hidden >Genre: Supernatural, Psychological Horror, Thriller</label>     
+                        <label id="similarTitle1_0001" hidden >_0006</label>          
+                        <label id="similarTitle2_0001" hidden >_0004</label>                          
+                    </div>
+                    <div id="MediaTitle_0002" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0002" >2015 | Horror</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0002" src="images/mediaTitle_0002.jpg" onclick="expandTile('_0002');">    
+                        </div>
+                        <label id="mediaTitleHeading_0002" hidden >The Witch | 2015 | 1h 32m</label>
+                        <label hidden >The VVitch</label>
+                        <label id="mediaTitleSummary_0002" hidden >A farmer relocates his family to a plot on the edge of an ominous forest.</label>
+                        <label id="mediaTitleCast_0002" hidden >Cast: Anya Taylor-Joy, Ralph Ineson, Kate Dickie, Harvey Scrimshaw, Ellie Grainger, Lucas Dawson</label>  
+                        <label id="mediaTitleGenre_0002" hidden >Genre: Folk Horror, Drama, Supernatural Horror</label>          
+                        <label id="similarTitle1_0002" hidden >_0003</label>          
+                        <label id="similarTitle2_0002" hidden >_0004</label>  
+                    </div>
+                    <div id="MediaTitle_0003" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0003" >2014 | Horror</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0003" src="images/mediaTitle_0003.jpg" onclick="expandTile('_0003');">    
+                        </div>
+                        <label id="mediaTitleHeading_0003" hidden >The Taking of Deborah Logan | 2014 | 1h 30m</label>
+                        <label id="mediaTitleSummary_0003" hidden >An elderly woman battling Alzheimer's disease agrees to let a film crew document her condition, but what they discover is something far more sinister going on.</label>
+                        <label id="mediaTitleCast_0003" hidden >Cast: Jill Larson, Anne Ramsay, Michelle Ang, Ryan Cutrona</label>  
+                        <label id="mediaTitleGenre_0003" hidden >Genre: Supernatural Horror, Found Footage</label>  
+                        <label id="similarTitle1_0003" hidden >_0025</label>          
+                        <label id="similarTitle2_0003" hidden >_0002</label>                          
+                    </div>
+                    <div id="MediaTitle_0025" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0025" >2007 | Horror</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0025" src="images/mediaTitle_0025.jpg" onclick="expandTile('_0025');">    
+                        </div>
+                        <label id="mediaTitleHeading_0025" hidden >The Poughkeepsie Tapes | 2007 | 1h 26m</label>
+                        <label id="mediaTitleSummary_0025" hidden >In an abandoned house in Poughkeepsie, New York murder investigators uncover hundreds of tapes showing decades of a serial killer's work.</label>
+                        <label id="mediaTitleCast_0025" hidden >Cast: Stacy Chbosky, Ben Messmer, Ivar Brogger, Lou George, Michael Lawson</label>  
+                        <label id="mediaTitleGenre_0025" hidden >Genre:  Horror, Thriller, Mystery</label>  
+                        <label id="similarTitle1_0025" hidden >_0003</label>          
+                        <label id="similarTitle2_0025" hidden >_0006</label>                          
+                    </div>
+                    <div id="MediaTitle_0004" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0004" >2005 | Horror</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0004" src="images/mediaTitle_0004.jpg" onclick="expandTile('_0004');">    
+                        </div>
+                        <label id="mediaTitleHeading_0004" hidden >The Exorcism of Emily Rose | 2005 | 2h 2m</label>
+                        <label id="mediaTitleSummary_0004" hidden >A lawyer takes on a negligent homicide case involving a priest who performed an exorcism on a young girl.</label>
+                        <label id="mediaTitleCast_0004" hidden >Cast: Laura Linney, Tom Wilkinson, Campbell Scott, Colm Feore, Jennifer Carpenter, Mary Beth Hurt, Henry Czerny, Shohreh Aghdashloo</label>  
+                        <label id="mediaTitleGenre_0004" hidden >Genre: Supernatural Horror, Legal Drama, Thriller, Crime</label>        
+                        <label id="similarTitle1_0004" hidden >_0003</label>          
+                        <label id="similarTitle2_0004" hidden >_0005</label>                        
+                    </div>
+                    <div id="MediaTitle_0005" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0005" >2010 | Horror</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0005" src="images/mediaTitle_0005.jpg" onclick="expandTile('_0005');">    
+                        </div>
+                        <label id="mediaTitleHeading_0005" hidden >Devil | 2010 | 1h 20m</label>
+                        <label id="mediaTitleSummary_0005" hidden >"A group of people are trapped in an elevator and the Devil is mysteriously amongst them."</label>
+                        <label id="mediaTitleCast_0005" hidden >Cast: Chris Messina, Logan Marshall-Green, Geoffrey Arend, Bojana Novakovic, Jenny O'Hara, Bokeem Woodbine, Matt Craven, Jacob Vargas</label>  
+                        <label id="mediaTitleGenre_0005" hidden >Genre: Supernatural Horror, Thriller, Mystery</label>    
+                        <label id="similarTitle1_0005" hidden >_0001</label>          
+                        <label id="similarTitle2_0005" hidden >_0004</label> 
+                    </div>
+                    <div id="MediaTitle_0006" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0006" >2019 | Horror</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0006" src="images/mediaTitle_0006.jpg" onclick="expandTile('_0006');">    
+                        </div>
+                        <label id="mediaTitleHeading_0006" hidden >Midsommar | 2019 | 2h 28m</label>
+                        <label id="mediaTitleSummary_0006" hidden >A couple travel to Sweden to visit their friend's rural hometown for its fabled midsummer festival, but what begins as an idyllic retreat quickly devolves into an increasingly violent and bizarre competition at the hands of a pagan cult.</label>
+                        <label id="mediaTitleCast_0006" hidden >Cast: Florence Pugh, Jack Reynor, William Jackson Harper, Vilhelm Blomgren, Ellora Torchia, Archie Madekwe, Will Poulter</label>  
+                        <label id="mediaTitleGenre_0006" hidden >Genre: Folk Horror, Thriller, Drama, Mystery</label>
+                        <label id="similarTitle1_0006" hidden >_0001</label>          
+                        <label id="similarTitle2_0006" hidden >_0002</label>                         
+                    </div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@code {
+
+}

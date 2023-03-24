@@ -1,0 +1,152 @@
+﻿@page "/DramaCollection"
+
+<PageTitle>Stream Project</PageTitle>
+
+<div class="mainBody">
+    <div class="ToolBar">
+        <div class="ToolBarChild">
+            <label class="headerLogo">LOGO HERE</label>
+            <input type="button" class="headerButtons" id="btnHome" value="Home" onclick="goHome();">
+            <input type="button" class="headerButtons" id="btnSearch" value="Search" onclick="goSearch();">
+            <input type="button" class="headerButtons" id="btnFavorites" value="Favorites" onclick="goFavorites();">
+        </div>
+    </div>
+    <div class="mediaArea">
+        <div id="overlay" class="screenOverlay" onclick="">
+            <div class="screenOverlayClickArea1" onclick="closeTile();"></div>
+            <div id="tileMain" class="tileExpanded" onclick="">
+                <img class="expandedTileImage" id="expandedTileImage" onclick="" alt="">
+                <div class="expandedTileChild" id="expandedTileChild">
+                    <label id="mediaTileHeadingExpanded" class="expandedTileHeadingLabel"></label>
+                    <label id="mediaTileSummaryExpanded" class="expandedTileSummaryLabel"></label>
+                    <label id="mediaTileCastExpanded" class="expandedTileCastLabel"></label>  
+                    <label id="mediaTileGenreExpanded" class="expandedTileGenreLabel"></label>            
+                </div>
+                <h2 class="similarTitlesHeadings">Similar Titles</h2>
+                <div class="similarTitlesExpanded">
+                        <div id="SimilarMediaTitle_0001" class="movieTileMain">
+                        </div>
+                        <div id="SimilarMediaTitle_0002" class="movieTileMain">      
+                        </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="rowHeadingWhatsNew">The Drama Collection</h2>
+        <div class="mediaHighlights">
+            <div id="WhatsNew1" class="newtile-primary">
+                <div class="HighlightsMediaTile">
+                    <img class="HighlightsTileImage" id="mediaTitleImage_0016" src="images/mediaTitle_0016.jpg" onclick="expandTile('_0016');">    
+                </div>
+                <label id="mediaTitleHeading_0016" hidden >The Place Beyond the Pines | 2012 | 2h 20m</label>
+                <label id="mediaTitleSummary_0016" hidden >A motorcycle stunt-rider turns to robbing banks as a way to provide for his lover and their newborn--a decision that sets him on a collision course with an ambitious rookie cop navigating a department ruled by a corrupt detective.</label>
+                <label id="mediaTitleCast_0016" hidden >Cast: Ryan Gosling, Bradley Cooper, Eva Mendes, Ray Liotta, Ben Mendelsohn, Rose Byrne, Mahershala Ali, Bruce Greenwood, Harris Yulin</label>  
+                <label id="mediaTitleGenre_0016" hidden >Genre: Drama, Crime, Romance, Thriller</label>            
+            </div>
+            <div id="WhatsNew2" class="newtile-secondary">
+                <div class="HighlightsMediaTile">
+                    <img class="HighlightsTileImage" id="mediaTitleImage_0017" src="images/mediaTitle_0017.jpg" onclick="expandTile('_0017');">    
+                </div>
+                <label id="mediaTitleHeading_0017" hidden >Prisoners | 2013 | 2h 33m</label>
+                <label id="mediaTitleSummary_0017" hidden >When Keller Dover's daughter and her friend go missing, he takes matters into his own hands as the police pursue multiple leads and the pressure mounts.</label>
+                <label id="mediaTitleCast_0017" hidden >Cast: Hugh Jackman, Jake Gyllenhaal, Viola Davis, Maria Bello, Terrence Howard, Melissa Leo, Paul Dano</label>  
+                <label id="mediaTitleGenre_0017" hidden >Genre: Thriller, Drama, Crime</label>       
+            </div>
+        </div>
+        <div class="searchRow">
+            <div id="" class="rowMediaMaskSearch">
+                <div id="mediaRow" class="mediaRowSearch">
+                    <div id="MediaTitle_0010" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0010" >1990 | Crime</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0010" src="images/mediaTitle_0010.jpg" onclick="expandTile('_0010');">    
+                        </div>
+                        <label id="mediaTitleHeading_0010" hidden >Goodfellas | 1990 | 2h 26m</label>
+                        <label id="mediaTitleSummary_0010" hidden >A young man grows up in the mob and works very hard to advance himself through the ranks. He enjoys his life of money and luxury, but is oblivious to the horror that he causes.</label>
+                        <label id="mediaTitleCast_0010" hidden >Cast: Robert De Niro, Ray Liotta, Joe Pesci, Lorraine Bracco, Paul Sorvino</label>  
+                        <label id="mediaTitleGenre_0010" hidden >Genre: Crime, Drama, Biography, Thriller</label>
+                        <label id="similarTitle1_0010" hidden >_0018</label>          
+                        <label id="similarTitle2_0010" hidden >_0016</label>                        
+                    </div>
+                    <div id="MediaTitle_0016" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0016" >2012 | Drama</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0016" src="images/mediaTitle_0016.jpg" onclick="expandTile('_0016');">    
+                        </div>
+                        <label id="mediaTitleHeading_0016" hidden >The Place Beyond the Pines | 2012 | 2h 20m</label>
+                        <label id="mediaTitleSummary_0016" hidden >A motorcycle stunt-rider turns to robbing banks as a way to provide for his lover and their newborn--a decision that sets him on a collision course with an ambitious rookie cop navigating a department ruled by a corrupt detective.</label>
+                        <label id="mediaTitleCast_0016" hidden >Cast: Ryan Gosling, Bradley Cooper, Eva Mendes, Ray Liotta, Ben Mendelsohn, Rose Byrne, Mahershala Ali, Bruce Greenwood, Harris Yulin</label>  
+                        <label id="mediaTitleGenre_0016" hidden >Genre: Drama, Crime, Romance, Thriller</label>   
+                        <label id="similarTitle1_0016" hidden >_0018</label>          
+                        <label id="similarTitle2_0016" hidden >_0017</label>                           
+                    </div>
+                    <div id="MediaTitle_0017" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0017" >2013 | Thriller</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0017" src="images/mediaTitle_0017.jpg" onclick="expandTile('_0017');">    
+                        </div>
+                        <label id="mediaTitleHeading_0017" hidden >Prisoners | 2013 | 2h 33m</label>
+                        <label id="mediaTitleSummary_0017" hidden >When Keller Dover's daughter and her friend go missing, he takes matters into his own hands as the police pursue multiple leads and the pressure mounts.</label>
+                        <label id="mediaTitleCast_0017" hidden >Cast: Hugh Jackman, Jake Gyllenhaal, Viola Davis, Maria Bello, Terrence Howard, Melissa Leo, Paul Dano</label>  
+                        <label id="mediaTitleGenre_0017" hidden >Genre: Thriller, Drama, Crime</label> 
+                        <label id="similarTitle1_0017" hidden >_0019</label>          
+                        <label id="similarTitle2_0017" hidden >_0016</label>                           
+                    </div>
+                    <div id="MediaTitle_0018" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0018" >2003 | Drama</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0018" src="images/mediaTitle_0018.jpg" onclick="expandTile('_0018');">    
+                        </div>
+                        <label id="mediaTitleHeading_0018" hidden >Mystic River | 2003 | 2h 17m</label>
+                        <label id="mediaTitleSummary_0018" hidden >The lives of three men who were childhood friends are shattered when one of them has a family tragedy.</label>
+                        <label id="mediaTitleCast_0018" hidden >Cast: Sean Penn, Tim Robbins, Kevin Bacon, Laurence Fishburne, Marcia Gay Harden, Laura Linney</label>  
+                        <label id="mediaTitleGenre_0018" hidden >Genre: Drama, Thriller, Crime, Neo-noir, Mystery</label>   
+                        <label id="similarTitle1_0018" hidden >_0010</label>          
+                        <label id="similarTitle2_0018" hidden >_0016</label>                        
+                    </div>
+                    <div id="MediaTitle_0019" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0019" >2015 | Thriller</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0019" src="images/mediaTitle_0019.jpg" onclick="expandTile('_0019');">    
+                        </div>
+                        <label id="mediaTitleHeading_0019" hidden >Spotlight | 2015 | 2h 8m</label>
+                        <label id="mediaTitleSummary_0019" hidden >The true story of how the Boston Globe uncovered the massive scandal of child molestation and cover-up within the local Catholic Archdiocese, shaking the entire Catholic Church to its core.</label>
+                        <label id="mediaTitleCast_0019" hidden >Cast: Mark Ruffalo, Michael Keaton, Rachel McAdams, Liev Schreiber, John Slattery, Stanley Tucci</label>  
+                        <label id="mediaTitleGenre_0019" hidden >Genre: Thriller, Drama, Historical, Crime</label>     
+                        <label id="similarTitle1_0019" hidden >_0017</label>          
+                        <label id="similarTitle2_0019" hidden >_0016</label>                          
+                    </div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@code {
+
+}

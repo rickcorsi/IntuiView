@@ -7,7 +7,7 @@
     flex-direction: row;
     flex-wrap: wrap;
 /*    background-color: yellow;
-*/    padding-top: 60px;
+*/    padding-top: 43px;
 }
 .textmain {
     color: snow;
@@ -63,14 +63,13 @@
     background-color: white;
 }
 .mediaArea {
-    min-width: 95%;
-    max-width: 95%;
+    min-width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: start;
     flex-direction: row;
     flex-wrap: wrap;
-/*    background-color: red;
-*/    z-index: 2;
+    z-index: 2;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -174,8 +173,8 @@ ion-icon {
     background-color: rgba(10,10,10,0.00);
 }
 .mediaHighlights {
-    min-width: 100%;
-    max-width: 100%;
+    min-width: 95%;
+    max-width: 95%;
     min-height: 440px;
     max-height: 440px;
     background-color: rgba(10,10,10,0.50);
@@ -185,8 +184,12 @@ ion-icon {
     overflow-y: hidden;
     padding: 18px;
     margin-bottom: 22px;
+    margin-left: 2.5%;
 }
 .mediaHighlightsMainTile {
+
+}
+.newtile-primary {
     min-width: 800px;
     max-width: 800px;
     min-height: 400px;
@@ -199,6 +202,57 @@ ion-icon {
     overflow: hidden;
     transition: .5s;
     margin-right: 10px;
+/*    animation: newtile-primary 3s linear infinite;
+*/}
+.newtile-secondary {
+    min-width: 800px;
+    max-width: 800px;
+    min-height: 400px;
+    max-height: 400px;
+    position: relative;
+    display: block;
+    flex: 1 1 0px;
+    transition: transform 500ms;
+    z-index: 5;
+    overflow: hidden;
+    transition: .5s;
+    margin-right: 10px;
+/*    animation: newtile-secondary 3s linear infinite;
+*/}
+@keyframes newtile-primary {
+/*    from {
+        left: 0%;
+    }
+
+    to {
+        left: -100%;
+    }*/
+}
+
+@keyframes newtile-secondary {
+/*    from {
+        left: 100%;
+    }
+
+    to {
+        left: 0%;
+    }*/
+}
+.rowStart {
+    min-width: 10px;
+    max-width: 10px;
+    min-height: 140px;
+    max-height: 140px;
+    display: block;
+    background-color: transparent;
+}
+.rowEnd {
+    min-width: 25px;
+    max-width: 25px;
+    min-height: 140px;
+    max-height: 140px;
+    display: block;
+    background-color: transparent;
 }
 .HighlightsTileImage {
     min-width: 100%;
@@ -209,7 +263,13 @@ ion-icon {
     object-position: 0% 0%;
     z-index: 4;
 }
-.mediaHighlightsMainTile:hover {
+.newtile-primary:hover {
+    outline: 5px solid;
+    outline-style: solid;
+    outline-color: snow;
+    z-index: 8;
+}
+.newtile-secondary:hover {
     outline: 5px solid;
     outline-style: solid;
     outline-color: snow;
@@ -232,6 +292,9 @@ ion-icon {
     .mediaRow:hover .movieTileMain {
 /*        transform: translateX(-15%);*/
     }
+    .mediaRow::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+    }
 .movieTileMain:focus ~ .movieTileMain,
 .movieTileMain:hover ~ .movieTileMain {
 /*    transform: translateX(15%);*/
@@ -252,13 +315,19 @@ ion-icon {
     color: snow;
     margin-left: 50px;
 }
+.rowHeadingWhatsNew {
+    font-size: 32px;
+    color: snow;
+    margin-left: 75px;
+    margin-top: 15px;
+}
 .rowContainter {
-    min-width: 100%;
-    max-width: 100%;
+    min-width: 95%;
+    max-width: 95%;
     min-height: 250px;
     max-height: 250px;
-/*    background-color: teal;
-*/    z-index: 2;
+    z-index: 2;
+    margin-left: 2.5%;
 }
 .rowMediaMask {
     min-width: 100%;
@@ -303,16 +372,39 @@ ion-icon {
     margin-left: -400px;
     min-width: 800px;
     max-width: 800px;
-    min-height: 600px;
-    max-height: 600px;
-    background-color: rgba(29,31,32,0.95);
-    z-index: 10;
+    min-height: 100%;
+    max-height: 100%;
+    background-color: rgba(10,10,10,0.95);
+    z-index: 11;
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     border-radius: 7px 7px 0px 0px;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+    .tileExpanded::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+    }
+.screenOverlay {
     display: none;
+    background-color: rgba(10,10,10,0.75);
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+.screenOverlayClickArea1 {
+    display: block;
+    background-color: transparent;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 11;
 }
 .expandedTileImage {
     min-width: 800px;
@@ -323,6 +415,7 @@ ion-icon {
     object-position: 0% 0%;
     border-radius: 7px 7px 0px 0px;
     z-index: 3;
+    animation: fadeIn 5s;
 }
 .expandedTileChild {
     min-width: 800px;
@@ -337,46 +430,85 @@ ion-icon {
     justify-content: start;
     flex-direction: column;
     flex-wrap: wrap;
+    animation: fadeIn 5s;
 }
 .expandedTileHeadingLabel {
     min-width: 500px;
     max-width: 500px;
     min-height: 50px;
     max-height: 50px;
-    padding: 10px;
-    padding-left: 20px;
+    padding: 8px;
+    padding-left: 8px;
     color: snow;
+    overflow-x: hidden;
+    overflow-y: auto;
     font-size: 20px;
     background-color: rgba(10,10,10,0.50);
-    border-radius: 0px 0px 17px 0px;
+    border-radius: 0px 0px 0px 0px;
+    border: solid;
+    border-width: 0px 2px 2px 0px;
+    border-color: snow;
+    animation: fadeIn 5s;
 }
 .expandedTileSummaryLabel {
     min-width: 500px;
     max-width: 500px;
     min-height: 150px;
     max-height: 150px;
-    padding: 20px;
+    padding: 5px;
     color: snow;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: solid;
+    border-width: 0px 2px 2px 0px;
+    border-color: snow;
+    animation: fadeIn 5s;
 }
 .expandedTileCastLabel {
     min-width: 300px;
     max-width: 300px;
-    min-height: 100px;
-    max-height: 100px;
-    padding: 20px;
+    min-height: 25px;
+    max-height: 125px;
+    padding: 5px;
     color: snow;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: solid;
+    border-width: 0px 0px 2px 0px;
+    border-color: snow;
 }
 .expandedTileGenreLabel {
     min-width: 300px;
     max-width: 300px;
-    min-height: 100px;
-    max-height: 100px;
-    padding: 20px;
+    min-height: 25px;
+    max-height: 75px;
+    padding: 5px;
     color: snow;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: solid;
+    border-width: 0px 0px 2px 0px;
+    border-color: snow;
 }
-.searchBarContainer {
+.similarTitlesExpanded {
     min-width: 100%;
     max-width: 100%;
+    min-height: 300px;
+    max-height: 300px;
+    display: flex;
+    justify-content: center;
+    color: snow;
+    padding-top: 15px;
+}
+.similarTitlesHeadings {
+    font-size: 22px;
+    color: snow;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+.searchBarContainer {
+    min-width: 95%;
+    max-width: 95%;
     min-height: 70px;
     max-height: 70px;
     margin-top: 30px;
@@ -385,6 +517,7 @@ ion-icon {
     outline-style: solid;
     outline-color: snow;
     color: snow;
+    margin-left: 2.5%;
     border-radius: 7px;
 }
 .searchBarInput {
@@ -431,7 +564,6 @@ input {
     min-width: 100%;
     max-width: 100%;
     z-index: 0;
-    border-radius: 7px 7px 7px 7px;
     background-color: rgba(10,10,10,0.50);
     overflow-x: hidden;
     overflow-y: hidden;
@@ -452,4 +584,36 @@ input {
     overflow: hidden;
     transition: .5s;
     background-color: transparent;
+}
+.sectionsMobile {
+    min-width: 95%;
+    max-width: 95%;
+    min-height: 70px;
+    max-height: 70px;
+    z-index: 2;
+    margin-left: 2.5%;
+    background-color: rgba(10,10,10,0.50);
+    margin-bottom: 22px;
+    border-radius: 7px 7px 7px 7px;
+}
+.sectionMobileHeadings {
+    font-size: 30px;
+    color: snow;
+    margin-left: 50px;
+    margin-top: 17px;
+}
+@media only screen and (max-width: 768px) {
+    .rowContainter {
+    display: none;
+    }
+    .sectionsMobile {
+        min-width: 95%;
+        max-width: 95%;
+        min-height: 70px;
+        max-height: 70px;
+        z-index: 2;
+        margin-left: 2.5%;
+        background-color: rgba(10,10,10,0.50);
+        margin-bottom: 22px;
+    }
 }

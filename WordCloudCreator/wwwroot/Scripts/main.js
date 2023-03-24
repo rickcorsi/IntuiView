@@ -69,35 +69,40 @@ function toggleList() {
     console.log('List Toggled');
 }
 function expandTile(n) {
+    console.log("Expansion Started");
     var imgsrc = document.getElementById("mediaTitleImage" + n).src;
     var headingsrc = document.getElementById("mediaTitleHeading" + n).textContent;
     var summarysrc = document.getElementById("mediaTitleSummary" + n).textContent;
     var castsrc = document.getElementById("mediaTitleCast" + n).textContent;
     var genresrc = document.getElementById("mediaTitleGenre" + n).textContent;
+    var sim1src = document.getElementById("similarTitle1" + n).textContent;
+    var sim2src = document.getElementById("similarTitle2" + n).textContent;
+    var div1 = document.getElementById('MediaTitle' + sim1src).innerHTML;
+    var div2 = document.getElementById('MediaTitle' + sim2src).innerHTML;
 
     console.log('imgsrc: ' + imgsrc);
     console.log('headingsrc: ' + headingsrc);
     console.log('summarysrc: ' + summarysrc);
     console.log('castsrc: ' + castsrc);
     console.log('genresrc: ' + genresrc);
+    console.log('sim1src: ' + sim1src);
+    console.log('sim2src: ' + sim2src);
 
+    document.getElementById('SimilarMediaTitle_0001').innerHTML = div1;
+    document.getElementById('SimilarMediaTitle_0002').innerHTML = div2;
     document.getElementById("expandedTileImage").src = imgsrc;
     document.getElementById("mediaTileHeadingExpanded").textContent = headingsrc;
     document.getElementById("mediaTileSummaryExpanded").textContent = summarysrc;
     document.getElementById("mediaTileCastExpanded").textContent = castsrc;
     document.getElementById("mediaTileGenreExpanded").textContent = genresrc;
-    var x = document.getElementById("tileMain");
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    }
-    else {
+
+    var x = document.getElementById("overlay");
         x.style.display = "block";
         console.log('Tile ' + n + ' Expanded');
-    }
 }
 function closeTile() {
     console.log('Tile Closed');
-    var x = document.getElementById("tileMain");
+    var x = document.getElementById("overlay");
     if (x.style.display === "block") {
         x.style.display = "none";
     }
@@ -105,16 +110,46 @@ function closeTile() {
         x.style.display = "block";
     }
 }
-//function scrollRowPrev() {
-//    console.log('Row Scrolled Previous');
-//    var element = document.getElementById('movieTile1');
-//    element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-//}
-//function scrollRowNext() {
-//    console.log('Row Scrolled Next');
-//    var element = document.getElementById('movieTile10');
-//    element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
-//}
+function scrollRowHorrorPrev() {
+    console.log('Row Scrolled Previous');
+    var element = document.getElementById('rowHorrorStart');
+    element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+}
+function scrollRowHorrorNext() {
+    console.log('Row Scrolled Next');
+    var element = document.getElementById('rowHorrorEnd');
+    element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+}
+function scrollRowActionPrev() {
+    console.log('Row Scrolled Previous');
+    var element = document.getElementById('rowActionStart');
+    element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+}
+function scrollRowActionNext() {
+    console.log('Row Scrolled Next');
+    var element = document.getElementById('rowActionEnd');
+    element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+}
+function scrollRowDocPrev() {
+    console.log('Row Scrolled Previous');
+    var element = document.getElementById('rowDocStart');
+    element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+}
+function scrollRowDocNext() {
+    console.log('Row Scrolled Next');
+    var element = document.getElementById('rowDocEnd');
+    element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+}
+function scrollRowDramaPrev() {
+    console.log('Row Scrolled Previous');
+    var element = document.getElementById('rowDramaStart');
+    element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+}
+function scrollRowDramaNext() {
+    console.log('Row Scrolled Next');
+    var element = document.getElementById('rowDramaEnd');
+    element.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+}
 function resize_to_fit() {
     let fontSize = window.getComputedStyle(output).fontSize;
     output.style.fontSize = (parseFloat(fontSize) - 1) + 'px';
@@ -132,7 +167,18 @@ function goSearch() {
 function goFavorites() {
     location.href = "/Favorites";
 }
-
+function goHorror() {
+    location.href = "/HorrorCollection";
+}
+function goAction() {
+    location.href = "/ActionCollection";
+}
+function goDocs() {
+    location.href = "/DocsCollection";
+}
+function goDrama() {
+    location.href = "/DramaCollection";
+}
 function liveSearch() {
     let cards = document.querySelectorAll('.movieTileMain');
     var cardsHidden = 0;

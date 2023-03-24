@@ -1,0 +1,165 @@
+﻿@page "/DocsCollection"
+
+<PageTitle>Stream Project</PageTitle>
+
+<div class="mainBody">
+    <div class="ToolBar">
+        <div class="ToolBarChild">
+            <label class="headerLogo">LOGO HERE</label>
+            <input type="button" class="headerButtons" id="btnHome" value="Home" onclick="goHome();">
+            <input type="button" class="headerButtons" id="btnSearch" value="Search" onclick="goSearch();">
+            <input type="button" class="headerButtons" id="btnFavorites" value="Favorites" onclick="goFavorites();">
+        </div>
+    </div>
+    <div class="mediaArea">
+        <div id="overlay" class="screenOverlay" onclick="">
+            <div class="screenOverlayClickArea1" onclick="closeTile();"></div>
+            <div id="tileMain" class="tileExpanded" onclick="">
+                <img class="expandedTileImage" id="expandedTileImage" onclick="" alt="">
+                <div class="expandedTileChild" id="expandedTileChild">
+                    <label id="mediaTileHeadingExpanded" class="expandedTileHeadingLabel"></label>
+                    <label id="mediaTileSummaryExpanded" class="expandedTileSummaryLabel"></label>
+                    <label id="mediaTileCastExpanded" class="expandedTileCastLabel"></label>  
+                    <label id="mediaTileGenreExpanded" class="expandedTileGenreLabel"></label>            
+                </div>
+                <h2 class="similarTitlesHeadings">Similar Titles</h2>
+                <div class="similarTitlesExpanded">
+                        <div id="SimilarMediaTitle_0001" class="movieTileMain">
+                        </div>
+                        <div id="SimilarMediaTitle_0002" class="movieTileMain">      
+                        </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="rowHeadingWhatsNew">The Doc's Collection</h2>
+        <div class="mediaHighlights">
+            <div id="WhatsNew1" class="newtile-primary">
+                <div class="HighlightsMediaTile">
+                    <img class="HighlightsTileImage" id="mediaTitleImage_0008" src="images/mediaTitle_0008.jpg" onclick="expandTile('_0008');">    
+                </div>
+                <label id="mediaTitleHeading_0008" hidden >The Last Dance | 2020 | 10 Episodes</label>
+                <label id="mediaTitleSummary_0008" hidden >This series revolves around the career of Michael Jordan, with particular focus on the 1997–98 season, his final season with the Chicago Bulls of the National Basketball Association (NBA).</label>
+                <label id="mediaTitleCast_0008" hidden >Cast: Michael Jordan, Scottie Pippen, Dennis Rodman</label>  
+                <label id="mediaTitleGenre_0008" hidden >Genre: Social and Cultural Docs, Docuseries, Sports Documentary</label>             
+            </div>
+            <div id="WhatsNew2" class="newtile-secondary">
+                <div class="HighlightsMediaTile">
+                    <img class="HighlightsTileImage" id="mediaTitleImage_0022" src="images/mediaTitle_0022.jpg" onclick="expandTile('_0022');">    
+                </div>
+                <label id="mediaTitleHeading_0022" hidden >Jonestown: Paradise Lost | 2007 | 1h 44m</label>
+                <label id="mediaTitleSummary_0022" hidden >This feature length film, a hybrid of documentary and drama, tracks the final, 5-day build up to a horrific doomsday - the infamous mass murder/ suicides of Jim Jones' People's Temple on November 18th, 1978. By the end of that day, 918 men, women and children will die.</label>
+                <label id="mediaTitleCast_0022" hidden >Director: Tim Wolochatiuk</label>  
+                <label id="mediaTitleGenre_0022" hidden >Genre: Documentary, Drama, History</label>          
+            </div>
+        </div>
+        <div class="searchRow">
+            <div id="" class="rowMediaMaskSearch">
+                <div id="mediaRow" class="mediaRowSearch">
+                    <div id="MediaTitle_0008" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0008" >2020 | Documentary</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0008" src="images/mediaTitle_0008.jpg" onclick="expandTile('_0008');">    
+                        </div>
+                        <label id="mediaTitleHeading_0008" hidden >The Last Dance | 2020 | 10 Episodes</label>
+                        <label id="mediaTitleSummary_0008" hidden >This series revolves around the career of Michael Jordan, with particular focus on the 1997–98 season, his final season with the Chicago Bulls of the National Basketball Association (NBA).</label>
+                        <label id="mediaTitleCast_0008" hidden >Cast: Michael Jordan, Scottie Pippen, Dennis Rodman</label>  
+                        <label id="mediaTitleGenre_0008" hidden >Genre: Social and Cultural Docs, Docuseries, Sports Documentary</label>  
+                        <label id="similarTitle1_0008" hidden >_0021</label>          
+                        <label id="similarTitle2_0008" hidden >_0009</label>                          
+                    </div>
+                    <div id="MediaTitle_0009" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0009" >2014 | Documentary</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0009" src="images/mediaTitle_0009.jpg" onclick="expandTile('_0009');">    
+                        </div>
+                        <label id="mediaTitleHeading_0009" hidden >Louis Theroux: LA Stories - City of Dogs | 2014 | 59m</label>
+                        <label id="mediaTitleSummary_0009" hidden >Louis visits the people who are providing a home for troubled and formerly feral dogs. He speaks to them about the city's enormous canine population.</label>
+                        <label id="mediaTitleCast_0009" hidden >Cast: Louis Theroux</label>  
+                        <label id="mediaTitleGenre_0009" hidden >Genre: Documentary, Special Interest</label> 
+                        <label id="similarTitle1_0009" hidden >_0023</label>          
+                        <label id="similarTitle2_0009" hidden >_0008</label>                        
+                    </div>
+                    <div id="MediaTitle_0021" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0021" >2012 | Documentary</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0021" src="images/mediaTitle_0021.jpg" onclick="expandTile('_0021');">    
+                        </div>
+                        <label id="mediaTitleHeading_0021" hidden >The Summit | 2012 | 1h 44m</label>
+                        <label id="mediaTitleSummary_0021" hidden >The story of the deadliest day on the world's most dangerous mountain, when 11 climbers mysteriously perished on K2.</label>
+                        <label id="mediaTitleCast_0021" hidden >Director: Nick Ryan</label>  
+                        <label id="mediaTitleGenre_0021" hidden >Genre: Documentary, Adventure, Mystery</label>    
+                        <label id="similarTitle1_0021" hidden >_0009</label>          
+                        <label id="similarTitle2_0021" hidden >_0008</label>                        
+                    </div>
+                    <div id="MediaTitle_0022" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0022" >2007 | Documentary</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0022" src="images/mediaTitle_0022.jpg" onclick="expandTile('_0022');">    
+                        </div>
+                        <label id="mediaTitleHeading_0022" hidden >Jonestown: Paradise Lost | 2007 | 1h 44m</label>
+                        <label id="mediaTitleSummary_0022" hidden >This feature length film, a hybrid of documentary and drama, tracks the final, 5-day build up to a horrific doomsday - the infamous mass murder/ suicides of Jim Jones' People's Temple on November 18th, 1978. By the end of that day, 918 men, women and children will die.</label>
+                        <label id="mediaTitleCast_0022" hidden >Director: Tim Wolochatiuk</label>  
+                        <label id="mediaTitleGenre_0022" hidden >Genre: Documentary, Drama, History</label>  
+                        <label id="similarTitle1_0022" hidden >_0024</label>          
+                        <label id="similarTitle2_0022" hidden >_0023</label>
+                    </div>
+                    <div id="MediaTitle_0023" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0023" >2015 | Documentary</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0023" src="images/mediaTitle_0023.jpg" onclick="expandTile('_0023');">    
+                        </div>
+                        <label id="mediaTitleHeading_0023" hidden >Louis Theroux: By Reason of Insanity | 2015 | 59m</label>
+                        <label id="mediaTitleSummary_0023" hidden >Louis investigates Ohio's state psychiatric hospitals, meeting patients who have committed crimes but have been found not guilty by reason of insanity.</label>
+                        <label id="mediaTitleCast_0023" hidden >Cast: Louis Theroux</label>  
+                        <label id="mediaTitleGenre_0023" hidden >Genre: Documentary, Special Interest</label>   
+                        <label id="similarTitle1_0023" hidden >_0009</label>          
+                        <label id="similarTitle2_0023" hidden >_0008</label>                          
+                    </div>
+                    <div id="MediaTitle_0024" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0024" >2011 | Documentary</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0024" src="images/mediaTitle_0024.jpg" onclick="expandTile('_0024');">    
+                        </div>
+                        <label id="mediaTitleHeading_0024" hidden >Where Is Robert Fisher? | 2011 | 1h 24m</label>
+                        <label id="mediaTitleSummary_0024" hidden >Explore the disturbing story of one of America's most wanted fugitives, Robert Fisher. Following the brutal murder of his family, Fisher went missing in 2001 - years later, his whereabouts remain unknown.</label>
+                        <label id="mediaTitleCast_0024" hidden >Director: Charlie Minn</label>  
+                        <label id="mediaTitleGenre_0024" hidden >Genre: Documentary, Crime</label>  
+                        <label id="similarTitle1_0024" hidden >_0023</label>          
+                        <label id="similarTitle2_0024" hidden >_0022</label>                        
+                    </div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@code {
+
+}
