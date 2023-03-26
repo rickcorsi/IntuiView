@@ -1,22 +1,16 @@
 ﻿.mainBody {
-    background-color: ;
     min-width: 100%;
     min-height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-/*    background-color: yellow;
-*/    padding-top: 43px;
-}
-.textmain {
-    color: snow;
+    padding-top: 43px;
 }
 .ToolBar {
-    min-width: 810px;
+    min-width: 400px;
     width: 100%;
     min-height: 60px;
-    margin-top: 0px;
     position: fixed;
     top: 0%;
     left: 0%;
@@ -27,44 +21,8 @@
     flex-wrap: wrap;
     background-color: rgba(10,10,10,0.75);
 }
-.ToolBarChild1 {
-    width: 100%;
-    height: 50px;
-    padding-top: 1%;
-    padding: 1%;
-    display: flex;
-    justify-content: start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    z-index: 6;
-    overflow: hidden;
-    padding-left: 16px;
-}
-.header {
-    height: 60px;
-    min-width: 100%;
-    font-size: 40px;
-    border-radius: 5px;
-    outline-style: solid;
-    outline: 2px solid;
-    border-color: skyblue;
-}
-.inputText {
-    height: 40px;
-    min-width: 120px;
-    max-width: 120px;
-    padding: 3px;
-    margin: 15px;
-    color: black;
-    border: 2px solid;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: cyan;
-    background-color: white;
-}
 .mediaArea {
     min-width: 100%;
-    max-width: 100%;
     display: flex;
     justify-content: start;
     flex-direction: row;
@@ -91,29 +49,25 @@
 .movieTileMain {
     min-width: 280px;
     max-width: 280px;
-    min-height: 140px;
-    max-height: 140px;
+    height: 140px;
     position: relative;
     display: block;
     flex: 1 1 0px;
     transition: transform 500ms;
     margin: 5px;
     z-index: 4;
-    overflow: hidden;
     transition: .5s;
 }
 .tileImageMain {
     min-width: 280px;
     max-width: 280px;
-    min-height: 140px;
-    max-height: 140px;
+    height: 140px;
     object-fit: inherit;
     object-position: 0% 0%;
     z-index: 4;
 }
 .tileTextHead {
     display: none;
-    z-index: 4;
     -webkit-transition: 1s 3s;
 }
 .mediaTile:hover .tileTextHead {
@@ -123,9 +77,7 @@
     bottom: 0;
     left: 0;
     min-width: 280px;
-    max-width: 280px;
-    min-height: 40px;
-    max-height: 40px;
+    height: 40px;
     padding: 10px;
     background-color: rgba(10,10,10,0.50);
     color: snow;
@@ -138,15 +90,12 @@ ion-icon {
     pointer-events: none;
 }
 .mediaTile:hover .listButton {
-    display: block;
-    min-height: 30px;
-    max-height: 30px;
-    min-width: 30px;
-    max-width: 30px;
+    display: none;
+    height: 30px;
+    width: 30px;
     z-index: 5;
     background-color: rgba(10,10,10,0.0);
     color: snow;
-    border-radius: 0px;
     border: none;
     position: absolute;
     top: 76%;
@@ -156,7 +105,6 @@ ion-icon {
 }
 .movieTileMain:hover + .hide {
     display: none;
-    background-color: green;
     min-height: 50px;
     min-width: 50px;
 }
@@ -175,111 +123,59 @@ ion-icon {
 .mediaHighlights {
     min-width: 95%;
     max-width: 95%;
-    min-height: 440px;
-    max-height: 440px;
+    height: 440px;
     background-color: rgba(10,10,10,0.50);
     border-radius: 7px 7px 7px 7px;
     display: flex;
+    justify-content: start;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 18px;
-    margin-bottom: 22px;
+    margin-bottom: 10px;
     margin-left: 2.5%;
+    padding-right: 18px;
 }
-.mediaHighlightsMainTile {
-
-}
-.newtile-primary {
+.newtile {
     min-width: 800px;
     max-width: 800px;
-    min-height: 400px;
-    max-height: 400px;
-    position: relative;
+    height: 400px;
     display: block;
-    flex: 1 1 0px;
-    transition: transform 500ms;
     z-index: 5;
     overflow: hidden;
-    transition: .5s;
-    margin-right: 10px;
-/*    animation: newtile-primary 3s linear infinite;
-*/}
-.newtile-secondary {
-    min-width: 800px;
-    max-width: 800px;
-    min-height: 400px;
-    max-height: 400px;
-    position: relative;
-    display: block;
-    flex: 1 1 0px;
+    margin-top: 18px;
+    margin-left: 18px;
     transition: transform 500ms;
-    z-index: 5;
-    overflow: hidden;
     transition: .5s;
-    margin-right: 10px;
-/*    animation: newtile-secondary 3s linear infinite;
-*/}
-@keyframes newtile-primary {
-/*    from {
-        left: 0%;
-    }
-
-    to {
-        left: -100%;
-    }*/
 }
-
-@keyframes newtile-secondary {
-/*    from {
-        left: 100%;
+    .newtile:hover {
+        outline: 5px solid;
+        outline-style: solid;
+        outline-color: snow;
+        z-index: 8;
     }
-
-    to {
-        left: 0%;
-    }*/
-}
 .rowStart {
     min-width: 10px;
-    max-width: 10px;
-    min-height: 140px;
-    max-height: 140px;
+    height: 140px;
     display: block;
     background-color: transparent;
 }
 .rowEnd {
     min-width: 25px;
-    max-width: 25px;
-    min-height: 140px;
-    max-height: 140px;
+    height: 140px;
     display: block;
     background-color: transparent;
 }
 .HighlightsTileImage {
     min-width: 100%;
     max-width: 100%;
-    min-height: 50%;
-    max-height: 50%;
+    height: 50%;
     object-fit: inherit;
     object-position: 0% 0%;
     z-index: 4;
 }
-.newtile-primary:hover {
-    outline: 5px solid;
-    outline-style: solid;
-    outline-color: snow;
-    z-index: 8;
-}
-.newtile-secondary:hover {
-    outline: 5px solid;
-    outline-style: solid;
-    outline-color: snow;
-    z-index: 8;
-}
 .mediaRow {
     min-width: 88%;
     max-width: 88%;
-    min-height: 200px;
-    max-height: 200px;
+    height: 200px;
     display: flex;
     padding-left: 15px;
     z-index: 3;
@@ -288,24 +184,12 @@ ion-icon {
     overflow-x: auto;
     overflow-y: hidden;
 }
-    .mediaRow:focus-within .movieTileMain,
-    .mediaRow:hover .movieTileMain {
-/*        transform: translateX(-15%);*/
-    }
-    .mediaRow::-webkit-scrollbar {
-        display: none; /* Safari and Chrome */
-    }
-.movieTileMain:focus ~ .movieTileMain,
-.movieTileMain:hover ~ .movieTileMain {
-/*    transform: translateX(15%);*/
-}
 .movieTileMain:hover {
     outline: 3px solid;
     outline-style: solid;
     outline-color: snow;
     z-index: 8;
 }
-.mediaRow .movieTileMain:focus,
 .mediaRow .movieTileMain:hover {
     transform: scale(1.05);
     z-index: 7;
@@ -324,16 +208,14 @@ ion-icon {
 .rowContainter {
     min-width: 95%;
     max-width: 95%;
-    min-height: 250px;
-    max-height: 250px;
+    height: 250px;
     z-index: 2;
     margin-left: 2.5%;
+    margin-bottom: 10px;
 }
 .rowMediaMask {
     min-width: 100%;
-    max-width: 100%;
-    min-height: 200px;
-    max-height: 200px;
+    height: 200px;
     z-index: 0;
     border-radius: 7px 7px 7px 7px;
     background-color: rgba(10,10,10,0.50);
@@ -343,10 +225,8 @@ ion-icon {
     display: flex;
 }
 .pre-button {
-    min-height: 200px;
-    max-height: 200px;
+    height: 200px;
     min-width: 6%;
-    max-width: 6%;
     z-index: 5;
     background-color: rgba(10,10,10,.5);
     color: snow;
@@ -354,10 +234,8 @@ ion-icon {
     font-size: 30px;
 }
 .nxt-button {
-    min-height: 200px;
-    max-height: 200px;
+    height: 200px;
     min-width: 6%;
-    max-width: 6%;
     z-index: 5;
     background-color: rgba(10,10,10,0.5);
     color: snow;
@@ -424,7 +302,6 @@ ion-icon {
     max-height: 200px;
     object-fit: inherit;
     object-position: 0% 0%;
-    border-radius: 0px 0px 0px 0px;
     z-index: 4;
     display: flex;
     justify-content: start;
@@ -435,8 +312,7 @@ ion-icon {
 .expandedTileHeadingLabel {
     min-width: 500px;
     max-width: 500px;
-    min-height: 50px;
-    max-height: 50px;
+    height: 50px;
     padding: 8px;
     padding-left: 8px;
     color: snow;
@@ -454,7 +330,6 @@ ion-icon {
     min-width: 500px;
     max-width: 500px;
     min-height: 150px;
-    max-height: 150px;
     padding: 5px;
     color: snow;
     overflow-x: hidden;
@@ -463,6 +338,7 @@ ion-icon {
     border-width: 0px 2px 2px 0px;
     border-color: snow;
     animation: fadeIn 5s;
+    font-size: 16px;
 }
 .expandedTileCastLabel {
     min-width: 300px;
@@ -476,6 +352,7 @@ ion-icon {
     border: solid;
     border-width: 0px 0px 2px 0px;
     border-color: snow;
+    font-size: 16px;
 }
 .expandedTileGenreLabel {
     min-width: 300px;
@@ -489,12 +366,11 @@ ion-icon {
     border: solid;
     border-width: 0px 0px 2px 0px;
     border-color: snow;
+    font-size: 16px;
 }
 .similarTitlesExpanded {
-    min-width: 100%;
-    max-width: 100%;
+    width: 100%;
     min-height: 300px;
-    max-height: 300px;
     display: flex;
     justify-content: center;
     color: snow;
@@ -507,12 +383,9 @@ ion-icon {
     margin-left: 8px;
 }
 .searchBarContainer {
-    min-width: 95%;
-    max-width: 95%;
-    min-height: 70px;
-    max-height: 70px;
+    width: 95%;
+    height: 70px;
     margin-top: 30px;
-    background-color: rgba(0,0,0,0.0);
     outline: 3px solid;
     outline-style: solid;
     outline-color: snow;
@@ -521,10 +394,8 @@ ion-icon {
     border-radius: 7px;
 }
 .searchBarInput {
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0,0,0,0.0);
     font-size: 35px;
     padding-left: 15px;
@@ -535,19 +406,17 @@ ion-icon {
     color: snow;
     opacity: 1;
 }
-input {
+.input {
     caret-color: snow;
 }
 .searchRow {
-    min-width: 100%;
-    max-width: 100%;
+    width: 100%;
     z-index: 2;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 .mediaRowSearch {
-    min-width: 100%;
-    max-width: 100%;
+    width: 100%;
     display: flex;
     z-index: 3;
     border-radius: 7px 7px 7px 7px;
@@ -559,10 +428,8 @@ input {
     flex-wrap: wrap;
 }
 .rowMediaMaskSearch {
-    min-height: 460px;
-    max-height: 460px;
-    min-width: 100%;
-    max-width: 100%;
+    height: 460px;
+    width: 100%;
     z-index: 0;
     background-color: rgba(10,10,10,0.50);
     overflow-x: hidden;
@@ -573,23 +440,18 @@ input {
 .spacer {
     min-width: 280px;
     max-width: 280px;
-    min-height: 140px;
-    max-height: 140px;
+    height: 140px;
     position: relative;
     display: block;
     flex: 1 1 0px;
-    transition: transform 500ms;
     margin: 5px;
     z-index: 4;
     overflow: hidden;
-    transition: .5s;
     background-color: transparent;
 }
 .sectionsMobile {
-    min-width: 95%;
-    max-width: 95%;
-    min-height: 70px;
-    max-height: 70px;
+    width: 95%;
+    height: 70px;
     z-index: 2;
     margin-left: 2.5%;
     background-color: rgba(10,10,10,0.50);
@@ -602,18 +464,357 @@ input {
     margin-left: 50px;
     margin-top: 17px;
 }
-@media only screen and (max-width: 768px) {
-    .rowContainter {
+.mobileCloseButton {
     display: none;
+}
+@media only screen and (max-width: 1168px) {
+    .pre-button {
+        height: 200px;
+        font-size: 28px;
     }
-    .sectionsMobile {
-        min-width: 95%;
-        max-width: 95%;
-        min-height: 70px;
-        max-height: 70px;
-        z-index: 2;
-        margin-left: 2.5%;
-        background-color: rgba(10,10,10,0.50);
-        margin-bottom: 22px;
+    .nxt-button {
+        height: 200px;
+        font-size: 28px;
+    }
+    .spacer {
+        min-width: 260px;
+        max-width: 260px;
+        height: 130px;
+    }
+    .movieTileMain {
+        min-width: 260px;
+        max-width: 260px;
+        height: 130px;
+    }
+    .tileImageMain {
+        min-width: 260px;
+        max-width: 260px;
+        height: 130px;
+    }
+    .rowMediaMask {
+        height: 190px;
+    }
+    .rowContainter {
+        height: 230px;
     }
 }
+@media only screen and (max-width: 1068px) {
+    .pre-button {
+        height: 190px;
+        font-size: 26px;
+    }
+    .nxt-button {
+        height: 190px;
+        font-size: 26px;
+    }
+    .spacer {
+        min-width: 240px;
+        max-width: 240px;
+        height: 120px;
+    }
+    .movieTileMain {
+        min-width: 240px;
+        max-width: 240px;
+        height: 120px;
+    }
+    .tileImageMain {
+        min-width: 240px;
+        max-width: 240px;
+        height: 120px;
+    }
+    .rowMediaMask {
+        height: 180px;
+    }
+    .rowContainter {
+        height: 220px;
+    }
+}
+@media only screen and (max-width: 968px) {
+    .pre-button {
+        height: 180px;
+        font-size: 24px;
+    }
+    .nxt-button {
+        height: 180px;
+        font-size: 24px;
+    }
+    .spacer {
+        min-width: 220px;
+        max-width: 220px;
+        height: 110px;
+    }
+    .movieTileMain {
+        min-width: 220px;
+        max-width: 220px;
+        height: 110px;
+    }
+    .tileImageMain {
+        min-width: 220px;
+        max-width: 220px;
+        height: 110px;
+    }
+    .rowMediaMask {
+        height: 170px;
+    }
+    .rowContainter {
+        height: 210px;
+    }
+}
+@media only screen and (max-width: 868px) {
+    .pre-button {
+        height: 170px;
+        font-size: 22px;
+    }
+    .nxt-button {
+        min-height: 170px;
+        max-height: 170px;
+        font-size: 22px;
+    }
+    .spacer {
+        min-width: 200px;
+        max-width: 200px;
+        height: 100px;
+    }
+    .movieTileMain {
+        min-width: 200px;
+        max-width: 200px;
+        height: 100px;
+    }
+    .tileImageMain {
+        min-width: 200px;
+        max-width: 200px;
+        height: 100px;
+    }
+    .rowMediaMask {
+        height: 160px;
+    }
+    .rowContainter {
+        height: 200px;
+    }
+}
+/*mobile*/
+@media only screen and (max-width: 800px) {
+    .mediaHighlights {
+        height: 220px;
+        flex-direction: row;
+        padding-right: 14px;
+        margin-bottom: 18px;
+    }
+    .newtile {
+        min-width: 400px;
+        max-width: 400px;
+        height: 200px;
+        margin-top: 14px;
+        margin-left: 14px;
+    }
+    .tileExpanded {
+        top: 50%;
+        left: 0%;
+        max-width: 95%;
+        min-width: 95%;
+        margin-left: 2.5%;
+        border-radius: 0px 0px 0px 0px;
+    }
+    .screenOverlay {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+        top: 50%;
+        left: 0%;
+        margin-top: 40px;
+        background-color: black;
+    }
+    .screenOverlayClickArea1 {
+        background-color: black;
+    }
+    .similarTitlesExpanded {
+        display: none;
+    }
+    .similarTitlesHeadings {
+        display: none;
+    }
+    .expandedTileImage {
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 50%;
+    }
+    .expandedTileChild {
+        min-width: 95%;
+        min-height: 200px;
+        max-height: 200px;
+        object-position: 50% 50%;
+        border-radius: 0px 0px 0px 0px;
+        flex-direction: row;
+    }
+    .expandedTileHeadingLabel {
+        min-width: 100%;
+        min-height: 100%;
+        border-width: 0px 0px 2px 0px;
+    }
+    .expandedTileSummaryLabel {
+        min-width: 100%;
+        min-height: 30px;
+        border-width: 0px 0px 2px 0px;
+    }
+    .expandedTileCastLabel {
+        min-width: 100%;
+        min-height: 30px;
+        border-width: 0px 0px 2px 0px;
+    }
+    .expandedTileGenreLabel {
+        min-width: 100%;
+        min-height: 30px;
+        border-width: 0px 0px 2px 0px;
+    }
+    .rowContainter {
+        display: none;
+    }
+    .tileTextHead {
+        display: none;
+    }
+    .mediaTile:hover .tileTextHead {
+        display: none;
+    }
+    .rowMediaMaskSearch {
+        min-height: 560px;
+        max-height: 560px;
+        width: 100%;
+    }
+    .searchBarContainer {
+        height: 50px;
+    }
+    .searchBarInput {
+        font-size: 25px;
+        padding-left: 5px;
+    }
+    .mobileCloseButton {
+        display: block;
+        background-color: transparent;
+        color: snow;
+        margin: 10px;
+        border: 2px solid;
+        border-radius: 2px;
+        border-style: solid;
+        border-color: snow;
+    }
+    .sectionMobileHeadings {
+        margin-left: 10px;
+    }
+    .rowHeadingWhatsNew {
+        margin: 15px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .spacer {
+        min-width: 180px;
+        max-width: 180px;
+        height: 90px;
+    }
+    .movieTileMain {
+        min-width: 180px;
+        max-width: 180px;
+        height: 90px;
+    }
+    .tileImageMain {
+        min-width: 180px;
+        max-width: 180px;
+        height: 90px;
+    }
+    .expandedTileSummaryLabel {
+        font-size: 16px;
+    }
+    .expandedTileCastLabel {
+        font-size: 16px;
+    }
+    .expandedTileGenreLabel {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 668px) {
+    .spacer {
+        min-width: 160px;
+        max-width: 160px;
+        height: 80px;
+    }
+    .movieTileMain {
+        min-width: 160px;
+        max-width: 160px;
+        height: 80px;
+    }
+    .tileImageMain {
+        min-width: 160px;
+        max-width: 160px;
+        height: 80px;
+    }
+    .expandedTileSummaryLabel {
+        font-size: 14px;
+    }
+    .expandedTileCastLabel {
+        font-size: 14px;
+    }
+    .expandedTileGenreLabel {
+        font-size: 14px;
+    }
+    .rowHeadingWhatsNew {
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 568px) {
+    .spacer {
+        min-width: 140px;
+        max-width: 140px;
+        height: 70px;
+    }
+    .movieTileMain {
+        min-width: 140px;
+        max-width: 140px;
+        height: 70px;
+    }
+    .tileImageMain {
+        min-width: 140px;
+        max-width: 140px;
+        height: 70px;
+    }
+    .expandedTileHeadingLabel {
+        font-size: 18px;
+    }
+    .expandedTileSummaryLabel {
+        font-size: 12px;
+    }
+    .expandedTileCastLabel {
+        font-size: 12px;
+    }
+    .expandedTileGenreLabel {
+        font-size: 12px;
+    }
+    .sectionMobileHeadings {
+        padding-top: 4px;
+        font-size: 24px;
+    }
+    .rowHeadingWhatsNew {
+        font-size: 24px;
+    }
+}
+@media only screen and (max-width: 468px) {
+    .expandedTileHeadingLabel {
+        font-size: 16px;
+    }
+    .expandedTileSummaryLabel {
+        font-size: 10px;
+    }
+    .expandedTileCastLabel {
+        font-size: 10px;
+    }
+    .expandedTileGenreLabel {
+        font-size: 10px;
+    }
+    .sectionMobileHeadings {
+        padding-top: 5px;
+        font-size: 22px;
+    }
+    .rowHeadingWhatsNew {
+        font-size: 22px;
+    }
+}
+/*Line 990*/

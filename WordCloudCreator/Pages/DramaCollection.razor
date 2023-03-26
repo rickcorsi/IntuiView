@@ -8,7 +8,6 @@
             <label class="headerLogo">LOGO HERE</label>
             <input type="button" class="headerButtons" id="btnHome" value="Home" onclick="goHome();">
             <input type="button" class="headerButtons" id="btnSearch" value="Search" onclick="goSearch();">
-            <input type="button" class="headerButtons" id="btnFavorites" value="Favorites" onclick="goFavorites();">
         </div>
     </div>
     <div class="mediaArea">
@@ -20,7 +19,8 @@
                     <label id="mediaTileHeadingExpanded" class="expandedTileHeadingLabel"></label>
                     <label id="mediaTileSummaryExpanded" class="expandedTileSummaryLabel"></label>
                     <label id="mediaTileCastExpanded" class="expandedTileCastLabel"></label>  
-                    <label id="mediaTileGenreExpanded" class="expandedTileGenreLabel"></label>            
+                    <label id="mediaTileGenreExpanded" class="expandedTileGenreLabel"></label>    
+                    <input type="button" class="mobileCloseButton" id="btnClose" value="Return" onclick="closeTile();">                    
                 </div>
                 <h2 class="similarTitlesHeadings">Similar Titles</h2>
                 <div class="similarTitlesExpanded">
@@ -33,7 +33,7 @@
         </div>
         <h2 class="rowHeadingWhatsNew">The Drama Collection</h2>
         <div class="mediaHighlights">
-            <div id="WhatsNew1" class="newtile-primary">
+            <div id="WhatsNew1" class="newtile">
                 <div class="HighlightsMediaTile">
                     <img class="HighlightsTileImage" id="mediaTitleImage_0016" src="images/mediaTitle_0016.jpg" onclick="expandTile('_0016');">    
                 </div>
@@ -42,7 +42,7 @@
                 <label id="mediaTitleCast_0016" hidden >Cast: Ryan Gosling, Bradley Cooper, Eva Mendes, Ray Liotta, Ben Mendelsohn, Rose Byrne, Mahershala Ali, Bruce Greenwood, Harris Yulin</label>  
                 <label id="mediaTitleGenre_0016" hidden >Genre: Drama, Crime, Romance, Thriller</label>            
             </div>
-            <div id="WhatsNew2" class="newtile-secondary">
+            <div id="WhatsNew2" class="newtile">
                 <div class="HighlightsMediaTile">
                     <img class="HighlightsTileImage" id="mediaTitleImage_0017" src="images/mediaTitle_0017.jpg" onclick="expandTile('_0017');">    
                 </div>

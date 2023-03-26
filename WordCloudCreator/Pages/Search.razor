@@ -8,7 +8,6 @@
             <label class="headerLogo">LOGO HERE</label>
             <input type="button" class="headerButtons" id="btnHome" value="Home" onclick="goHome();">
             <input type="button" class="headerButtons" id="btnSearch" value="Search" onclick="">
-            <input type="button" class="headerButtons" id="btnFavorites" value="Favorites" onclick="goFavorites();">
         </div>
     </div>
     <div class="mediaArea">
@@ -20,7 +19,8 @@
                     <label id="mediaTileHeadingExpanded" class="expandedTileHeadingLabel"></label>
                     <label id="mediaTileSummaryExpanded" class="expandedTileSummaryLabel"></label>
                     <label id="mediaTileCastExpanded" class="expandedTileCastLabel"></label>  
-                    <label id="mediaTileGenreExpanded" class="expandedTileGenreLabel"></label>            
+                    <label id="mediaTileGenreExpanded" class="expandedTileGenreLabel"></label>  
+                    <input type="button" class="mobileCloseButton" id="btnClose" value="Return" onclick="closeTile();">                    
                 </div>
                 <h2 class="similarTitlesHeadings">Similar Titles</h2>
                 <div class="similarTitlesExpanded">
