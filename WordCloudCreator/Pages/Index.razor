@@ -1,196 +1,479 @@
 ﻿@page "/"
 
-<PageTitle>Word Cloud Creator</PageTitle>
+<PageTitle>Stream Project</PageTitle>
 
 <div class="mainBody">
     <div class="ToolBar">
         <div class="ToolBarChild">
-            <label class="headerLogo">LOGO HERE</label>
-            <input type="button" class="headerButtons" id="btnGames" value="Home" onclick="toggleGames();">
-            <input type="button" class="headerButtons" id="btnViewList" value="Favorites" onclick="toggleList();">
-            <input type="button" class="headerButtons" id="btnTV" value="TV Shows" onclick="toggleTV();">
-            <input type="button" class="headerButtons" id="btnMovies" value="Movies" onclick="toggleMovies();">
-@*            <input type="button" class="inputButtons" id="btnMovies" value="Movies" onclick="toggleMovies();">
-            <input type="button" class="inputButtons" id="btnTV" value="TV" onclick="toggleTV();">
-            <input type="button" class="inputButtons" id="btnGames" value="Games" onclick="toggleGames();">
-            <input type="button" class="inputButtons" id="btnViewList" value="Hide List" onclick="toggleList();">*@
+            <label class="headerLogo">IntuiView</label>
+            <input type="button" class="headerButtons" id="btnHome" value="Home" onclick="">
+            <input type="button" class="headerButtons" id="btnSearch" value="Search" onclick="goSearch();">
         </div>
     </div>
     <div class="mediaArea">
-        <div id="tileMain" class="tileExpanded" onclick="closeTile();">
-            <img class="expandedTileImage" id="expandedTileImage" onclick="" alt="">
-            <div class="expandedTileChild" id="expandedTileChild">
-                <label id="mediaTileHeadingExpanded" class="expandedTileHeadingLabel"></label>
-                <label id="mediaTileSummaryExpanded" class="expandedTileSummaryLabel"></label>
-                <label id="mediaTileCastExpanded" class="expandedTileCastLabel"></label>  
-                <label id="mediaTileGenreExpanded" class="expandedTileGenreLabel"></label>            
-            </div>
-@*            <input type="button" class="closeTileButton" id="" value="Close" onclick="closeTile();">
-*@        </div>
-        <div class="rowContainter">
-            <h2 class="rowHeadings">Recommended</h2>
-            <div id="" class="rowOneMediaMask">
-            </div>
-            <div id="row" class="mediaRow">
-                <input type="button" class="rowOneDirectionButtons" id="rowOneDirectionalButton" value=">" onclick="rowOneCycle();">
-                <div id="movieTile1" class="movieTileMain">
-                    <div class="movieTileOne" onclick="">
-                        <label class="tileTextHead" id="mediaTileLabel1" >2020 | Documentary</label>
-                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
-                        <img class="tileImageMain" id="mediaTileImage1" src="images/mediaTile1.jpg" onclick="expandTile('1');" alt="media1">    
-                    </div>
-                    <label id="mediaTileHeading1" hidden >The Last Dance | 2020 | 10 Episodes</label>
-                    <label id="mediaTileSummary1" hidden >This series revolves around the career of Michael Jordan, with particular focus on the 1997–98 season, his final season with the Chicago Bulls of the National Basketball Association (NBA).</label>
-                    <label id="mediaTileCast1" hidden >Cast: Michael Jordan, Scottie Pippen, Dennis Rodman</label>  
-                    <label id="mediaTileGenre1" hidden >Genre: Social and Cultural Docs, Docuseries, Sports</label>          
+        <div id="overlay" class="screenOverlay" onclick="">
+            <div class="screenOverlayClickArea1" onclick="closeTile();"></div>
+            <div id="tileMain" class="tileExpanded" onclick="">
+                <img class="expandedTileImage" id="expandedTileImage" onclick="" alt="">
+                <div class="expandedTileChild" id="expandedTileChild">
+                    <label id="mediaTileHeadingExpanded" class="expandedTileHeadingLabel"></label>
+                    <label id="mediaTileSummaryExpanded" class="expandedTileSummaryLabel"></label>
+                    <label id="mediaTileCastExpanded" class="expandedTileCastLabel"></label>  
+                    <label id="mediaTileGenreExpanded" class="expandedTileGenreLabel"></label>   
+                    <input type="button" class="mobileCloseButton" id="btnClose" value="Return" onclick="closeTile();">
                 </div>
-                <div id="movieTile2" class="movieTileMain">
-                    <div class="movieTileOne" onclick="">
-                        <label class="tileTextHead" id="mediaTileLabel2" >2019 | Horror/Thriller</label>
-                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
-                        <img class="tileImageMain" id="mediaTileImage2" src="images/mediaTile2.jpg" onclick="expandTile('2');" alt="media2">    
+                <div class="expandedTileChild2">
+                    <input type="button" class="closeButton" id="btnClose" value="Return" onclick="closeTile();">
+                    <h2 class="similarTitlesHeadings">Similar Titles</h2>
+                    <div class="similarTitlesExpanded">
+                            <div id="SimilarMediaTitle_0001" class="movieTileMain">
+                            </div>
+                            <div id="SimilarMediaTitle_0002" class="movieTileMain">      
+                            </div>
                     </div>
-                    <label id="mediaTileHeading2" hidden >Midsommar | 2019 | 2h 28m</label>
-                    <label id="mediaTileSummary2" hidden >A couple travel to Sweden to visit their friend's rural hometown for its fabled midsummer festival, but what begins as an idyllic retreat quickly devolves into an increasingly violent and bizarre competition at the hands of a pagan cult.</label>
-                    <label id="mediaTileCast2" hidden >Cast: Florence Pugh, Jack Reynor, William Jackson Harper, Vilhelm Blomgren, Ellora Torchia, Archie Madekwe, Will Poulter</label>  
-                    <label id="mediaTileGenre2" hidden >Genre: Folk Horror, Thriller, Drama, Mystery</label> 
-                </div>
-                <div id="movieTile3" class="movieTileMain">
-                    <div class="movieTileOne" onclick="">
-                        <label class="tileTextHead" id="mediaTileLabel3" >2014 | Documentary</label>
-                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
-                        <img class="tileImageMain" id="mediaTileImage3" src="images/mediaTile3.jpg" onclick="expandTile('3');" alt="media2">    
-                    </div>
-                    <label id="mediaTileHeading3" hidden >Louis Theroux: LA Stories - City of Dogs | 2014 | 59m</label>
-                    <label id="mediaTileSummary3" hidden >Louis visits the people who are providing a home for troubled and formerly feral dogs. He speaks to them about the city's enormous canine population.</label>
-                    <label id="mediaTileCast3" hidden >Cast: Louis Theroux</label>  
-                    <label id="mediaTileGenre3" hidden >Genre: Documentary, Special Interest</label> 
-                </div>
-                <div id="movieTile4" class="movieTileMain">
-                    <div class="movieTileOne" onclick="">
-                        <label class="tileTextHead" id="mediaTileLabel4" >2016 | Action/Adventure</label>
-                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
-                        <img class="tileImageMain" id="mediaTileImage4" src="images/mediaTile4.jpg" onclick="expandTile('4');" alt="media2">    
-                    </div>
-                    <label id="mediaTileHeading4" hidden >Captain America: Civil War | 2016 | 2h 28m</label>
-                    <label id="mediaTileSummary4" hidden >Political pressure mounts to install a system of accountability when the actions of the Avengers lead to collateral damage. The new status quo deeply divides members of the team.</label>
-                    <label id="mediaTileCast4" hidden >Cast: Chris Evans, Robert Downey Jr., Scarlett Johansson, Sebastian Stan, Anthony Mackie, Don Cheadle, Jeremy Renner</label>  
-                    <label id="mediaTileGenre4" hidden >Genre: Action, Adventure, Superhero, Sci-Fi</label> 
-                </div>
-                <div id="movieTile5" class="movieTileMain">
-                    <div class="movieTileOne" onclick="">
-                        <label class="tileTextHead" id="mediaTileLabel5" >1990 | Crime</label>
-                        <button class="listButton" id="" value="" onclick="toggleGames();"><ion-icon name="add-circle-outline"></ion-icon></button>
-                        <img class="tileImageMain" id="mediaTileImage5" src="images/mediaTile5.jpg" onclick="expandTile('5');" alt="media2">    
-                    </div>
-                    <label id="mediaTileHeading5" hidden >Goodfellas | 1990 | 2h 26m</label>
-                    <label id="mediaTileSummary5" hidden >A young man grows up in the mob and works very hard to advance himself through the ranks. He enjoys his life of money and luxury, but is oblivious to the horror that he causes. </label>
-                    <label id="mediaTileCast5" hidden >Cast: Robert De Niro, Ray Liotta, Joe Pesci, Lorraine Bracco, Paul Sorvino</label>  
-                    <label id="mediaTileGenre5" hidden >Genre: Crime, Biography, Thriller, Drama</label> 
                 </div>
             </div>
         </div>
-        <div id="divList" style="display: none;" class="mediaAreaMain">
-            <div class="mediaAreaChildItemHeading">
-                <label class="textmain" style="margin-left: 5%;">Type</label>
-                <label class="textmain" style="margin-left: 5%;">Title</label>
-                <label class="textmain" style="margin-left: 5%;">Genre</label>
-                <label class="textmain" style="margin-left: 5%;">Release Date</label>
+        <h2 class="rowHeadingWhatsNew">What's New</h2>
+        <div class="mediaHighlights">
+            <div id="WhatsNew1" class="newtile">
+                <div class="HighlightsMediaTile">
+                    <img class="HighlightsTileImage" id="mediaTitleImage_0006" src="images/mediaTitle_0006.jpg" onclick="expandTile('_0006');">    
+                </div>
+                <label id="mediaTitleHeading_0006" hidden >Midsommar | 2019 | 2h 28m</label>
+                <label id="mediaTitleSummary_0006" hidden >A couple travel to Sweden to visit their friend's rural hometown for its fabled midsummer festival, but what begins as an idyllic retreat quickly devolves into an increasingly violent and bizarre competition at the hands of a pagan cult.</label>
+                <label id="mediaTitleCast_0006" hidden >Cast: Florence Pugh, Jack Reynor, William Jackson Harper, Vilhelm Blomgren, Ellora Torchia, Archie Madekwe, Will Poulter</label>  
+                <label id="mediaTitleGenre_0006" hidden >Genre: Folk Horror, Thriller, Drama, Mystery</label>          
             </div>
-            <div class="mediaAreaChild">
-                <table class="mediaTable">
-                  <tr>
-                    <td class="mediaTableData">Movie</td>
-                    <td class="mediaTableData">One True Loves</td>
-                    <td class="mediaTableData">Romance/Comedy</td>
-                    <td class="mediaTableData">Apr 7, 2023</td>
-                  </tr>
-                  <tr>
-                    <td class="mediaTableData">Movie</td>
-                    <td class="mediaTableData">One True Loves</td>
-                    <td class="mediaTableData">Romance/Comedy</td>
-                    <td class="mediaTableData">Apr 7, 2023</td>
-                  </tr>
-                  <tr>
-                    <td class="mediaTableData">Movie</td>
-                    <td class="mediaTableData">One True Loves</td>
-                    <td class="mediaTableData">Romance/Comedy</td>
-                    <td class="mediaTableData">Apr 7, 2023</td>
-                  </tr>
-                  <tr>
-                    <td class="mediaTableData">Movie</td>
-                    <td class="mediaTableData">One True Loves</td>
-                    <td class="mediaTableData">Romance/Comedy</td>
-                    <td class="mediaTableData">Apr 7, 2023</td>
-                  </tr>
-                  <tr>
-                    <td class="mediaTableData">Movie</td>
-                    <td class="mediaTableData">One True Loves</td>
-                    <td class="mediaTableData">Romance/Comedy</td>
-                    <td class="mediaTableData">Apr 7, 2023</td>
-                  </tr>
-                  <tr>
-                    <td class="mediaTableData">Movie</td>
-                    <td class="mediaTableData">One True Loves</td>
-                    <td class="mediaTableData">Romance/Comedy</td>
-                    <td class="mediaTableData">Apr 7, 2023</td>
-                  </tr>
-                  <tr>
-                    <td class="mediaTableData">Movie</td>
-                    <td class="mediaTableData">One True Loves</td>
-                    <td class="mediaTableData">Romance/Comedy</td>
-                    <td class="mediaTableData">Apr 7, 2023</td>
-                  </tr>
-                  <tr>
-                    <td class="mediaTableData">Movie</td>
-                    <td class="mediaTableData">One True Loves</td>
-                    <td class="mediaTableData">Romance/Comedy</td>
-                    <td class="mediaTableData">Apr 7, 2023</td>
-                  </tr>
-                  <tr>
-                    <td class="mediaTableData">Movie</td>
-                    <td class="mediaTableData">One True Loves</td>
-                    <td class="mediaTableData">Romance/Comedy</td>
-                    <td class="mediaTableData">Apr 7, 2023</td>
-                  </tr>
-                  <tr>
-                    <td class="mediaTableData">Movie</td>
-                    <td class="mediaTableData">One True Loves</td>
-                    <td class="mediaTableData">Romance/Comedy</td>
-                    <td class="mediaTableData">Apr 7, 2023</td>
-                  </tr>
-                  <tr>
-                    <td class="mediaTableData">Movie</td>
-                    <td class="mediaTableData">One True Loves</td>
-                    <td class="mediaTableData">Romance/Comedy</td>
-                    <td class="mediaTableData">Apr 7, 2023</td>
-                  </tr>
-                  <tr>
-                    <td class="mediaTableData">Movie</td>
-                    <td class="mediaTableData">One True Loves</td>
-                    <td class="mediaTableData">Romance/Comedy</td>
-                    <td class="mediaTableData">Apr 7, 2023</td>
-                  </tr>
-                  <tr>
-                    <td class="mediaTableData">Movie</td>
-                    <td class="mediaTableData">One True Loves</td>
-                    <td class="mediaTableData">Romance/Comedy</td>
-                    <td class="mediaTableData">Apr 7, 2023</td>
-                  </tr>
-                  <tr>
-                    <td class="mediaTableData">Movie</td>
-                    <td class="mediaTableData">One True Loves</td>
-                    <td class="mediaTableData">Romance/Comedy</td>
-                    <td class="mediaTableData">Apr 7, 2023</td>
-                  </tr>
-                  <tr>
-                    <td class="mediaTableData">Movie</td>
-                    <td class="mediaTableData">One True Loves</td>
-                    <td class="mediaTableData">Romance/Comedy</td>
-                    <td class="mediaTableData">Apr 7, 2023</td>
-                  </tr>
-                </table>
+            <div id="WhatsNew2" class="newtile">
+                <div class="HighlightsMediaTile">
+                    <img class="HighlightsTileImage" id="mediaTitleImage_0009" src="images/mediaTitle_0009.jpg" onclick="expandTile('_0009');">    
+                </div>
+                <label id="mediaTitleHeading_0009" hidden >Louis Theroux: LA Stories - City of Dogs | 2014 | 59m</label>
+                <label id="mediaTitleSummary_0009" hidden >Louis visits the people who are providing a home for troubled and formerly feral dogs. He speaks to them about the city's enormous canine population.</label>
+                <label id="mediaTitleCast_0009" hidden >Cast: Louis Theroux</label>  
+                <label id="mediaTitleGenre_0009" hidden >Genre: Documentary, Special Interest</label>          
             </div>
+        </div>
+        <div class="rowContainter">
+            <h2 class="rowHeadings">Horror</h2>
+            <div id="" class="rowMediaMask">
+                <button class="pre-button" onclick="scrollRowHorrorPrev();"><ion-icon name="arrow-back-outline"></ion-icon></button>
+                <div id="mediaRow" class="mediaRow">
+                    <div id="rowHorrorStart" class="rowStart"></div>
+                    <div id="MediaTitle_0001" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0001" >2014 | Horror</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0001" src="images/mediaTitle_0001.jpg" onclick="expandTile('_0001');">    
+                        </div>
+                        <label id="mediaTitleHeading_0001" hidden >It Follows | 2014 | 1h 40m</label>
+                        <label id="mediaTitleSummary_0001" hidden >After a seemingly innocent sexual encounter, 19-year-old Jay becomes trapped by a vicious curse - "it" is following her, and the only way to save herself is to put others in harm's way.</label>
+                        <label id="mediaTitleCast_0001" hidden >Cast: Maika Monroe, Keir Gilchrist, Olivia Luccardi, Lili Sepe, Daniel Zovatto, Jake Weary</label>  
+                        <label id="mediaTitleGenre_0001" hidden >Genre: Supernatural, Psychological Horror, Thriller</label>  
+                        <label id="similarTitle1_0001" hidden >_0006</label>          
+                        <label id="similarTitle2_0001" hidden >_0004</label>          
+                    </div>
+                    <div id="MediaTitle_0002" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0002" >2015 | Horror</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0002" src="images/mediaTitle_0002.jpg" onclick="expandTile('_0002');">    
+                        </div>
+                        <label id="mediaTitleHeading_0002" hidden >The Witch | 2015 | 1h 32m</label>
+                        <label id="mediaTitleSummary_0002" hidden >A farmer relocates his family to a plot on the edge of an ominous forest.</label>
+                        <label id="mediaTitleCast_0002" hidden >Cast: Anya Taylor-Joy, Ralph Ineson, Kate Dickie, Harvey Scrimshaw, Ellie Grainger, Lucas Dawson</label>  
+                        <label id="mediaTitleGenre_0002" hidden >Genre: Folk Horror, Drama, Supernatural Horror</label>        
+                        <label id="similarTitle1_0002" hidden >_0003</label>          
+                        <label id="similarTitle2_0002" hidden >_0004</label>  
+                    </div>
+                    <div id="MediaTitle_0003" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0003" >2014 | Horror</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0003" src="images/mediaTitle_0003.jpg" onclick="expandTile('_0003');">    
+                        </div>
+                        <label id="mediaTitleHeading_0003" hidden >The Taking of Deborah Logan | 2014 | 1h 30m</label>
+                        <label id="mediaTitleSummary_0003" hidden >An elderly woman battling Alzheimer's disease agrees to let a film crew document her condition, but what they discover is something far more sinister going on.</label>
+                        <label id="mediaTitleCast_0003" hidden >Cast: Jill Larson, Anne Ramsay, Michelle Ang, Ryan Cutrona</label>  
+                        <label id="mediaTitleGenre_0003" hidden >Genre: Supernatural Horror, Found Footage</label>  
+                        <label id="similarTitle1_0003" hidden >_0025</label>          
+                        <label id="similarTitle2_0003" hidden >_0002</label>  
+                    </div>
+                    <div id="MediaTitle_0004" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0004" >2005 | Horror</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0004" src="images/mediaTitle_0004.jpg" onclick="expandTile('_0004');">    
+                        </div>
+                        <label id="mediaTitleHeading_0004" hidden >The Exorcism of Emily Rose | 2005 | 2h 2m</label>
+                        <label id="mediaTitleSummary_0004" hidden >A lawyer takes on a negligent homicide case involving a priest who performed an exorcism on a young girl.</label>
+                        <label id="mediaTitleCast_0004" hidden >Cast: Laura Linney, Tom Wilkinson, Campbell Scott, Colm Feore, Jennifer Carpenter, Mary Beth Hurt, Henry Czerny, Shohreh Aghdashloo</label>  
+                        <label id="mediaTitleGenre_0004" hidden >Genre: Supernatural Horror, Legal Drama, Thriller, Crime</label>     
+                        <label id="similarTitle1_0004" hidden >_0003</label>          
+                        <label id="similarTitle2_0004" hidden >_0005</label>
+                    </div>
+                    <div id="MediaTitle_0005" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0005" >2010 | Horror</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0005" src="images/mediaTitle_0005.jpg" onclick="expandTile('_0005');">    
+                        </div>
+                        <label id="mediaTitleHeading_0005" hidden >Devil | 2010 | 1h 20m</label>
+                        <label id="mediaTitleSummary_0005" hidden >"A group of people are trapped in an elevator and the Devil is mysteriously amongst them."</label>
+                        <label id="mediaTitleCast_0005" hidden >Cast: Chris Messina, Logan Marshall-Green, Geoffrey Arend, Bojana Novakovic, Jenny O'Hara, Bokeem Woodbine, Matt Craven, Jacob Vargas</label>  
+                        <label id="mediaTitleGenre_0005" hidden >Genre: Supernatural Horror, Thriller, Mystery</label>     
+                        <label id="similarTitle1_0005" hidden >_0001</label>          
+                        <label id="similarTitle2_0005" hidden >_0004</label>                        
+                    </div>
+                    <div id="MediaTitle_0006" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0006" >2019 | Horror</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0006" src="images/mediaTitle_0006.jpg" onclick="expandTile('_0006');">    
+                        </div>
+                        <label id="mediaTitleHeading_0006" hidden >Midsommar | 2019 | 2h 28m</label>
+                        <label id="mediaTitleSummary_0006" hidden >A couple travel to Sweden to visit their friend's rural hometown for its fabled midsummer festival, but what begins as an idyllic retreat quickly devolves into an increasingly violent and bizarre competition at the hands of a pagan cult.</label>
+                        <label id="mediaTitleCast_0006" hidden >Cast: Florence Pugh, Jack Reynor, William Jackson Harper, Vilhelm Blomgren, Ellora Torchia, Archie Madekwe, Will Poulter</label>  
+                        <label id="mediaTitleGenre_0006" hidden >Genre: Folk Horror, Thriller, Drama, Mystery</label>  
+                        <label id="similarTitle1_0006" hidden >_0001</label>          
+                        <label id="similarTitle2_0006" hidden >_0002</label>                        
+                    </div>
+                    <div id="MediaTitle_0012" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0012" >2009 | Sci-Fi</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0012" src="images/mediaTitle_0012.jpg" onclick="expandTile('_0012');">    
+                        </div>
+                        <label id="mediaTitleHeading_0012" hidden >District 9 | 2009 | 1h 52m</label>
+                        <label id="mediaTitleSummary_0012" hidden >Violence ensues after an extraterrestrial race forced to live in slum-like conditions on Earth finds a kindred spirit in a government agent exposed to their biotechnology.</label>
+                        <label id="mediaTitleCast_0012" hidden >Cast: Sharlto Copley, Jason Cope, David James, Vanessa Haywood, Mandla Gaduka, Kenneth Nkosi, Eugene Khumbanyiwa, Louis Minnaar, William Allen Young</label>  
+                        <label id="mediaTitleGenre_0012" hidden >Genre: Sci-Fi, Action, Adventure, Fantasy, Horror</label>   
+                        <label id="similarTitle1_0012" hidden >_0014</label>          
+                        <label id="similarTitle2_0012" hidden >_0011</label>                        
+                    </div>
+                    <div id="MediaTitle_0025" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0025" >2007 | Horror</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0025" src="images/mediaTitle_0025.jpg" onclick="expandTile('_0025');">    
+                        </div>
+                        <label id="mediaTitleHeading_0025" hidden >The Poughkeepsie Tapes | 2007 | 1h 26m</label>
+                        <label id="mediaTitleSummary_0025" hidden >In an abandoned house in Poughkeepsie, New York murder investigators uncover hundreds of tapes showing decades of a serial killer's work.</label>
+                        <label id="mediaTitleCast_0025" hidden >Cast: Stacy Chbosky, Ben Messmer, Ivar Brogger, Lou George, Michael Lawson</label>  
+                        <label id="mediaTitleGenre_0025" hidden >Genre:  Horror, Thriller, Mystery</label>
+                        <label id="similarTitle1_0025" hidden >_0003</label>          
+                        <label id="similarTitle2_0025" hidden >_0006</label>  
+                    </div>
+                    <div id="rowHorrorEnd" class="rowEnd"></div>
+                </div>
+                <button class="nxt-button" onclick="scrollRowHorrorNext();"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+            </div>
+        </div>
+        <div class="rowContainter">
+            <h2 class="rowHeadings">Action</h2>
+            <div id="" class="rowMediaMask">
+                <button class="pre-button" onclick="scrollRowActionPrev();"><ion-icon name="arrow-back-outline"></ion-icon></button>
+                <div id="mediaRow" class="mediaRow">
+                    <div id="rowActionStart" class="rowStart"></div>
+                    <div id="MediaTitle_0007" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0007" >2016 | Action/Adventure</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0007" src="images/mediaTitle_0007.jpg" onclick="expandTile('_0007');">    
+                        </div>
+                        <label id="mediaTitleHeading_0007" hidden >Captain America: Civil War | 2016 | 2h 28m</label>
+                        <label id="mediaTitleSummary_0007" hidden >Political pressure mounts to install a system of accountability when the actions of the Avengers lead to collateral damage. The new status quo deeply divides members of the team.</label>
+                        <label id="mediaTitleCast_0007" hidden >Cast: Chris Evans, Robert Downey Jr., Scarlett Johansson, Sebastian Stan, Anthony Mackie, Don Cheadle, Jeremy Renner</label>  
+                        <label id="mediaTitleGenre_0007" hidden >Genre: Action, Adventure, Superhero, Sci-Fi</label> 
+                        <label id="similarTitle1_0007" hidden >_0013</label>          
+                        <label id="similarTitle2_0007" hidden >_0014</label>  
+                    </div>
+                    <div id="MediaTitle_0011" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0011" >1988 | Action</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0011" src="images/mediaTitle_0011.jpg" onclick="expandTile('_0011');">    
+                        </div>
+                        <label id="mediaTitleHeading_0011" hidden >Die Hard | 1988 | 2h 12m</label>
+                        <label id="mediaTitleSummary_0011" hidden >A New York City police officer tries to save his estranged wife and several others taken hostage by terrorists during a Christmas party at the Nakatomi Plaza in Los Angeles.</label>
+                        <label id="mediaTitleCast_0011" hidden >Cast: Bruce Willis, Alan Rickman, Alexander Godunov, Bonnie Bedelia</label>  
+                        <label id="mediaTitleGenre_0011" hidden >Genre: Action, Thriller</label>     
+                        <label id="similarTitle1_0011" hidden >_0015</label>          
+                        <label id="similarTitle2_0011" hidden >_0020</label>                          
+                    </div>
+                    <div id="MediaTitle_0012" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0012" >2009 | Sci-Fi</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0012" src="images/mediaTitle_0012.jpg" onclick="expandTile('_0012');">    
+                        </div>
+                        <label id="mediaTitleHeading_0012" hidden >District 9 | 2009 | 1h 52m</label>
+                        <label id="mediaTitleSummary_0012" hidden >Violence ensues after an extraterrestrial race forced to live in slum-like conditions on Earth finds a kindred spirit in a government agent exposed to their biotechnology.</label>
+                        <label id="mediaTitleCast_0012" hidden >Cast: Sharlto Copley, Jason Cope, David James, Vanessa Haywood, Mandla Gaduka, Kenneth Nkosi, Eugene Khumbanyiwa, Louis Minnaar, William Allen Young</label>  
+                        <label id="mediaTitleGenre_0012" hidden >Genre: Sci-Fi, Action, Adventure, Fantasy, Horror</label>      
+                        <label id="similarTitle1_0012" hidden >_0014</label>          
+                        <label id="similarTitle2_0012" hidden >_0011</label>                                 
+                    </div>
+                    <div id="MediaTitle_0013" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0013" >2019 | Action/Adventure</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0013" src="images/mediaTitle_0013.jpg" onclick="expandTile('_0013');">    
+                        </div>
+                        <label id="mediaTitleHeading_0013" hidden >Spider-Man: Far From Home | 2019 | 2h 10m</label>
+                        <label id="mediaTitleSummary_0013" hidden >Following the events of Avengers: Endgame (2019), Spider-Man must step up to take on new threats in a world that has changed forever.</label>
+                        <label id="mediaTitleCast_0013" hidden >Cast: Tom Holland, Samuel L. Jackson, Zendaya, Cobie Smulders, Jon Favreau, J. B. Smoove, Jacob Batalon, Martin Starr, Tony Revolori, Marisa Tomei, Jake Gyllenhaal</label>  
+                        <label id="mediaTitleGenre_0013" hidden >Genre: Action, Superhero, Sci-Fi, Comedy</label>         
+                        <label id="similarTitle1_0013" hidden >_0007</label>          
+                        <label id="similarTitle2_0013" hidden >_0014</label>                          
+                    </div>
+                    <div id="MediaTitle_0014" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0014" >2004 | Sci-Fi</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0014" src="images/mediaTitle_0014.jpg" onclick="expandTile('_0014');">    
+                        </div>
+                        <label id="mediaTitleHeading_0014" hidden >I, Robot | 2004 | 1h 55m</label>
+                        <label id="mediaTitleSummary_0014" hidden >In 2035, a technophobic cop investigates a crime that may have been perpetrated by a robot, which leads to a larger threat to humanity.</label>
+                        <label id="mediaTitleCast_0014" hidden >Cast: Will Smith, Bridget Moynahan, Bruce Greenwood, James Cromwell, Chi McBride, Alan Tudyk</label>  
+                        <label id="mediaTitleGenre_0014" hidden >Genre: Sci-Fi, Action, Crime, Mystery, Thriller</label> 
+                        <label id="similarTitle1_0014" hidden >_0020</label>          
+                        <label id="similarTitle2_0014" hidden >_0013</label>                          
+                    </div>
+                    <div id="MediaTitle_0015" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0015" >1997 | Action/Adventure</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0015" src="images/mediaTitle_0015.jpg" onclick="expandTile('_0015');">    
+                        </div>
+                        <label id="mediaTitleHeading_0015" hidden >Face/Off | 1997 | 2h 13m</label>
+                        <label id="mediaTitleSummary_0015" hidden >To foil a terrorist plot, an FBI agent undergoes facial transplant surgery to assume the identity of the criminal mastermind who murdered his only son, but the criminal wakes up prematurely and seeks revenge.</label>
+                        <label id="mediaTitleCast_0015" hidden >Cast: John Travolta, Nicolas Cage, Joan Allen, Gina Gershon, Alessandro Nivola, Colm Feore</label>  
+                        <label id="mediaTitleGenre_0015" hidden >Genre: Action, Crime, Sci-Fi, Thriller</label>  
+                        <label id="similarTitle1_0015" hidden >_0011</label>          
+                        <label id="similarTitle2_0015" hidden >_0020</label>                           
+                    </div>
+                    <div id="MediaTitle_0020" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0020" >2004 | Thriller</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0020" src="images/mediaTitle_0020.jpg" onclick="expandTile('_0020');">    
+                        </div>
+                        <label id="mediaTitleHeading_0020" hidden >Man on Fire | 2004 | 2h 26m</label>
+                        <label id="mediaTitleSummary_0020" hidden >In Mexico City, a former CIA operative swears vengeance on those who committed an unspeakable act against the family he was hired to protect.</label>
+                        <label id="mediaTitleCast_0020" hidden >Cast: Denzel Washington, Dakota Fanning, Christopher Walken, Giancarlo Giannini, Radha Mitchell, Marc Anthony, Rachel Ticotin, Mickey Rourke</label>  
+                        <label id="mediaTitleGenre_0020" hidden >Genre: Drama, Action, Crime, Thriller</label> 
+                        <label id="similarTitle1_0020" hidden >_0011</label>          
+                        <label id="similarTitle2_0020" hidden >_0015</label>                          
+                    </div>
+                    <div id="rowActionEnd" class="rowEnd"></div>
+                </div>
+                <button class="nxt-button" onclick="scrollRowActionNext();"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+            </div>
+        </div>
+        <div class="rowContainter">
+            <h2 class="rowHeadings">Documentary</h2>
+            <div id="" class="rowMediaMask">
+                <button class="pre-button" onclick="scrollRowDocPrev();"><ion-icon name="arrow-back-outline"></ion-icon></button>
+                <div id="mediaRow" class="mediaRow">
+                    <div id="rowDocStart" class="rowStart"></div>
+                    <div id="MediaTitle_0008" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0008" >2020 | Documentary</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0008" src="images/mediaTitle_0008.jpg" onclick="expandTile('_0008');">    
+                        </div>
+                        <label id="mediaTitleHeading_0008" hidden >The Last Dance | 2020 | 10 Episodes</label>
+                        <label id="mediaTitleSummary_0008" hidden >This series revolves around the career of Michael Jordan, with particular focus on the 1997–98 season, his final season with the Chicago Bulls of the National Basketball Association (NBA).</label>
+                        <label id="mediaTitleCast_0008" hidden >Cast: Michael Jordan, Scottie Pippen, Dennis Rodman</label>  
+                        <label id="mediaTitleGenre_0008" hidden >Genre: Social and Cultural Docs, Docuseries, Sports Documentary</label>  
+                        <label id="similarTitle1_0008" hidden >_0021</label>          
+                        <label id="similarTitle2_0008" hidden >_0009</label>                          
+                    </div>
+                    <div id="MediaTitle_0009" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0009" >2014 | Documentary</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0009" src="images/mediaTitle_0009.jpg" onclick="expandTile('_0009');">    
+                        </div>
+                        <label id="mediaTitleHeading_0009" hidden >Louis Theroux: LA Stories - City of Dogs | 2014 | 59m</label>
+                        <label id="mediaTitleSummary_0009" hidden >Louis visits the people who are providing a home for troubled and formerly feral dogs. He speaks to them about the city's enormous canine population.</label>
+                        <label id="mediaTitleCast_0009" hidden >Cast: Louis Theroux</label>  
+                        <label id="mediaTitleGenre_0009" hidden >Genre: Documentary, Special Interest</label> 
+                        <label id="similarTitle1_0009" hidden >_0023</label>          
+                        <label id="similarTitle2_0009" hidden >_0008</label>                        
+                    </div>
+                    <div id="MediaTitle_0021" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0021" >2012 | Documentary</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0021" src="images/mediaTitle_0021.jpg" onclick="expandTile('_0021');">    
+                        </div>
+                        <label id="mediaTitleHeading_0021" hidden >The Summit | 2012 | 1h 44m</label>
+                        <label id="mediaTitleSummary_0021" hidden >The story of the deadliest day on the world's most dangerous mountain, when 11 climbers mysteriously perished on K2.</label>
+                        <label id="mediaTitleCast_0021" hidden >Director: Nick Ryan</label>  
+                        <label id="mediaTitleGenre_0021" hidden >Genre: Documentary, Adventure, Mystery</label>    
+                        <label id="similarTitle1_0021" hidden >_0009</label>          
+                        <label id="similarTitle2_0021" hidden >_0008</label>                        
+                    </div>
+                    <div id="MediaTitle_0022" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0022" >2007 | Documentary</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0022" src="images/mediaTitle_0022.jpg" onclick="expandTile('_0022');">    
+                        </div>
+                        <label id="mediaTitleHeading_0022" hidden >Jonestown: Paradise Lost | 2007 | 1h 44m</label>
+                        <label id="mediaTitleSummary_0022" hidden >This feature length film, a hybrid of documentary and drama, tracks the final, 5-day build up to a horrific doomsday - the infamous mass murder/ suicides of Jim Jones' People's Temple on November 18th, 1978. By the end of that day, 918 men, women and children will die.</label>
+                        <label id="mediaTitleCast_0022" hidden >Director: Tim Wolochatiuk</label>  
+                        <label id="mediaTitleGenre_0022" hidden >Genre: Documentary, Drama, History</label>  
+                        <label id="similarTitle1_0022" hidden >_0024</label>          
+                        <label id="similarTitle2_0022" hidden >_0023</label>
+                    </div>
+                    <div id="MediaTitle_0023" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0023" >2015 | Documentary</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0023" src="images/mediaTitle_0023.jpg" onclick="expandTile('_0023');">    
+                        </div>
+                        <label id="mediaTitleHeading_0023" hidden >Louis Theroux: By Reason of Insanity | 2015 | 59m</label>
+                        <label id="mediaTitleSummary_0023" hidden >Louis investigates Ohio's state psychiatric hospitals, meeting patients who have committed crimes but have been found not guilty by reason of insanity.</label>
+                        <label id="mediaTitleCast_0023" hidden >Cast: Louis Theroux</label>  
+                        <label id="mediaTitleGenre_0023" hidden >Genre: Documentary, Special Interest</label>   
+                        <label id="similarTitle1_0023" hidden >_0009</label>          
+                        <label id="similarTitle2_0023" hidden >_0008</label>                          
+                    </div>
+                    <div id="MediaTitle_0024" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0024" >2011 | Documentary</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0024" src="images/mediaTitle_0024.jpg" onclick="expandTile('_0024');">    
+                        </div>
+                        <label id="mediaTitleHeading_0024" hidden >Where Is Robert Fisher? | 2011 | 1h 24m</label>
+                        <label id="mediaTitleSummary_0024" hidden >Explore the disturbing story of one of America's most wanted fugitives, Robert Fisher. Following the brutal murder of his family, Fisher went missing in 2001 - years later, his whereabouts remain unknown.</label>
+                        <label id="mediaTitleCast_0024" hidden >Director: Charlie Minn</label>  
+                        <label id="mediaTitleGenre_0024" hidden >Genre: Documentary, Crime</label>  
+                        <label id="similarTitle1_0024" hidden >_0023</label>          
+                        <label id="similarTitle2_0024" hidden >_0022</label>                          
+                    </div>
+                    <div id="MediaTitle_0025" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0025" >2007 | Horror</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0025" src="images/mediaTitle_0025.jpg" onclick="expandTile('_0025');">    
+                        </div>
+                        <label id="mediaTitleHeading_0025" hidden >The Poughkeepsie Tapes | 2007 | 1h 26m</label>
+                        <label id="mediaTitleSummary_0025" hidden >In an abandoned house in Poughkeepsie, New York murder investigators uncover hundreds of tapes showing decades of a serial killer's work.</label>
+                        <label id="mediaTitleCast_0025" hidden >Cast: Stacy Chbosky, Ben Messmer, Ivar Brogger, Lou George, Michael Lawson</label>  
+                        <label id="mediaTitleGenre_0025" hidden >Genre:  Horror, Thriller, Mystery</label>  
+                        <label id="similarTitle1_0025" hidden >_0003</label>          
+                        <label id="similarTitle2_0025" hidden >_0006</label>                          
+                    </div>
+                    <div id="rowDocEnd" class="rowEnd"></div>
+                </div>
+                <button class="nxt-button" onclick="scrollRowDocNext();"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+            </div>
+        </div>
+        <div class="rowContainter">
+            <h2 class="rowHeadings">Drama</h2>
+            <div id="" class="rowMediaMask">
+                <button class="pre-button" onclick="scrollRowDramaPrev();"><ion-icon name="arrow-back-outline"></ion-icon></button>
+                <div id="mediaRow" class="mediaRow">
+                    <div id="rowDramaStart" class="rowStart"></div>
+                    <div id="MediaTitle_0010" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0010" >1990 | Crime</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0010" src="images/mediaTitle_0010.jpg" onclick="expandTile('_0010');">    
+                        </div>
+                        <label id="mediaTitleHeading_0010" hidden >Goodfellas | 1990 | 2h 26m</label>
+                        <label id="mediaTitleSummary_0010" hidden >A young man grows up in the mob and works very hard to advance himself through the ranks. He enjoys his life of money and luxury, but is oblivious to the horror that he causes.</label>
+                        <label id="mediaTitleCast_0010" hidden >Cast: Robert De Niro, Ray Liotta, Joe Pesci, Lorraine Bracco, Paul Sorvino</label>  
+                        <label id="mediaTitleGenre_0010" hidden >Genre: Crime, Drama, Biography, Thriller</label>
+                        <label id="similarTitle1_0010" hidden >_0018</label>          
+                        <label id="similarTitle2_0010" hidden >_0016</label>                        
+                    </div>
+                    <div id="MediaTitle_0016" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0016" >2012 | Drama</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0016" src="images/mediaTitle_0016.jpg" onclick="expandTile('_0016');">    
+                        </div>
+                        <label id="mediaTitleHeading_0016" hidden >The Place Beyond the Pines | 2012 | 2h 20m</label>
+                        <label id="mediaTitleSummary_0016" hidden >A motorcycle stunt-rider turns to robbing banks as a way to provide for his lover and their newborn--a decision that sets him on a collision course with an ambitious rookie cop navigating a department ruled by a corrupt detective.</label>
+                        <label id="mediaTitleCast_0016" hidden >Cast: Ryan Gosling, Bradley Cooper, Eva Mendes, Ray Liotta, Ben Mendelsohn, Rose Byrne, Mahershala Ali, Bruce Greenwood, Harris Yulin</label>  
+                        <label id="mediaTitleGenre_0016" hidden >Genre: Drama, Crime, Romance, Thriller</label>   
+                        <label id="similarTitle1_0016" hidden >_0018</label>          
+                        <label id="similarTitle2_0016" hidden >_0017</label>                           
+                    </div>
+                    <div id="MediaTitle_0017" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0017" >2013 | Thriller</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0017" src="images/mediaTitle_0017.jpg" onclick="expandTile('_0017');">    
+                        </div>
+                        <label id="mediaTitleHeading_0017" hidden >Prisoners | 2013 | 2h 33m</label>
+                        <label id="mediaTitleSummary_0017" hidden >When Keller Dover's daughter and her friend go missing, he takes matters into his own hands as the police pursue multiple leads and the pressure mounts.</label>
+                        <label id="mediaTitleCast_0017" hidden >Cast: Hugh Jackman, Jake Gyllenhaal, Viola Davis, Maria Bello, Terrence Howard, Melissa Leo, Paul Dano</label>  
+                        <label id="mediaTitleGenre_0017" hidden >Genre: Thriller, Drama, Crime</label> 
+                        <label id="similarTitle1_0017" hidden >_0019</label>          
+                        <label id="similarTitle2_0017" hidden >_0016</label>                           
+                    </div>
+                    <div id="MediaTitle_0018" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0018" >2003 | Drama</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0018" src="images/mediaTitle_0018.jpg" onclick="expandTile('_0018');">    
+                        </div>
+                        <label id="mediaTitleHeading_0018" hidden >Mystic River | 2003 | 2h 17m</label>
+                        <label id="mediaTitleSummary_0018" hidden >The lives of three men who were childhood friends are shattered when one of them has a family tragedy.</label>
+                        <label id="mediaTitleCast_0018" hidden >Cast: Sean Penn, Tim Robbins, Kevin Bacon, Laurence Fishburne, Marcia Gay Harden, Laura Linney</label>  
+                        <label id="mediaTitleGenre_0018" hidden >Genre: Drama, Thriller, Crime, Neo-noir, Mystery</label>   
+                        <label id="similarTitle1_0018" hidden >_0010</label>          
+                        <label id="similarTitle2_0018" hidden >_0016</label>                        
+                    </div>
+                    <div id="MediaTitle_0019" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0019" >2015 | Thriller</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0019" src="images/mediaTitle_0019.jpg" onclick="expandTile('_0019');">    
+                        </div>
+                        <label id="mediaTitleHeading_0019" hidden >Spotlight | 2015 | 2h 8m</label>
+                        <label id="mediaTitleSummary_0019" hidden >The true story of how the Boston Globe uncovered the massive scandal of child molestation and cover-up within the local Catholic Archdiocese, shaking the entire Catholic Church to its core.</label>
+                        <label id="mediaTitleCast_0019" hidden >Cast: Mark Ruffalo, Michael Keaton, Rachel McAdams, Liev Schreiber, John Slattery, Stanley Tucci</label>  
+                        <label id="mediaTitleGenre_0019" hidden >Genre: Thriller, Drama, Historical, Crime</label>     
+                        <label id="similarTitle1_0019" hidden >_0017</label>          
+                        <label id="similarTitle2_0019" hidden >_0016</label>                          
+                    </div>
+                    <div id="MediaTitle_0020" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0020" >2004 | Thriller</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0020" src="images/mediaTitle_0020.jpg" onclick="expandTile('_0020');">    
+                        </div>
+                        <label id="mediaTitleHeading_0020" hidden >Man on Fire | 2004 | 2h 26m</label>
+                        <label id="mediaTitleSummary_0020" hidden >In Mexico City, a former CIA operative swears vengeance on those who committed an unspeakable act against the family he was hired to protect.</label>
+                        <label id="mediaTitleCast_0020" hidden >Cast: Denzel Washington, Dakota Fanning, Christopher Walken, Giancarlo Giannini, Radha Mitchell, Marc Anthony, Rachel Ticotin, Mickey Rourke</label>  
+                        <label id="mediaTitleGenre_0020" hidden >Genre: Drama, Action, Crime, Thriller</label> 
+                        <label id="similarTitle1_0020" hidden >_0011</label>          
+                        <label id="similarTitle2_0020" hidden >_0015</label>                          
+                    </div>
+                    <div id="rowDramaEnd" class="rowEnd"></div>
+                </div>
+                <button class="nxt-button" onclick="scrollRowDramaNext();"><ion-icon name="arrow-forward-outline"></ion-icon></button>
+            </div>
+        </div>
+        <div class="sectionsMobile" onclick="goHorror();">
+            <h2 class="sectionMobileHeadings">The Horror Collection</h2>
+        </div>
+        <div class="sectionsMobile" onclick="goAction();">
+            <h2 class="sectionMobileHeadings">The Action Collection</h2>
+        </div>
+        <div class="sectionsMobile" onclick="goDocs();">
+            <h2 class="sectionMobileHeadings">The Doc's Collection</h2>
+        </div>
+        <div class="sectionsMobile" onclick="goDrama();">
+            <h2 class="sectionMobileHeadings">The Drama Collection</h2>
         </div>
     </div>
 </div>

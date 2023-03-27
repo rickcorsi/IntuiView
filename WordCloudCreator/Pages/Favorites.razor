@@ -1,0 +1,34 @@
+﻿@page "/Favorites"
+
+<PageTitle>Stream Project</PageTitle>
+
+<div class="mainBody">
+    <div class="ToolBar">
+        <div class="ToolBarChild">
+            <label class="headerLogo">IntuiView</label>
+            <input type="button" class="headerButtons" id="btnHome" value="Home" onclick="goHome();">
+            <input type="button" class="headerButtons" id="btnSearch" value="Search" onclick="goSearch();">
+            <input type="button" class="headerButtons" id="btnFavorites" value="Favorites" onclick="">
+        </div>
+    </div>
+    <div class="mediaArea">
+        <div id="tileMain" class="tileExpanded" onclick="closeTile();">
+            <img class="expandedTileImage" id="expandedTileImage" onclick="" alt="">
+            <div class="expandedTileChild" id="expandedTileChild">
+                <label id="mediaTileHeadingExpanded" class="expandedTileHeadingLabel"></label>
+                <label id="mediaTileSummaryExpanded" class="expandedTileSummaryLabel"></label>
+                <label id="mediaTileCastExpanded" class="expandedTileCastLabel"></label>  
+                <label id="mediaTileGenreExpanded" class="expandedTileGenreLabel"></label>            
+            </div>
+        </div>
+
+        <div
+            
+        ></div>
+    
+    </div>
+</div>
+
+@code {
+
+}

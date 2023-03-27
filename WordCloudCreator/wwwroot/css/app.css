@@ -1,8 +1,8 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 html, body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background: linear-gradient(-45deg, #05111e, #03060a, #10161c, #04213d);
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(-45deg, #1E1E5C, #701955, #1E1E5C, #701955);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 100vh;

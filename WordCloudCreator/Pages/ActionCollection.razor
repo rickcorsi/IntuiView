@@ -1,0 +1,193 @@
+﻿@page "/ActionCollection"
+
+<PageTitle>Stream Project</PageTitle>
+
+<div class="mainBody">
+    <div class="ToolBar">
+        <div class="ToolBarChild">
+            <label class="headerLogo">IntuiView</label>
+            <input type="button" class="headerButtons" id="btnHome" value="Home" onclick="goHome();">
+            <input type="button" class="headerButtons" id="btnSearch" value="Search" onclick="goSearch();">
+        </div>
+    </div>
+    <div class="mediaArea">
+        <div id="overlay" class="screenOverlay" onclick="">
+            <div class="screenOverlayClickArea1" onclick="closeTile();"></div>
+            <div id="tileMain" class="tileExpanded" onclick="">
+                <img class="expandedTileImage" id="expandedTileImage" onclick="" alt="">
+                <div class="expandedTileChild" id="expandedTileChild">
+                    <label id="mediaTileHeadingExpanded" class="expandedTileHeadingLabel"></label>
+                    <label id="mediaTileSummaryExpanded" class="expandedTileSummaryLabel"></label>
+                    <label id="mediaTileCastExpanded" class="expandedTileCastLabel"></label>  
+                    <label id="mediaTileGenreExpanded" class="expandedTileGenreLabel"></label>   
+                    <input type="button" class="mobileCloseButton" id="btnClose" value="Return" onclick="closeTile();">
+                </div>
+                <div class="expandedTileChild2">
+                    <input type="button" class="closeButton" id="btnClose" value="Return" onclick="closeTile();">
+                    <h2 class="similarTitlesHeadings">Similar Titles</h2>
+                    <div class="similarTitlesExpanded">
+                            <div id="SimilarMediaTitle_0001" class="movieTileMain">
+                            </div>
+                            <div id="SimilarMediaTitle_0002" class="movieTileMain">      
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2 class="rowHeadingWhatsNew">The Action Collection</h2>
+        <div class="mediaHighlights">
+            <div id="WhatsNew1" class="newtile">
+                <div class="HighlightsMediaTile">
+                    <img class="HighlightsTileImage" id="mediaTitleImage_0013" src="images/mediaTitle_0013.jpg" onclick="expandTile('_0013');">    
+                </div>
+                <label id="mediaTitleHeading_0013" hidden >Spider-Man: Far From Home | 2019 | 2h 10m</label>
+                <label id="mediaTitleSummary_0013" hidden >Following the events of Avengers: Endgame (2019), Spider-Man must step up to take on new threats in a world that has changed forever.</label>
+                <label id="mediaTitleCast_0013" hidden >Cast: Tom Holland, Samuel L. Jackson, Zendaya, Cobie Smulders, Jon Favreau, J. B. Smoove, Jacob Batalon, Martin Starr, Tony Revolori, Marisa Tomei, Jake Gyllenhaal</label>  
+                <label id="mediaTitleGenre_0013" hidden >Genre: Action, Superhero, Sci-Fi, Comedy</label>             
+            </div>
+            <div id="WhatsNew2" class="newtile">
+                <div class="HighlightsMediaTile">
+                    <img class="HighlightsTileImage" id="mediaTitleImage_0011" src="images/mediaTitle_0011.jpg" onclick="expandTile('_0011');">    
+                </div>
+                <label id="mediaTitleHeading_0011" hidden >Die Hard | 1988 | 2h 12m</label>
+                <label id="mediaTitleSummary_0011" hidden >A New York City police officer tries to save his estranged wife and several others taken hostage by terrorists during a Christmas party at the Nakatomi Plaza in Los Angeles.</label>
+                <label id="mediaTitleCast_0011" hidden >Cast: Bruce Willis, Alan Rickman, Alexander Godunov, Bonnie Bedelia</label>  
+                <label id="mediaTitleGenre_0011" hidden >Genre: Action, Thriller</label>          
+            </div>
+        </div>
+        <div class="searchRow">
+            <div id="" class="rowMediaMaskSearch">
+                <div id="mediaRow" class="mediaRowSearch">
+                    <div id="MediaTitle_0013" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0013" >2019 | Action/Adventure</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0013" src="images/mediaTitle_0013.jpg" onclick="expandTile('_0013');">    
+                        </div>
+                        <label id="mediaTitleHeading_0013" hidden >Spider-Man: Far From Home | 2019 | 2h 10m</label>
+                        <label hidden >Spiderman Spider-Man Far From Home</label>
+                        <label id="mediaTitleSummary_0013" hidden >Following the events of Avengers: Endgame (2019), Spider-Man must step up to take on new threats in a world that has changed forever.</label>
+                        <label id="mediaTitleCast_0013" hidden >Cast: Tom Holland, Samuel L. Jackson, Zendaya, Cobie Smulders, Jon Favreau, J. B. Smoove, Jacob Batalon, Martin Starr, Tony Revolori, Marisa Tomei, Jake Gyllenhaal</label>  
+                        <label id="mediaTitleGenre_0013" hidden >Genre: Action, Superhero, Sci-Fi, Comedy</label>          
+                        <label id="similarTitle1_0013" hidden >_0007</label>          
+                        <label id="similarTitle2_0013" hidden >_0014</label>
+                    </div>
+                    <div id="MediaTitle_0015" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0015" >1997 | Action/Adventure</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0015" src="images/mediaTitle_0015.jpg" onclick="expandTile('_0015');">    
+                        </div>
+                        <label id="mediaTitleHeading_0015" hidden >Face/Off | 1997 | 2h 13m</label>
+                        <label hidden >faceoff, face off</label>
+                        <label id="mediaTitleSummary_0015" hidden >To foil a terrorist plot, an FBI agent undergoes facial transplant surgery to assume the identity of the criminal mastermind who murdered his only son, but the criminal wakes up prematurely and seeks revenge.</label>
+                        <label id="mediaTitleCast_0015" hidden >Cast: John Travolta, Nicolas Cage, Joan Allen, Gina Gershon, Alessandro Nivola, Colm Feore</label>  
+                        <label id="mediaTitleGenre_0015" hidden >Genre: Action, Crime, Sci-Fi, Thriller</label>          
+                        <label id="similarTitle1_0015" hidden >_0011</label>          
+                        <label id="similarTitle2_0015" hidden >_0020</label>
+                    </div>
+                    <div id="MediaTitle_0014" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0014" >2004 | Sci-Fi</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0014" src="images/mediaTitle_0014.jpg" onclick="expandTile('_0014');">    
+                        </div>
+                        <label id="mediaTitleHeading_0014" hidden >I, Robot | 2004 | 1h 55m</label>
+                        <label hidden >I Robot</label>
+                        <label id="mediaTitleSummary_0014" hidden >In 2035, a technophobic cop investigates a crime that may have been perpetrated by a robot, which leads to a larger threat to humanity.</label>
+                        <label id="mediaTitleCast_0014" hidden >Cast: Will Smith, Bridget Moynahan, Bruce Greenwood, James Cromwell, Chi McBride, Alan Tudyk</label>  
+                        <label id="mediaTitleGenre_0014" hidden >Genre: Sci-Fi, Action, Crime, Mystery, Thriller</label>       
+                        <label id="similarTitle1_0014" hidden >_0020</label>          
+                        <label id="similarTitle2_0014" hidden >_0013</label>                          
+                    </div>
+                    <div id="MediaTitle_0007" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0007" >2016 | Action/Adventure</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0007" src="images/mediaTitle_0007.jpg" onclick="expandTile('_0007');">    
+                        </div>
+                        <label id="mediaTitleHeading_0007" hidden >Captain America: Civil War | 2016 | 2h 28m</label>
+                        <label hidden >Captain America Civil War</label>
+                        <label id="mediaTitleSummary_0007" hidden >Political pressure mounts to install a system of accountability when the actions of the Avengers lead to collateral damage. The new status quo deeply divides members of the team.</label>
+                        <label id="mediaTitleCast_0007" hidden >Cast: Chris Evans, Robert Downey Jr., Scarlett Johansson, Sebastian Stan, Anthony Mackie, Don Cheadle, Jeremy Renner</label>  
+                        <label id="mediaTitleGenre_0007" hidden >Genre: Action, Adventure, Superhero, Sci-Fi</label>      
+                        <label id="similarTitle1_0007" hidden >_0013</label>          
+                        <label id="similarTitle2_0007" hidden >_0014</label>                          
+                    </div>
+                    <div id="MediaTitle_0020" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0020" >2004 | Thriller</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0020" src="images/mediaTitle_0020.jpg" onclick="expandTile('_0020');">    
+                        </div>
+                        <label id="mediaTitleHeading_0020" hidden >Man on Fire | 2004 | 2h 26m</label>
+                        <label id="mediaTitleSummary_0020" hidden >In Mexico City, a former CIA operative swears vengeance on those who committed an unspeakable act against the family he was hired to protect.</label>
+                        <label id="mediaTitleCast_0020" hidden >Cast: Denzel Washington, Dakota Fanning, Christopher Walken, Giancarlo Giannini, Radha Mitchell, Marc Anthony, Rachel Ticotin, Mickey Rourke</label>  
+                        <label id="mediaTitleGenre_0020" hidden >Genre: Drama, Action, Crime, Thriller</label>  
+                        <label id="similarTitle1_0020" hidden >_0011</label>          
+                        <label id="similarTitle2_0020" hidden >_0015</label>                        
+                    </div>
+                    <div id="MediaTitle_0012" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0012" >2009 | Sci-Fi</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0012" src="images/mediaTitle_0012.jpg" onclick="expandTile('_0012');">    
+                        </div>
+                        <label id="mediaTitleHeading_0012" hidden >District 9 | 2009 | 1h 52m</label>
+                        <label id="mediaTitleSummary_0012" hidden >Violence ensues after an extraterrestrial race forced to live in slum-like conditions on Earth finds a kindred spirit in a government agent exposed to their biotechnology.</label>
+                        <label id="mediaTitleCast_0012" hidden >Cast: Sharlto Copley, Jason Cope, David James, Vanessa Haywood, Mandla Gaduka, Kenneth Nkosi, Eugene Khumbanyiwa, Louis Minnaar, William Allen Young</label>  
+                        <label id="mediaTitleGenre_0012" hidden >Genre: Sci-Fi, Action, Adventure, Fantasy, Horror</label>
+                        <label id="similarTitle1_0012" hidden >_0014</label>          
+                        <label id="similarTitle2_0012" hidden >_0011</label>                          
+                    </div>
+                    <div id="MediaTitle_0011" class="movieTileMain">
+                        <div class="mediaTile">
+                            <label class="tileTextHead" id="mediaTileLabel_0011" >1988 | Action</label>
+                            <button class="listButton" id="" value="" onclick=""><ion-icon name="add-circle-outline"></ion-icon></button>
+                            <img class="tileImageMain" id="mediaTitleImage_0011" src="images/mediaTitle_0011.jpg" onclick="expandTile('_0011');">    
+                        </div>
+                        <label id="mediaTitleHeading_0011" hidden >Die Hard | 1988 | 2h 12m</label>
+                        <label id="mediaTitleSummary_0011" hidden >A New York City police officer tries to save his estranged wife and several others taken hostage by terrorists during a Christmas party at the Nakatomi Plaza in Los Angeles.</label>
+                        <label id="mediaTitleCast_0011" hidden >Cast: Bruce Willis, Alan Rickman, Alexander Godunov, Bonnie Bedelia</label>  
+                        <label id="mediaTitleGenre_0011" hidden >Genre: Action, Thriller</label>    
+                        <label id="similarTitle1_0011" hidden >_0015</label>          
+                        <label id="similarTitle2_0011" hidden >_0020</label>                           
+                    </div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                    <div id="" class="spacer"></div>
+                </div>
+            </div>
+        </div>
+        <div class="sectionsMobile" onclick="goHorror();">
+            <h2 class="sectionMobileHeadings">The Horror Collection</h2>
+        </div>
+        <div class="sectionsMobile" onclick="goDocs();">
+            <h2 class="sectionMobileHeadings">The Doc's Collection</h2>
+        </div>
+        <div class="sectionsMobile" onclick="goDrama();">
+            <h2 class="sectionMobileHeadings">The Drama Collection</h2>
+        </div>
+    </div>
+</div>
+
+@code {
+
+}

@@ -1,301 +1,16 @@
 ﻿.mainBody {
-    background-color: ;
     min-width: 100%;
     min-height: 100%;
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-/*    background-color: yellow;
-*/    padding-top: 60px;
-}
-.textmain {
-    color: snow;
-}
-.header {
-    height: 60px;
-    min-width: 100%;
-    font-size: 40px;
-    border-radius: 5px;
-    outline-style: solid;
-    outline: 2px solid;
-    border-color: skyblue;
-}
-.inputButtons {
-    height: 30px;
-    min-width: 120px;
-    max-width: 120px;
-    margin: 15px;
-    border: 2px solid;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: snow;
-    color: snow;
-    background-color: rgba(10,10,10,0.00);
-}
-    .inputButtons:hover {
-        outline: 1px solid;
-        outline-style: solid;
-        outline-color: white;
-    }
-    .inputButtons:focus {
-        border-color: snow;
-    }
-.inputButtonsInactive {
-    height: 30px;
-    min-width: 120px;
-    max-width: 120px;
-    margin: 15px;
-    border: 2px solid;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: #666668;
-    color: #666668;
-    background-color: rgba(10,10,10,0.00);
-}
-    .inputButtonsInactive:hover {
-        border: 2px solid;
-        border-radius: 5px;
-        border-style: solid;
-        border-color: snow;
-        color: snow;
-    }
-    .inputButtonsInactive:focus {
-
-    }
-.inputText {
-    height: 40px;
-    min-width: 120px;
-    max-width: 120px;
-    padding: 3px;
-    margin: 15px;
-    color: black;
-    border: 2px solid;
-    border-radius: 5px;
-    border-style: solid;
-    border-color: cyan;
-    background-color: white;
-}
-.mediaArea {
-    min-width: 95%;
-    max-width: 95%;
-    min-height: 450px;
-    max-height: 450px;
-    display: flex;
-    justify-content: start;
-    flex-direction: row;
-    flex-wrap: wrap;
-/*    background-color: red;
-*/    z-index: 2;
-}
-.mediaAreaMain {
-    min-width: 60%;
-    max-width: 60%;
-    min-height: 550px;
-    max-height: 550px;
-    display: flex;
-    justify-content: start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-radius: 7px 7px 7px 7px;
-    background-color: #151521;
-}
-
-.mediaAreaChild {
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 498px;
-    max-height: 498px;
-    display: inline;
-    justify-content: start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    overflow-y: auto;
-    outline-color: black;
-    outline: solid 3px;
-/*    background-color: deeppink;
-*/}
-
-.mediaTable {
-    min-width: 100%;
-    outline-color: black;
-    outline: solid 3px;
-    background-color: indianred;
-}
-
-.mediaAreaChildItem {
-    min-width: 100%;
-    min-height: 52px;
-    max-height: 52px;
-    padding-top: 15px;
-    margin-top: 3px;
-    display: flex;
-    justify-content: space-evenly;
-    outline-color: black;
-    outline: solid 3px;
-    background-color: blueviolet;
-}
-.mediaTableData {
-    padding: 13px;
-    color: snow;
-    outline-color: snow;
-    outline: solid 3px;
-    background-color: mediumpurple;
-}
-.mediaAreaChildItemHeading {
-    min-width: 70%;
-    max-width: 70%;
-    min-height: 52px;
-    max-height: 52px;
-    padding-top: 15px;
-    color: snow;
-    display: flex;
-    justify-content: start;
-}
-/* width */
-::-webkit-scrollbar {
-    width: 7px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    width: 7px;
-    background-color: rgba(10,10,10,0.00);
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: snow;
-}
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-        background: snow;
-    }
-.movieTileMain {
-    min-width: 280px;
-    max-width: 280px;
-    min-height: 140px;
-    max-height: 140px;
-    position: relative;
-    display: block;
-    flex: 1 1 0px;
-    transition: transform 500ms;
-    border-radius: 7px 7px 7px 7px;
-    margin: 5px;
-    z-index: 4;
-}
-.tileImageMain {
-    min-width: 280px;
-    max-width: 280px;
-    min-height: 140px;
-    max-height: 140px;
-    object-fit: inherit;
-    object-position: 0% 0%;
-    border-radius: 7px 7px 7px 7px;
-    z-index: 3;
-}
-.tileTextHead {
-    display: none;
-    z-index: 4;
-    -webkit-transition: 1s 3s;
-}
-.movieTileOne:hover .tileTextHead {
-    display: block;
-    z-index: 4;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    min-width: 280px;
-    max-width: 280px;
-    min-height: 40px;
-    max-height: 40px;
-    padding: 10px;
-    background-color: rgba(10,10,10,0.50);
-    color: snow;
-    border-radius: 0px 7px 7px 7px;
-}
-.listButton {
-    display: none;
-}
-ion-icon {
-    pointer-events: none;
-}
-.movieTileOne:hover .listButton {
-    display: block;
-    min-height: 30px;
-    max-height: 30px;
-    min-width: 30px;
-    max-width: 30px;
-    z-index: 5;
-    background-color: rgba(10,10,10,0.0);
-    color: snow;
-    border-radius: 0px;
-    border: none;
-    position: absolute;
-    top: 76%;
-    left: 88%;
-    padding-top: 3px;
-    font-size: 20px;
-}
-.hide {
-    display: block;
-    background-color: red;
-    min-height: 50px;
-    min-width: 50px;
-    z-index: 9;
-}
-.mediaRow {
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 175px;
-    max-height: 175px;
-    display: flex;
-    padding-top: 12px;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    z-index: 3;
-    border-radius: 7px 7px 7px 7px;
-/*    background-color: purple;
-*/    overflow: hidden;
-}
-    .mediaRow:focus-within .movieTileMain,
-    .mediaRow:hover .movieTileMain {
-        transform: translateX(-15%);
-    }
-.movieTileMain:focus ~ .movieTileMain,
-.movieTileMain:hover ~ .movieTileMain {
-    transform: translateX(15%);
-}
-.movieTileMain:hover {
-    outline: 3px solid;
-    outline-style: solid;
-    outline-color: snow;
-    z-index: 8;
-}
-.mediaRow .movieTileMain:focus,
-.mediaRow .movieTileMain:hover {
-    transform: scale(1.2);
-    z-index: 7;
-}
-.movieTileMain:hover + .hide {
-    display: none;
-    background-color: green;
-    min-height: 50px;
-    min-width: 50px;
-}
-.rowContainter {
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 250px;
-    max-height: 250px;
-/*    background-color: teal;
-*/    z-index: 2;
+    padding-top: 43px;
 }
 .ToolBar {
-    min-width: 810px;
+    min-width: 400px;
     width: 100%;
     min-height: 60px;
-    margin-top: 0px;
     position: fixed;
     top: 0%;
     left: 0%;
@@ -306,18 +21,95 @@ ion-icon {
     flex-wrap: wrap;
     background-color: rgba(10,10,10,0.75);
 }
-.ToolBarChild1 {
-    width: 100%;
-    height: 50px;
-    padding-top: 1%;
-    padding: 1%;
+.mediaArea {
+    min-width: 100%;
     display: flex;
     justify-content: start;
     flex-direction: row;
     flex-wrap: wrap;
-    z-index: 6;
-    overflow: hidden;
-    padding-left: 16px;
+    z-index: 2;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    width: 7px;
+    background-color: rgba(10,10,10,0.00);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: rgba(10,10,10,0.00);
+}
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(10,10,10,0.00);
+    }
+.movieTileMain {
+    min-width: 280px;
+    max-width: 280px;
+    height: 140px;
+    position: relative;
+    display: block;
+    flex: 1 1 0px;
+    transition: transform 500ms;
+    margin: 5px;
+    z-index: 4;
+    transition: .5s;
+}
+.tileImageMain {
+    min-width: 280px;
+    max-width: 280px;
+    height: 140px;
+    object-fit: inherit;
+    object-position: 0% 0%;
+    z-index: 4;
+}
+.tileTextHead {
+    display: none;
+    -webkit-transition: 1s 3s;
+}
+.mediaTile:hover .tileTextHead {
+    display: block;
+    z-index: 4;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 280px;
+    height: 40px;
+    padding: 10px;
+    background-color: rgba(10,10,10,0.50);
+    color: snow;
+    border-radius: 0px 7px 0px 0px;
+}
+.listButton {
+    display: none;
+}
+ion-icon {
+    pointer-events: none;
+}
+.mediaTile:hover .listButton {
+    display: none;
+    height: 30px;
+    width: 30px;
+    z-index: 5;
+    background-color: rgba(10,10,10,0.0);
+    color: snow;
+    border: none;
+    position: absolute;
+    top: 76%;
+    left: 88%;
+    padding-top: 3px;
+    font-size: 20px;
+}
+.movieTileMain:hover + .hide {
+    display: none;
+    min-height: 50px;
+    min-width: 50px;
+}
+.is-hidden {
+    display: none;
 }
 .headerButtons {
     height: 45px;
@@ -328,96 +120,179 @@ ion-icon {
     border-color: rgba(10,10,10,0.00);
     background-color: rgba(10,10,10,0.00);
 }
-.rowHeadings {
-    font-size: 32px;
+.headerLogo {
+    height: 45px;
+    min-width: 100px;
+    max-width: 100px;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 20px;
     color: snow;
-    margin: 5px;
-    margin-left: 50px;
 }
-.rowOneDirectionButtons {
-    min-height: 50px;
-    max-height: 50px;
-    min-width: 50px;
-    max-width: 50px;
-    z-index: 5;
-    background-color: rgba(10,10,10,0.20);
-    color: snow;
-    border-radius: 90px;
-    border: none;
-    position: absolute;
-    top: 35.5%;
-    left: 92%;
-    font-size: 20px;
+.mediaHighlights {
+    min-width: 95%;
+    max-width: 95%;
+    height: 440px;
+    background-color: rgba(10,10,10,0.50);
+    border-radius: 7px 7px 7px 7px;
+    display: flex;
+    justify-content: start;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin-bottom: 10px;
+    margin-left: 2.5%;
+    padding-right: 18px;
 }
-    .rowOneDirectionButtons:hover {
-        background-color: rgba(10,10,10,0.30);
-        color: orange;
-    }
-.rowTwoDirectionButtons {
-    min-height: 50px;
-    max-height: 50px;
-    min-width: 50px;
-    max-width: 50px;
-    z-index: 5;
-    background-color: rgba(10,10,10,0.20);
-    color: snow;
-    border-radius: 90px;
-    border: none;
-    position: absolute;
-    top: 83%;
-    left: 92%;
-    font-size: 20px;
-}
-    .rowTwoDirectionButtons:hover {
-        background-color: rgba(10,10,10,0.30);
-        color: orange;
-    }
-.rowOneMediaMask {
-    min-width: 93%;
-    max-width: 93%;
-    min-height: 175px;
-    max-height: 175px;
-    z-index: 0;
-    /*    background-color: greenyellow;
-*/ color: snow;
-    border: none;
-    position: absolute;
-    top: 35%;
-    font-size: 20px;
-}
-.rowTwoMediaMask {
-    min-width: 93%;
-    max-width: 93%;
-    min-height: 175px;
-    max-height: 175px;
-    z-index: 0;
-/*    background-color: greenyellow;
-*/    color: snow;
-    border: none;
-    position: absolute;
-    top: 75.5%;
-    font-size: 20px;
-}
-.tileExpanded {
+.newtile {
     min-width: 800px;
     max-width: 800px;
-    min-height: 600px;
-    max-height: 600px;
-    background-color: #1d1f20;
-    position: absolute;
+    height: 400px;
+    display: block;
+    z-index: 5;
+    overflow: hidden;
+    margin-top: 18px;
+    margin-left: 18px;
+    transition: transform 500ms;
+    transition: .5s;
+}
+    .newtile:hover {
+        outline: 5px solid;
+        outline-style: solid;
+        outline-color: snow;
+        z-index: 8;
+    }
+.rowStart {
+    min-width: 10px;
+    height: 140px;
+    display: block;
+    background-color: transparent;
+}
+.rowEnd {
+    min-width: 25px;
+    height: 140px;
+    display: block;
+    background-color: transparent;
+}
+.HighlightsTileImage {
+    min-width: 100%;
+    max-width: 100%;
+    height: 50%;
+    object-fit: inherit;
+    object-position: 0% 0%;
+    z-index: 4;
+}
+.mediaRow {
+    min-width: 88%;
+    max-width: 88%;
+    height: 200px;
+    display: flex;
+    padding-left: 15px;
+    z-index: 3;
+    border-radius: 7px 7px 7px 7px;
+    padding-top: 22px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.movieTileMain:hover {
+    outline: 3px solid;
+    outline-style: solid;
+    outline-color: snow;
+    z-index: 8;
+}
+.mediaRow .movieTileMain:hover {
+    transform: scale(1.05);
+    z-index: 7;
+}
+.rowHeadings {
+    font-size: 22px;
+    color: snow;
+    margin-left: 50px;
+}
+.rowHeadingWhatsNew {
+    font-size: 32px;
+    color: snow;
+    margin-left: 75px;
+    margin-top: 15px;
+}
+.rowContainter {
+    min-width: 95%;
+    max-width: 95%;
+    height: 250px;
+    z-index: 2;
+    margin-left: 2.5%;
+    margin-bottom: 10px;
+}
+.rowMediaMask {
+    min-width: 100%;
+    height: 200px;
+    z-index: 0;
+    border-radius: 7px 7px 7px 7px;
+    background-color: rgba(10,10,10,0.50);
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: start;
+    display: flex;
+}
+.pre-button {
+    height: 200px;
+    min-width: 6%;
+    z-index: 5;
+    background-color: rgba(10,10,10,.5);
+    color: snow;
+    border: none;
+    font-size: 30px;
+}
+.nxt-button {
+    height: 200px;
+    min-width: 6%;
+    z-index: 5;
+    background-color: rgba(10,10,10,0.5);
+    color: snow;
+    border: none;
+    font-size: 30px;
+}
+.tileExpanded {
+    position: fixed;
+    top: 50%;
     left: 50%;
+    margin-top: -300px;
     margin-left: -400px;
-    top: 15%;
-    margin-top: 10px;
-    z-index: 10;
+    min-width: 800px;
+    max-width: 800px;
+    min-height: 100%;
+    max-height: 100%;
+    background-color: rgba(10,10,10,0.95);
+    z-index: 11;
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
     border-radius: 7px 7px 0px 0px;
-    display: none;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
-
+    .tileExpanded::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+    }
+.screenOverlay {
+    display: none;
+    background-color: rgba(10,10,10,0.75);
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+.screenOverlayClickArea1 {
+    display: block;
+    background-color: transparent;
+    height: 100vh;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 11;
+}
 .expandedTileImage {
     min-width: 800px;
     max-width: 800px;
@@ -427,73 +302,576 @@ ion-icon {
     object-position: 0% 0%;
     border-radius: 7px 7px 0px 0px;
     z-index: 3;
+    animation: fadeIn 5s;
 }
 .expandedTileChild {
-    min-width: 800px;
-    max-width: 800px;
-    min-height: 200px;
-    max-height: 200px;
+    width: 100%;
+    height: 200px;
     object-fit: inherit;
     object-position: 0% 0%;
-    border-radius: 0px 0px 0px 0px;
     z-index: 4;
     display: flex;
     justify-content: start;
     flex-direction: column;
     flex-wrap: wrap;
+    animation: fadeIn 5s;
 }
 .expandedTileHeadingLabel {
-    min-width: 500px;
-    max-width: 500px;
-    min-height: 50px;
-    max-height: 50px;
-    padding: 10px;
-    padding-left: 20px;
+    width: 500px;
+    height: 50px;
+    padding: 8px;
+    padding-left: 8px;
     color: snow;
+    overflow-x: hidden;
+    overflow-y: auto;
     font-size: 20px;
+    background-color: rgba(10,10,10,0.50);
+    border-radius: 0px 0px 0px 0px;
+    border: solid;
+    border-width: 0px 2px 2px 0px;
+    border-color: snow;
+    animation: fadeIn 5s;
 }
 .expandedTileSummaryLabel {
-    min-width: 500px;
-    max-width: 500px;
+    width: 500px;
     min-height: 150px;
-    max-height: 150px;
-    padding: 20px;
+    padding: 5px;
     color: snow;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: solid;
+    border-width: 0px 2px 2px 0px;
+    border-color: snow;
+    animation: fadeIn 5s;
+    font-size: 16px;
 }
 .expandedTileCastLabel {
-    min-width: 300px;
-    max-width: 300px;
-    min-height: 100px;
-    max-height: 100px;
-    padding: 20px;
+    width: 300px;
+    min-height: 25px;
+    max-height: 125px;
+    padding: 5px;
     color: snow;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: solid;
+    border-width: 0px 0px 2px 0px;
+    border-color: snow;
+    font-size: 16px;
 }
 .expandedTileGenreLabel {
-    min-width: 300px;
-    max-width: 300px;
-    min-height: 100px;
-    max-height: 100px;
-    padding: 20px;
+    width: 300px;
+    min-height: 25px;
+    max-height: 75px;
+    padding: 5px;
     color: snow;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: solid;
+    border-width: 0px 0px 2px 0px;
+    border-color: snow;
+    font-size: 16px;
 }
-.closeTileButton {
-    display: block;
-    min-height: 40px;
-    max-height: 40px;
-    min-width: 80px;
-    max-width: 80px;
-    z-index: 5;
-    background-color: rgba(10,10,10,0.01);
+.similarTitlesExpanded {
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
     color: snow;
-    border-radius: 0px;
-    border: none;
-    position: absolute;
-    top: 92%;
-    left: 88%;
-    padding-top: 1px;
-    font-size: 20px;
-    border: 3px solid;
-    border-radius: 15px;
+    padding-top: 15px;
+}
+.similarTitlesHeadings {
+    font-size: 22px;
+    color: snow;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+.searchBarContainer {
+    width: 95%;
+    height: 70px;
+    margin-top: 30px;
+    outline: 3px solid;
+    outline-style: solid;
+    outline-color: snow;
+    color: snow;
+    margin-left: 2.5%;
+    border-radius: 7px;
+}
+.searchBarInput {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.0);
+    font-size: 35px;
+    padding-left: 15px;
+    color: snow;
+    border-radius: 7px;
+}
+::placeholder {
+    color: snow;
+    opacity: 1;
+}
+.input {
+    caret-color: snow;
+}
+.searchRow {
+    width: 100%;
+    z-index: 2;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.mediaRowSearch {
+    width: 100%;
+    display: flex;
+    z-index: 3;
+    border-radius: 7px 7px 7px 7px;
+    padding-top: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.rowMediaMaskSearch {
+    height: 460px;
+    width: 100%;
+    z-index: 0;
+    background-color: rgba(10,10,10,0.50);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    justify-content: start;
+    display: flex;
+}
+.spacer {
+    min-width: 280px;
+    max-width: 280px;
+    height: 140px;
+    position: relative;
+    display: block;
+    flex: 1 1 0px;
+    margin: 5px;
+    z-index: 4;
+    overflow: hidden;
+    background-color: transparent;
+}
+.sectionsMobile {
+    width: 95%;
+    height: 70px;
+    z-index: 2;
+    margin-left: 2.5%;
+    background-color: rgba(10,10,10,0.50);
+    margin-bottom: 22px;
+    border-radius: 7px 7px 7px 7px;
+}
+.sectionMobileHeadings {
+    font-size: 30px;
+    color: snow;
+    margin-left: 50px;
+    margin-top: 17px;
+}
+.closeButton {
+    display: block;
+    background-color: transparent;
+    color: snow;
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 2px;
     border-style: solid;
     border-color: snow;
 }
+.mobileCloseButton {
+    display: none;
+}
+@media only screen and (max-width: 1168px) {
+    .pre-button {
+        height: 200px;
+        font-size: 28px;
+    }
+    .nxt-button {
+        height: 200px;
+        font-size: 28px;
+    }
+    .spacer {
+        min-width: 260px;
+        max-width: 260px;
+        height: 130px;
+    }
+    .movieTileMain {
+        min-width: 260px;
+        max-width: 260px;
+        height: 130px;
+    }
+    .tileImageMain {
+        min-width: 260px;
+        max-width: 260px;
+        height: 130px;
+    }
+    .rowMediaMask {
+        height: 190px;
+    }
+    .rowContainter {
+        height: 230px;
+    }
+}
+@media only screen and (max-width: 1068px) {
+    .pre-button {
+        height: 190px;
+        font-size: 26px;
+    }
+    .nxt-button {
+        height: 190px;
+        font-size: 26px;
+    }
+    .spacer {
+        min-width: 240px;
+        max-width: 240px;
+        height: 120px;
+    }
+    .movieTileMain {
+        min-width: 240px;
+        max-width: 240px;
+        height: 120px;
+    }
+    .tileImageMain {
+        min-width: 240px;
+        max-width: 240px;
+        height: 120px;
+    }
+    .rowMediaMask {
+        height: 180px;
+    }
+    .rowContainter {
+        height: 220px;
+    }
+}
+@media only screen and (max-width: 968px) {
+    .pre-button {
+        height: 180px;
+        font-size: 24px;
+    }
+    .nxt-button {
+        height: 180px;
+        font-size: 24px;
+    }
+    .spacer {
+        min-width: 220px;
+        max-width: 220px;
+        height: 110px;
+    }
+    .movieTileMain {
+        min-width: 220px;
+        max-width: 220px;
+        height: 110px;
+    }
+    .tileImageMain {
+        min-width: 220px;
+        max-width: 220px;
+        height: 110px;
+    }
+    .rowMediaMask {
+        height: 170px;
+    }
+    .rowContainter {
+        height: 210px;
+    }
+}
+@media only screen and (max-width: 868px) {
+    .pre-button {
+        height: 170px;
+        font-size: 22px;
+    }
+    .nxt-button {
+        min-height: 170px;
+        max-height: 170px;
+        font-size: 22px;
+    }
+    .spacer {
+        min-width: 200px;
+        max-width: 200px;
+        height: 100px;
+    }
+    .movieTileMain {
+        min-width: 200px;
+        max-width: 200px;
+        height: 100px;
+    }
+    .tileImageMain {
+        min-width: 200px;
+        max-width: 200px;
+        height: 100px;
+    }
+    .rowMediaMask {
+        height: 160px;
+    }
+    .rowContainter {
+        height: 200px;
+    }
+}
+/*mobile*/
+@media only screen and (max-width: 800px) {
+    .mediaHighlights {
+        height: 220px;
+        flex-direction: row;
+        padding-right: 14px;
+        margin-bottom: 18px;
+    }
+    .newtile {
+        min-width: 400px;
+        max-width: 400px;
+        height: 200px;
+        margin-top: 14px;
+        margin-left: 14px;
+    }
+    .tileExpanded {
+        top: 0%;
+        left: 0%;
+        margin-top: 60px;
+        max-width: 95%;
+        min-width: 95%;
+        min-height: 100%;
+        max-height: 100%;
+        margin-left: 2.5%;
+        border-radius: 0px 0px 0px 0px;
+    }
+    .screenOverlay {
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+        top: 50%;
+        left: 0%;
+        margin-top: 40px;
+        background-color: black;
+    }
+    .screenOverlayClickArea1 {
+        background-color: black;
+    }
+    .expandedTileImage {
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 50%;
+    }
+    .expandedTileChild {
+        min-width: 95%;
+        min-height: 120px;
+        max-height: 270px;
+        object-position: 50% 50%;
+        border-radius: 0px 0px 0px 0px;
+        flex-direction: row;
+    }
+    .expandedTileChild2 {
+    display: none;
+    }
+    .similarTitlesExpanded {
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        color: snow;
+        padding-top: 0px;
+    }
+    .similarTitlesHeadings {
+        font-size: 22px;
+        color: snow;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .expandedTileHeadingLabel {
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 20px;
+        max-height: 60px;
+        padding-top: 0px;
+        border-width: 0px 0px 2px 0px;
+    }
+    .expandedTileSummaryLabel {
+        width: 100%;
+        min-width: 100%;
+        min-height: 30px;
+        padding-top: 0px;
+        border-width: 0px 0px 2px 0px;
+    }
+    .expandedTileCastLabel {
+        width: 100%;
+        min-width: 100%;
+        min-height: 30px;
+        padding-top: 0px;
+        border-width: 0px 0px 2px 0px;
+    }
+    .expandedTileGenreLabel {
+        width: 100%;
+        min-width: 100%;
+        min-height: 30px;
+        padding-top: 0px;
+        border-width: 0px 0px 0px 0px;
+    }
+/*    .expandedTileHeadingLabel {
+        width: 500px;
+        height: 50px;
+    }
+    .expandedTileSummaryLabel {
+        width: 500px;
+        min-height: 150px;
+    }
+    .expandedTileCastLabel {
+        width: 300px;
+        min-height: 25px;
+        max-height: 125px;
+    }
+    .expandedTileGenreLabel {
+        width: 300px;
+        min-height: 25px;
+        max-height: 75px;
+    }*/
+    .rowContainter {
+        display: none;
+    }
+    .tileTextHead {
+        display: none;
+    }
+    .mediaTile:hover .tileTextHead {
+        display: none;
+    }
+    .rowMediaMaskSearch {
+        min-height: 560px;
+        max-height: 560px;
+        width: 100%;
+    }
+    .searchBarContainer {
+        height: 50px;
+    }
+    .searchBarInput {
+        font-size: 25px;
+        padding-left: 5px;
+    }
+    .mobileCloseButton {
+        display: block;
+        background-color: transparent;
+        color: snow;
+        margin: 10px;
+        border: 2px solid;
+        border-radius: 2px;
+        border-style: solid;
+        border-color: snow;
+    }
+    .closeButton {
+        display: none;
+    }
+    .sectionMobileHeadings {
+        margin-left: 10px;
+    }
+    .rowHeadingWhatsNew {
+        margin: 15px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .spacer {
+        min-width: 180px;
+        max-width: 180px;
+        height: 90px;
+    }
+    .movieTileMain {
+        min-width: 180px;
+        max-width: 180px;
+        height: 90px;
+    }
+    .tileImageMain {
+        min-width: 180px;
+        max-width: 180px;
+        height: 90px;
+    }
+/*    .expandedTileSummaryLabel {
+        font-size: 16px;
+    }
+    .expandedTileCastLabel {
+        font-size: 16px;
+    }
+    .expandedTileGenreLabel {
+        font-size: 16px;
+    }*/
+}
+@media only screen and (max-width: 668px) {
+    .spacer {
+        min-width: 160px;
+        max-width: 160px;
+        height: 80px;
+    }
+    .movieTileMain {
+        min-width: 160px;
+        max-width: 160px;
+        height: 80px;
+    }
+    .tileImageMain {
+        min-width: 160px;
+        max-width: 160px;
+        height: 80px;
+    }
+/*    .expandedTileSummaryLabel {
+        font-size: 14px;
+    }
+    .expandedTileCastLabel {
+        font-size: 14px;
+    }
+    .expandedTileGenreLabel {
+        font-size: 14px;
+    }*/
+    .rowHeadingWhatsNew {
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 568px) {
+    .spacer {
+        min-width: 140px;
+        max-width: 140px;
+        height: 70px;
+    }
+    .movieTileMain {
+        min-width: 140px;
+        max-width: 140px;
+        height: 70px;
+    }
+    .tileImageMain {
+        min-width: 140px;
+        max-width: 140px;
+        height: 70px;
+    }
+/*    .expandedTileHeadingLabel {
+        font-size: 18px;
+    }
+    .expandedTileSummaryLabel {
+        font-size: 12px;
+    }
+    .expandedTileCastLabel {
+        font-size: 12px;
+    }
+    .expandedTileGenreLabel {
+        font-size: 12px;
+    }*/
+    .sectionMobileHeadings {
+        padding-top: 4px;
+        font-size: 24px;
+    }
+    .rowHeadingWhatsNew {
+        font-size: 24px;
+    }
+}
+@media only screen and (max-width: 468px) {
+/*    .expandedTileHeadingLabel {
+        font-size: 16px;
+    }
+    .expandedTileSummaryLabel {
+        font-size: 10px;
+    }
+    .expandedTileCastLabel {
+        font-size: 10px;
+    }
+    .expandedTileGenreLabel {
+        font-size: 10px;
+    }*/
+    .sectionMobileHeadings {
+        padding-top: 5px;
+        font-size: 22px;
+    }
+    .rowHeadingWhatsNew {
+        font-size: 22px;
+    }
+}
+/*Line 990*/
