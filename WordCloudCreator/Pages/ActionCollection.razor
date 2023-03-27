@@ -5,7 +5,7 @@
 <div class="mainBody">
     <div class="ToolBar">
         <div class="ToolBarChild">
-            <label class="headerLogo">LOGO HERE</label>
+            <label class="headerLogo">IntuiView</label>
             <input type="button" class="headerButtons" id="btnHome" value="Home" onclick="goHome();">
             <input type="button" class="headerButtons" id="btnSearch" value="Search" onclick="goSearch();">
         </div>
@@ -19,15 +19,18 @@
                     <label id="mediaTileHeadingExpanded" class="expandedTileHeadingLabel"></label>
                     <label id="mediaTileSummaryExpanded" class="expandedTileSummaryLabel"></label>
                     <label id="mediaTileCastExpanded" class="expandedTileCastLabel"></label>  
-                    <label id="mediaTileGenreExpanded" class="expandedTileGenreLabel"></label> 
-                    <input type="button" class="mobileCloseButton" id="btnClose" value="Return" onclick="closeTile();">                    
+                    <label id="mediaTileGenreExpanded" class="expandedTileGenreLabel"></label>   
+                    <input type="button" class="mobileCloseButton" id="btnClose" value="Return" onclick="closeTile();">
                 </div>
-                <h2 class="similarTitlesHeadings">Similar Titles</h2>
-                <div class="similarTitlesExpanded">
-                        <div id="SimilarMediaTitle_0001" class="movieTileMain">
-                        </div>
-                        <div id="SimilarMediaTitle_0002" class="movieTileMain">      
-                        </div>
+                <div class="expandedTileChild2">
+                    <input type="button" class="closeButton" id="btnClose" value="Return" onclick="closeTile();">
+                    <h2 class="similarTitlesHeadings">Similar Titles</h2>
+                    <div class="similarTitlesExpanded">
+                            <div id="SimilarMediaTitle_0001" class="movieTileMain">
+                            </div>
+                            <div id="SimilarMediaTitle_0002" class="movieTileMain">      
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -173,7 +176,15 @@
                 </div>
             </div>
         </div>
-
+        <div class="sectionsMobile" onclick="goHorror();">
+            <h2 class="sectionMobileHeadings">The Horror Collection</h2>
+        </div>
+        <div class="sectionsMobile" onclick="goDocs();">
+            <h2 class="sectionMobileHeadings">The Doc's Collection</h2>
+        </div>
+        <div class="sectionsMobile" onclick="goDrama();">
+            <h2 class="sectionMobileHeadings">The Drama Collection</h2>
+        </div>
     </div>
 </div>
 

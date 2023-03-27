@@ -120,6 +120,15 @@ ion-icon {
     border-color: rgba(10,10,10,0.00);
     background-color: rgba(10,10,10,0.00);
 }
+.headerLogo {
+    height: 45px;
+    min-width: 100px;
+    max-width: 100px;
+    margin-top: 15px;
+    margin-left: 15px;
+    font-size: 20px;
+    color: snow;
+}
 .mediaHighlights {
     min-width: 95%;
     max-width: 95%;
@@ -296,10 +305,8 @@ ion-icon {
     animation: fadeIn 5s;
 }
 .expandedTileChild {
-    min-width: 800px;
-    max-width: 800px;
-    min-height: 200px;
-    max-height: 200px;
+    width: 100%;
+    height: 200px;
     object-fit: inherit;
     object-position: 0% 0%;
     z-index: 4;
@@ -310,8 +317,7 @@ ion-icon {
     animation: fadeIn 5s;
 }
 .expandedTileHeadingLabel {
-    min-width: 500px;
-    max-width: 500px;
+    width: 500px;
     height: 50px;
     padding: 8px;
     padding-left: 8px;
@@ -327,8 +333,7 @@ ion-icon {
     animation: fadeIn 5s;
 }
 .expandedTileSummaryLabel {
-    min-width: 500px;
-    max-width: 500px;
+    width: 500px;
     min-height: 150px;
     padding: 5px;
     color: snow;
@@ -341,8 +346,7 @@ ion-icon {
     font-size: 16px;
 }
 .expandedTileCastLabel {
-    min-width: 300px;
-    max-width: 300px;
+    width: 300px;
     min-height: 25px;
     max-height: 125px;
     padding: 5px;
@@ -355,8 +359,7 @@ ion-icon {
     font-size: 16px;
 }
 .expandedTileGenreLabel {
-    min-width: 300px;
-    max-width: 300px;
+    width: 300px;
     min-height: 25px;
     max-height: 75px;
     padding: 5px;
@@ -463,6 +466,16 @@ ion-icon {
     color: snow;
     margin-left: 50px;
     margin-top: 17px;
+}
+.closeButton {
+    display: block;
+    background-color: transparent;
+    color: snow;
+    margin: 10px;
+    border: 2px solid;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: snow;
 }
 .mobileCloseButton {
     display: none;
@@ -608,10 +621,13 @@ ion-icon {
         margin-left: 14px;
     }
     .tileExpanded {
-        top: 50%;
+        top: 0%;
         left: 0%;
+        margin-top: 60px;
         max-width: 95%;
         min-width: 95%;
+        min-height: 100%;
+        max-height: 100%;
         margin-left: 2.5%;
         border-radius: 0px 0px 0px 0px;
     }
@@ -628,12 +644,6 @@ ion-icon {
     .screenOverlayClickArea1 {
         background-color: black;
     }
-    .similarTitlesExpanded {
-        display: none;
-    }
-    .similarTitlesHeadings {
-        display: none;
-    }
     .expandedTileImage {
         min-width: 100%;
         max-width: 100%;
@@ -641,32 +651,76 @@ ion-icon {
     }
     .expandedTileChild {
         min-width: 95%;
-        min-height: 200px;
-        max-height: 200px;
+        min-height: 120px;
+        max-height: 270px;
         object-position: 50% 50%;
         border-radius: 0px 0px 0px 0px;
         flex-direction: row;
     }
-    .expandedTileHeadingLabel {
-        min-width: 100%;
+    .expandedTileChild2 {
+    display: none;
+    }
+    .similarTitlesExpanded {
+        width: 100%;
         min-height: 100%;
+        display: flex;
+        justify-content: center;
+        color: snow;
+        padding-top: 0px;
+    }
+    .similarTitlesHeadings {
+        font-size: 22px;
+        color: snow;
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    .expandedTileHeadingLabel {
+        max-width: 100%;
+        min-width: 100%;
+        min-height: 20px;
+        max-height: 60px;
+        padding-top: 0px;
         border-width: 0px 0px 2px 0px;
     }
     .expandedTileSummaryLabel {
+        width: 100%;
         min-width: 100%;
         min-height: 30px;
+        padding-top: 0px;
         border-width: 0px 0px 2px 0px;
     }
     .expandedTileCastLabel {
+        width: 100%;
         min-width: 100%;
         min-height: 30px;
+        padding-top: 0px;
         border-width: 0px 0px 2px 0px;
     }
     .expandedTileGenreLabel {
+        width: 100%;
         min-width: 100%;
         min-height: 30px;
-        border-width: 0px 0px 2px 0px;
+        padding-top: 0px;
+        border-width: 0px 0px 0px 0px;
     }
+/*    .expandedTileHeadingLabel {
+        width: 500px;
+        height: 50px;
+    }
+    .expandedTileSummaryLabel {
+        width: 500px;
+        min-height: 150px;
+    }
+    .expandedTileCastLabel {
+        width: 300px;
+        min-height: 25px;
+        max-height: 125px;
+    }
+    .expandedTileGenreLabel {
+        width: 300px;
+        min-height: 25px;
+        max-height: 75px;
+    }*/
     .rowContainter {
         display: none;
     }
@@ -698,6 +752,9 @@ ion-icon {
         border-style: solid;
         border-color: snow;
     }
+    .closeButton {
+        display: none;
+    }
     .sectionMobileHeadings {
         margin-left: 10px;
     }
@@ -721,7 +778,7 @@ ion-icon {
         max-width: 180px;
         height: 90px;
     }
-    .expandedTileSummaryLabel {
+/*    .expandedTileSummaryLabel {
         font-size: 16px;
     }
     .expandedTileCastLabel {
@@ -729,7 +786,7 @@ ion-icon {
     }
     .expandedTileGenreLabel {
         font-size: 16px;
-    }
+    }*/
 }
 @media only screen and (max-width: 668px) {
     .spacer {
@@ -747,7 +804,7 @@ ion-icon {
         max-width: 160px;
         height: 80px;
     }
-    .expandedTileSummaryLabel {
+/*    .expandedTileSummaryLabel {
         font-size: 14px;
     }
     .expandedTileCastLabel {
@@ -755,7 +812,7 @@ ion-icon {
     }
     .expandedTileGenreLabel {
         font-size: 14px;
-    }
+    }*/
     .rowHeadingWhatsNew {
         font-size: 30px;
     }
@@ -776,7 +833,7 @@ ion-icon {
         max-width: 140px;
         height: 70px;
     }
-    .expandedTileHeadingLabel {
+/*    .expandedTileHeadingLabel {
         font-size: 18px;
     }
     .expandedTileSummaryLabel {
@@ -787,7 +844,7 @@ ion-icon {
     }
     .expandedTileGenreLabel {
         font-size: 12px;
-    }
+    }*/
     .sectionMobileHeadings {
         padding-top: 4px;
         font-size: 24px;
@@ -797,7 +854,7 @@ ion-icon {
     }
 }
 @media only screen and (max-width: 468px) {
-    .expandedTileHeadingLabel {
+/*    .expandedTileHeadingLabel {
         font-size: 16px;
     }
     .expandedTileSummaryLabel {
@@ -808,7 +865,7 @@ ion-icon {
     }
     .expandedTileGenreLabel {
         font-size: 10px;
-    }
+    }*/
     .sectionMobileHeadings {
         padding-top: 5px;
         font-size: 22px;
